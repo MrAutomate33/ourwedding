@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" aria-hidden="true" focusable="false">
+  <rect width="800" height="400" fill="#E8EEEC"/>
+  <path d="M0,0 L800,0 L800,400 L0,400 Z" fill="#DCC7A1" opacity="0.3"/>
+  <path d="M50,350 Q200,250 350,320 T750,280" stroke="#58735C" stroke-width="6" fill="none" opacity="0.5"/>
+  <path d="M100,80 Q300,150 500,90 T750,140" stroke="#6D5E52" stroke-width="4" fill="none" opacity="0.4"/>
+  <circle cx="400" cy="200" r="16" fill="#2C3E50"/>
+  <path d="M400,200 L400,150 L385,165 M400,150 L415,165" stroke="#2C3E50" stroke-width="4" fill="none"/>
+  <text x="400" y="240" font-family="sans-serif" font-size="20" fill="#253238" text-anchor="middle">Venue Location</text>
+</svg>

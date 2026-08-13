@@ -1,0 +1,713 @@
+/* ==========================================================================
+   Mariëlle & Jeremy — Wedding Website Stylesheet
+   Theme: Romantic Icelandic Nature
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Root variables & Bootstrap overrides
+   -------------------------------------------------------------------------- */
+:root {
+  --color-midnight: #2C3E50;
+  --color-moss: #58735C;
+  --color-aurora: #65E6C5;
+  --color-volcanic: #6D5E52;
+  --color-snow: #FAFAFA;
+  --color-sand: #DCC7A1;
+  --color-mist: #E8EEEC;
+  --color-text: #253238;
+
+  /* Bootstrap variable overrides */
+  --bs-primary: var(--color-moss);
+  --bs-primary-rgb: 88, 115, 92;
+  --bs-secondary: var(--color-volcanic);
+  --bs-body-color: var(--color-text);
+  --bs-body-bg: var(--color-snow);
+  --bs-link-color: var(--color-moss);
+  --bs-link-hover-color: var(--color-aurora);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-snow);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: var(--font-heading);
+  color: var(--color-midnight);
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--color-moss);
+  font-weight: 500;
+}
+
+a {
+  color: var(--bs-link-color);
+}
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+/* Alternating section backgrounds */
+.bg-snow { background-color: var(--color-snow); }
+.bg-mist { background-color: var(--color-mist); }
+.bg-midnight { background-color: var(--color-midnight); color: var(--color-snow); }
+.bg-midnight h2, .bg-midnight h3 { color: var(--color-snow); }
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   3. Skip link & focus styles
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  z-index: 2000;
+  background: var(--color-midnight);
+  color: var(--color-snow);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-aurora);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Navbar
+   -------------------------------------------------------------------------- */
+.navbar-wedding {
+  background-color: rgba(44, 62, 80, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar-wedding.scrolled {
+  background-color: rgba(44, 62, 80, 0.92);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+.navbar-wedding .navbar-brand {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-snow);
+  letter-spacing: 0.03em;
+}
+.navbar-wedding .nav-link {
+  color: rgba(250, 250, 250, 0.85);
+  font-weight: 500;
+}
+.navbar-wedding .nav-link:hover,
+.navbar-wedding .nav-link.active {
+  color: var(--color-aurora);
+}
+.btn-rsvp {
+  background-color: var(--color-aurora);
+  border-color: var(--color-aurora);
+  color: var(--color-midnight);
+  font-weight: 600;
+}
+.btn-rsvp:hover,
+.btn-rsvp:focus {
+  background-color: var(--color-snow);
+  border-color: var(--color-snow);
+  color: var(--color-midnight);
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-snow);
+  overflow: hidden;
+}
+.hero-parallax {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/hero-placeholder.svg');
+  background-size: cover;
+  background-position: center bottom;
+  will-change: transform;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21, 34, 50, 0.55) 0%, rgba(44, 62, 80, 0.75) 65%, rgba(21, 30, 40, 0.92) 100%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+.hero-content h1 {
+  color: var(--color-snow);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-style: italic;
+}
+.hero-content .hero-sub {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--color-sand);
+}
+.hero-content .hero-date {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: var(--color-snow);
+  animation: bounce 2s infinite;
+  font-size: 1.5rem;
+}
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
+/* --------------------------------------------------------------------------
+   6. Countdown
+   -------------------------------------------------------------------------- */
+.countdown {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.countdown-block {
+  background: rgba(250, 250, 250, 0.1);
+  border: 1px solid rgba(101, 230, 197, 0.4);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  min-width: 88px;
+  backdrop-filter: blur(4px);
+}
+.countdown-block .countdown-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  display: block;
+  color: var(--color-aurora);
+}
+.countdown-block .countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-mist);
+}
+
+/* --------------------------------------------------------------------------
+   7. Expedition / Coordinates card
+   -------------------------------------------------------------------------- */
+.expedition-card {
+  background: linear-gradient(135deg, var(--color-midnight), #1c2a37);
+  color: var(--color-snow);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(101, 230, 197, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+.expedition-card .coord-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--color-aurora);
+}
+.expedition-card .coord-value {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Aurora gradient effect
+   -------------------------------------------------------------------------- */
+.aurora-effect {
+  position: relative;
+  isolation: isolate;
+}
+.aurora-effect::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(120deg, var(--color-aurora), var(--color-moss), var(--color-aurora));
+  background-size: 200% 200%;
+  animation: aurora-shift 8s ease infinite;
+}
+@keyframes aurora-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --------------------------------------------------------------------------
+   9. Mountain section dividers
+   -------------------------------------------------------------------------- */
+.mountain-divider {
+  width: 100%;
+  height: 60px;
+  display: block;
+  line-height: 0;
+}
+.mountain-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   10. Topographic subtle pattern
+   -------------------------------------------------------------------------- */
+.topo-pattern {
+  background-image:
+    repeating-radial-gradient(circle at 20% 30%, rgba(88, 115, 92, 0.06) 0, rgba(88, 115, 92, 0.06) 1px, transparent 1px, transparent 40px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(101, 230, 197, 0.05) 0, rgba(101, 230, 197, 0.05) 1px, transparent 1px, transparent 60px);
+}
+
+/* --------------------------------------------------------------------------
+   11. Timeline (Our Journey)
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-moss), var(--color-aurora));
+  opacity: 0.35;
+}
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 3px;
+  height: 0%;
+  background: var(--color-aurora);
+  transition: height 0.2s ease-out;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-item .timeline-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-snow);
+  border: 2px solid var(--color-moss);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-moss);
+  font-size: 1.25rem;
+  z-index: 1;
+}
+.timeline-card {
+  background: var(--color-mist);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--color-volcanic);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Featured milestone: Kerlingarfjöll */
+.timeline-item.featured .timeline-card {
+  background: linear-gradient(160deg, var(--color-midnight), #22323f);
+  color: var(--color-snow);
+  padding: 2.5rem;
+  border: 1px solid var(--color-aurora);
+  box-shadow: 0 0 0 1px rgba(101, 230, 197, 0.3), 0 0 40px rgba(101, 230, 197, 0.35);
+}
+.timeline-item.featured .timeline-icon {
+  background: var(--color-aurora);
+  border-color: var(--color-aurora);
+  color: var(--color-midnight);
+}
+.timeline-item.featured .timeline-date {
+  color: var(--color-aurora);
+}
+
+/* Desktop: alternating left/right layout using a central line */
+@media (min-width: 992px) {
+  .timeline::before,
+  .timeline-progress {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    margin-bottom: 4rem;
+  }
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 3.5rem;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 3.5rem;
+  }
+  .timeline-item .timeline-icon {
+    left: auto;
+    right: -24px;
+  }
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: -24px;
+    right: auto;
+  }
+  .timeline-item.featured {
+    width: 100%;
+    left: 0 !important;
+    text-align: center;
+    padding: 0 3.5rem;
+  }
+  .timeline-item.featured .timeline-icon {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. Proposal section
+   -------------------------------------------------------------------------- */
+.proposal-section {
+  position: relative;
+}
+.proposal-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-moss);
+}
+
+/* --------------------------------------------------------------------------
+   13. Wedding day schedule
+   -------------------------------------------------------------------------- */
+.schedule-item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(109, 94, 82, 0.2);
+}
+.schedule-item:last-child {
+  border-bottom: none;
+}
+.schedule-time {
+  min-width: 100px;
+  font-weight: 600;
+  color: var(--color-moss);
+}
+.schedule-icon {
+  color: var(--color-aurora);
+  font-size: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   14. Gallery
+   -------------------------------------------------------------------------- */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.gallery-filters .btn {
+  border-radius: 2rem;
+}
+.gallery-grid {
+  column-count: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 576px) {
+  .gallery-grid { column-count: 2; }
+}
+@media (min-width: 992px) {
+  .gallery-grid { column-count: 3; }
+}
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-mist);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+.gallery-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(0deg, rgba(44, 62, 80, 0.85), transparent);
+  color: var(--color-snow);
+  padding: 0.75rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+}
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-within .gallery-caption {
+  transform: translateY(0);
+}
+.gallery-item.d-none {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   15. RSVP
+   -------------------------------------------------------------------------- */
+.rsvp-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 130%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: var(--color-mist);
+}
+@media (min-width: 768px) {
+  .rsvp-iframe-container {
+    padding-bottom: 90%;
+  }
+}
+.rsvp-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   16. Dress code / Gifts cards
+   -------------------------------------------------------------------------- */
+.dress-code-card,
+.gift-card,
+.ceremony-master-card {
+  border: 1px solid rgba(109, 94, 82, 0.15);
+  border-radius: 0.75rem;
+  background: var(--color-snow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.dress-code-card:hover,
+.gift-card:hover,
+.ceremony-master-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   17. FAQ accordion
+   -------------------------------------------------------------------------- */
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(109, 94, 82, 0.2);
+  background: transparent;
+}
+.accordion-button {
+  font-family: var(--font-heading);
+  color: var(--color-midnight);
+  background: transparent;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--color-moss);
+  background: rgba(101, 230, 197, 0.08);
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px var(--color-aurora);
+}
+
+/* --------------------------------------------------------------------------
+   18. Guestbook
+   -------------------------------------------------------------------------- */
+.guestbook-example {
+  background: var(--color-mist);
+  border-left: 4px solid var(--color-aurora);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+}
+.guestbook-example .example-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-volcanic);
+}
+
+/* --------------------------------------------------------------------------
+   19. Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-midnight);
+  color: var(--color-mist);
+  padding: 3rem 0 2rem;
+}
+.site-footer a {
+  color: var(--color-mist);
+}
+.site-footer a:hover {
+  color: var(--color-aurora);
+}
+.site-footer .footer-brand {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-snow);
+}
+
+/* --------------------------------------------------------------------------
+   20. Back-to-top button
+   -------------------------------------------------------------------------- */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1050;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-moss);
+  color: var(--color-snow);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--color-aurora);
+  color: var(--color-midnight);
+}
+
+/* --------------------------------------------------------------------------
+   21. Utilities
+   -------------------------------------------------------------------------- */
+.text-aurora { color: var(--color-aurora); }
+.text-moss { color: var(--color-moss); }
+.text-sand { color: var(--color-sand); }
+
+/* --------------------------------------------------------------------------
+   22. Reduced motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-parallax {
+    transform: none !important;
+  }
+  .timeline-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   23. Mobile-first responsive tweaks
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .countdown-block {
+    min-width: 70px;
+    padding: 0.5rem 0.75rem;
+  }
+  .expedition-card {
+    padding: 2rem 1.25rem;
+  }
+}

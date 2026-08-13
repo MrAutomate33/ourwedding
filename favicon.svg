@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="M and J monogram with mountain silhouette">
+  <defs>
+    <linearGradient id="favGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#65E6C5"/>
+      <stop offset="100%" stop-color="#58735C"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#2C3E50"/>
+  <path d="M6 42 L18 24 L26 36 L34 18 L44 34 L52 22 L60 42 Z" fill="url(#favGrad)" opacity="0.9"/>
+  <text x="32" y="30" font-family="Georgia, 'Playfair Display', serif" font-size="16" font-style="italic" fill="#FAFAFA" text-anchor="middle">M&amp;J</text>
+</svg>

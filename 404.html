@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found · Mariëlle &amp; Jeremy</title>
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+  .not-found-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-snow);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #152232 0%, #2C3E50 60%, #3A5049 100%);
+  }
+  .not-found-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+  }
+  .not-found-bg svg {
+    width: 100%;
+    height: 100%;
+  }
+  .not-found-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+  }
+  .not-found-content h1 {
+    color: var(--color-snow);
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<a href="index.html#main-content" class="skip-link">Skip to main content</a>
+
+<div class="not-found-page">
+  <div class="not-found-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="nfMtn" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3A4E52"/>
+          <stop offset="100%" stop-color="#101819"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,380 L150,290 L300,360 L480,260 L650,350 L820,270 L1000,360 L1200,300 L1200,600 L0,600 Z" fill="url(#nfMtn)"/>
+    </svg>
+  </div>
+  <div class="not-found-content">
+    <h1>404</h1>
+    <p class="lead">Looks like this trail leads somewhere else.</p>
+    <a href="index.html" class="btn btn-rsvp btn-lg mt-3">Back to the homepage</a>
+  </div>
+</div>
+</body>
+</html>
