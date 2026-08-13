@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="pSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DCC7A1"/>
+      <stop offset="45%" stop-color="#6D5E52"/>
+      <stop offset="100%" stop-color="#2C3E50"/>
+    </linearGradient>
+    <radialGradient id="pGlow" cx="70%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#FAFAFA" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FAFAFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pMtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58735C"/>
+      <stop offset="100%" stop-color="#33443A"/>
+    </linearGradient>
+    <linearGradient id="pMtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C3E50"/>
+      <stop offset="100%" stop-color="#182229"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#pSky)"/>
+  <circle cx="560" cy="150" r="220" fill="url(#pGlow)"/>
+  <path d="M0,340 L100,270 L220,330 L360,240 L500,320 L620,250 L760,330 L800,300 L800,600 L0,600 Z" fill="url(#pMtn1)"/>
+  <path d="M0,420 L140,360 L300,410 L460,340 L620,410 L800,360 L800,600 L0,600 Z" fill="url(#pMtn2)"/>
+  <g opacity="0.85">
+    <circle cx="400" cy="470" r="10" fill="#253238"/>
+    <circle cx="424" cy="470" r="10" fill="#253238"/>
+  </g>
+</svg>
