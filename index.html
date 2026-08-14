@@ -663,6 +663,32 @@
     </div>
   </section>
 
+  <section id="wind-game" class="wind-game-section" aria-labelledby="wind-game-title">
+    <div class="container">
+      <div class="wind-game" data-wind-game>
+        <div class="wind-game__copy">
+          <p class="section-label" data-i18n="wind.label">Een beetje IJslandse wind</p>
+          <h2 id="wind-game-title" data-i18n="wind.h2">Roep de wind op</h2>
+          <p class="wind-game__lead" data-i18n="wind.lead">Blaas in je microfoon en laat de wind opsteken. Bereik de top en Jérémy waait het landschap in.</p>
+          <div class="wind-game__meter" role="progressbar" aria-label="Windkracht" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="wind-game__meter-fill"></span>
+          </div>
+          <p class="wind-game__status" aria-live="polite" data-wind-status data-i18n="wind.status_ready">Klaar voor een frisse bries?</p>
+          <div class="wind-game__actions">
+            <button type="button" class="btn btn-rsvp" data-wind-start><i class="bi bi-mic-fill" aria-hidden="true"></i><span data-i18n="wind.start">Gebruik microfoon</span></button>
+            <button type="button" class="btn btn-outline-light" data-wind-fallback><i class="bi bi-wind" aria-hidden="true"></i><span data-i18n="wind.fallback">Roep de wind op</span></button>
+          </div>
+        </div>
+        <div class="wind-game__scene" aria-hidden="true">
+          <div class="wind-game__gust wind-game__gust--one"></div>
+          <div class="wind-game__gust wind-game__gust--two"></div>
+          <div class="wind-game__gust wind-game__gust--three"></div>
+          <img class="wind-game__portrait" src="img/wind-game-jeremy-waterfall.jpg" alt="" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ==========================================================================

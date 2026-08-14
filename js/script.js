@@ -32,6 +32,11 @@ const translations = {
     'proposal.label': 'Het Aanzoek', 'proposal.h2': 'Het aanzoek bij Kerlingarfjöll',
     'proposal.h3_journey': 'De reis erheen', 'proposal.h3_moment': 'Het moment', 'proposal.h3_answer': 'Het antwoord',
     'proposal.location_caption': 'Kerlingarfjöll, IJsland · 64°38\'41.8"N 19°17\'14.9"W',
+    'wind.label': 'Een beetje IJslandse wind', 'wind.h2': 'Roep de wind op',
+    'wind.lead': 'Blaas in je microfoon en laat de wind opsteken. Kun jij de windkracht tot het uiterste brengen?',
+    'wind.start': 'Gebruik microfoon', 'wind.fallback': 'Houd vast voor wind',
+    'wind.status_ready': 'Klaar voor een frisse bries?', 'wind.status_listening': 'We luisteren. Blaas maar!',
+    'wind.status_success': 'Windkracht bereikt. Kijk wat er gebeurt!', 'wind.status_unavailable': 'De microfoon is niet beschikbaar. Roep de wind op met de knop.',
     // Wedding Day
     'wedding.label': 'De Grote Dag', 'wedding.h2': 'De Trouwdag',
     'wedding.date': 'Donderdag, 15 juli 2027',
@@ -119,6 +124,11 @@ const translations = {
     'proposal.label': 'The Proposal', 'proposal.h2': 'The Proposal at Kerlingarfj\u00f6ll',
     'proposal.h3_journey': 'The Journey There', 'proposal.h3_moment': 'The Moment', 'proposal.h3_answer': 'The Answer',
     'proposal.location_caption': 'Kerlingarfjöll, Iceland · 64°38\'41.8"N 19°17\'14.9"W',
+    'wind.label': 'A little Icelandic wind', 'wind.h2': 'Call up the wind',
+    'wind.lead': 'Blow into your microphone and make the wind rise. Can you take the wind strength all the way to the top?',
+    'wind.start': 'Use microphone', 'wind.fallback': 'Hold for wind',
+    'wind.status_ready': 'Ready for a fresh breeze?', 'wind.status_listening': 'We are listening. Give us your best gust!',
+    'wind.status_success': 'Wind strength reached. Look what happens!', 'wind.status_unavailable': 'The microphone is unavailable. Call up the wind with the button.',
     'wedding.label': 'The Big Day', 'wedding.h2': 'The Wedding Day',
     'wedding.date': 'Thursday, 15 July 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Guest Arrival & Welcome', 'wedding.arr.note': 'Take your time arriving and greeting one another.',
@@ -198,6 +208,11 @@ const translations = {
     'proposal.label': 'La Demande', 'proposal.h2': 'La demande \u00e0 Kerlingarfj\u00f6ll',
     'proposal.h3_journey': 'Le voyage l\u00e0-bas', 'proposal.h3_moment': 'Le moment', 'proposal.h3_answer': 'La r\u00e9ponse',
     'proposal.location_caption': 'Kerlingarfjöll, Islande · 64°38\'41.8"N 19°17\'14.9"W',
+    'wind.label': 'Un peu de vent islandais', 'wind.h2': 'Appelez le vent',
+    'wind.lead': 'Soufflez dans votre microphone et faites monter le vent. Pouvez-vous pousser la force du vent jusqu’au sommet ?',
+    'wind.start': 'Utiliser le microphone', 'wind.fallback': 'Maintenir pour le vent',
+    'wind.status_ready': 'Prêt pour une brise fraîche ?', 'wind.status_listening': 'Nous écoutons. Soufflez !',
+    'wind.status_success': 'Force du vent atteinte. Regardez ce qui se passe !', 'wind.status_unavailable': 'Le microphone est indisponible. Appelez le vent avec le bouton.',
     'wedding.label': 'Le Grand Jour', 'wedding.h2': 'Le Mariage',
     'wedding.date': 'Jeudi, 15 juillet 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Accueil des invit\u00e9s', 'wedding.arr.note': 'Prenez le temps d’arriver tranquillement et de vous saluer.',
@@ -415,6 +430,96 @@ const initLazyRsvp = () => {
   }, { rootMargin: '300px 0px' });
 
   observer.observe(iframe);
+};
+
+const initWindGame = () => {
+  const game = document.querySelector('[data-wind-game]');
+  if (!game) return;
+
+  const startButton = game.querySelector('[data-wind-start]');
+  const fallbackButton = game.querySelector('[data-wind-fallback]');
+  const meter = game.querySelector('.wind-game__meter');
+  const status = game.querySelector('[data-wind-status]');
+  let stream;
+  let animationFrame;
+  let fallbackInterval;
+  let resetTimeout;
+  let windLevel = 0;
+  let won = false;
+
+  const text = (key) => i18nInstance ? i18nInstance.get(key) : key;
+  const update = (level) => {
+    windLevel = Math.max(0, Math.min(100, level));
+    game.style.setProperty('--wind-level', `${windLevel}%`);
+    meter.setAttribute('aria-valuenow', String(Math.round(windLevel)));
+    game.classList.toggle('is-windy', windLevel > 14);
+    if (!won && windLevel >= 65) {
+      won = true;
+      window.clearInterval(fallbackInterval);
+      game.classList.add('is-won');
+      status.textContent = text('wind.status_success');
+      if (stream) stream.getTracks().forEach((track) => track.stop());
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      resetTimeout = window.setTimeout(() => {
+        won = false;
+        stream = undefined;
+        animationFrame = undefined;
+        game.classList.remove('is-won', 'is-windy');
+        update(0);
+        status.textContent = text('wind.status_ready');
+        startButton.disabled = false;
+      }, 4000);
+    }
+  };
+
+  const stopFallback = () => {
+    window.clearInterval(fallbackInterval);
+    fallbackInterval = undefined;
+    if (!won) update(0);
+  };
+
+  const startFallback = () => {
+    if (won) return;
+    window.clearInterval(fallbackInterval);
+    update(55);
+    fallbackInterval = window.setInterval(() => update(85), 100);
+  };
+
+  fallbackButton.addEventListener('pointerdown', startFallback);
+  fallbackButton.addEventListener('pointerup', stopFallback);
+  fallbackButton.addEventListener('pointerleave', stopFallback);
+  fallbackButton.addEventListener('pointercancel', stopFallback);
+  fallbackButton.addEventListener('keydown', (event) => {
+    if (event.key === ' ' || event.key === 'Enter') startFallback();
+  });
+  fallbackButton.addEventListener('keyup', stopFallback);
+  startButton.addEventListener('click', async () => {
+    if (!navigator.mediaDevices?.getUserMedia) {
+      status.textContent = text('wind.status_unavailable');
+      return;
+    }
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      status.textContent = text('wind.status_listening');
+      startButton.disabled = true;
+      const audioContext = new AudioContext();
+      const analyser = audioContext.createAnalyser();
+      analyser.fftSize = 512;
+      audioContext.createMediaStreamSource(stream).connect(analyser);
+      const samples = new Uint8Array(analyser.fftSize);
+      const sample = () => {
+        if (won) return;
+        analyser.getByteTimeDomainData(samples);
+        const average = samples.reduce((sum, value) => sum + Math.abs(value - 128), 0) / samples.length;
+        const detectedWind = Math.min(100, Math.max(0, (average - 2.2) * 22));
+        update(windLevel * 0.2 + detectedWind * 0.8);
+        animationFrame = window.requestAnimationFrame(sample);
+      };
+      sample();
+    } catch {
+      status.textContent = text('wind.status_unavailable');
+    }
+  });
 };
 
 const initStoryHearts = () => {
@@ -752,6 +857,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSiteLoader();
   initI18n();
   initPersonalInvitation();
+  initWindGame();
   initLazyRsvp();
   initStoryHearts();
   initCountdown();
