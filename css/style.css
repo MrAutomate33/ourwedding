@@ -14,6 +14,7 @@
   --clr-sky:    #BBC3D4;   /* glacier sky    – lightest      */
   --clr-moss:   #9CA04C;   /* Icelandic moss – vivid accent  */
   --clr-gold:   #C8A86B;   /* desert gold    – warm accent   */
+  --clr-heart:  #B23A48;   /* romantic red   – map heart     */
 
   /* ── Bootstrap overrides ── */
   --bs-primary:          var(--clr-moss);
@@ -712,6 +713,7 @@ section {
 }
 
 .location-map {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(68, 69, 46, 0.22);
   border-radius: 0.75rem;
@@ -724,13 +726,20 @@ section {
   height: 320px;
   border: 0;
 }
-.location-map__credit {
-  padding: 0.45rem 0.75rem;
-  color: var(--clr-lichen);
-  background: rgba(187, 195, 212, 0.72);
-}
-.location-map__credit a {
-  color: var(--clr-lichen);
+.location-map__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  color: var(--clr-heart);
+  font-size: 1.55rem;
+  text-shadow: 0 1px 3px rgba(41, 46, 56, 0.7);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 @media (max-width: 575.98px) {
   .location-map iframe {
