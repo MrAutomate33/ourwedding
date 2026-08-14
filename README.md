@@ -1,6 +1,6 @@
-# Mariëlle & Jeremy — Wedding Website
+# Mariëlle & Jérémy — Wedding Website
 
-A static, dependency-light wedding website celebrating Mariëlle & Jeremy's wedding on **15 July 2027** in Europe/Amsterdam time, themed around their proposal at **Kerlingarfjöll, Iceland**. Built with plain HTML, CSS and JavaScript plus Bootstrap 5.3.3 (via CDN), designed to be hosted for free on **GitHub Pages**.
+A static, dependency-light wedding website celebrating Mariëlle & Jérémy's wedding on **15 July 2027** in Europe/Amsterdam time, themed around their proposal at **Kerlingarfjöll, Iceland**. Built with plain HTML, CSS and JavaScript plus Bootstrap 5.3.3 (via CDN), designed to be hosted for free on **GitHub Pages**.
 
 This README is written for beginners — no build tools, frameworks, or npm installs are required.
 
@@ -108,7 +108,7 @@ Compress photos before uploading (e.g. with [Squoosh](https://squoosh.app/)) to 
 
 ## 7. Microsoft Forms RSVP Setup
 
-1. Go to [forms.microsoft.com](https://forms.microsoft.com) and create a new form named e.g. "Wedding RSVP — Mariëlle & Jeremy".
+1. Go to [forms.microsoft.com](https://forms.microsoft.com) and create a new form named e.g. "Wedding RSVP — Mariëlle & Jérémy".
 2. Recommended form questions:
    - Full name(s) of guest(s)
    - Will you attend? (Yes / No)
@@ -232,4 +232,4 @@ Whichever option you choose, moderate messages before they go public and avoid e
 
 ## License / Credit
 
-This is a personal project for Mariëlle & Jeremy's wedding. Feel free to fork and adapt the structure for your own wedding — please replace all personal content, photos, and placeholders with your own.
+This is a personal project for Mariëlle & Jérémy's wedding. Feel free to fork and adapt the structure for your own wedding — please replace all personal content, photos, and placeholders with your own.

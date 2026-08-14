@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Mariëlle & Jeremy — Wedding Website Stylesheet
+  Mariëlle & Jérémy — Wedding Website Stylesheet
    Theme: Romantic Icelandic Nature
    ========================================================================== */
 
@@ -81,7 +81,7 @@ body[aria-busy="true"] {
   animation: loader-image-in 2.4s ease forwards;
 }
 .site-loader__veil {
-  background: linear-gradient(180deg, rgba(41, 46, 56, 0.62), rgba(41, 46, 56, 0.9));
+  background: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.62), rgb(from var(--clr-rock) r g b / 0.9));
 }
 .site-loader__content {
   position: relative;
@@ -106,6 +106,7 @@ body[aria-busy="true"] {
   font-size: clamp(2.3rem, 7vw, 4.5rem);
   font-style: italic;
   line-height: 1;
+  white-space: nowrap;
 }
 .site-loader__names span {
   color: var(--clr-moss);
@@ -115,7 +116,7 @@ body[aria-busy="true"] {
   height: 1px;
   margin: 0 auto 1.2rem;
   overflow: hidden;
-  background: rgba(187, 195, 212, 0.28);
+  background: rgb(from var(--clr-sky) r g b / 0.28);
 }
 .site-loader__line span {
   display: block;
@@ -201,14 +202,14 @@ section {
    4. Navbar
    -------------------------------------------------------------------------- */
 .navbar-wedding {
-  background-color: rgba(41, 46, 56, 0.65);
+  background-color: rgb(from var(--clr-rock) r g b / 0.65);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar-wedding.scrolled {
-  background-color: rgba(41, 46, 56, 0.95);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  background-color: rgb(from var(--clr-rock) r g b / 0.95);
+  box-shadow: 0 2px 12px rgb(from var(--clr-rock) r g b / 0.3);
 }
 .navbar-wedding .navbar-brand {
   font-family: var(--font-heading);
@@ -217,7 +218,7 @@ section {
   letter-spacing: 0.03em;
 }
 .navbar-wedding .nav-link {
-  color: rgba(250, 250, 250, 0.85);
+  color: rgb(from var(--clr-sky) r g b / 0.85);
   font-weight: 500;
 }
 .navbar-wedding .nav-link:hover,
@@ -228,10 +229,10 @@ section {
   min-width: 13rem;
   margin-top: 0.65rem;
   padding: 0.5rem;
-  border: 1px solid rgba(200, 168, 107, 0.35);
+  border: 1px solid rgb(from var(--clr-gold) r g b / 0.35);
   border-radius: 0.5rem;
   background: var(--clr-rock);
-  box-shadow: 0 0.75rem 2rem rgba(41, 46, 56, 0.28);
+  box-shadow: 0 0.75rem 2rem rgb(from var(--clr-rock) r g b / 0.28);
 }
 .navbar-wedding .dropdown-item {
   padding: 0.55rem 0.75rem;
@@ -311,7 +312,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 22, 28, 0.45) 0%, rgba(41, 46, 56, 0.72) 65%, rgba(20, 22, 28, 0.92) 100%);
+  background: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.45) 0%, rgb(from var(--clr-rock) r g b / 0.72) 65%, rgb(from var(--clr-rock) r g b / 0.92) 100%);
   z-index: 1;
 }
 .hero-content {
@@ -359,8 +360,8 @@ section {
   margin: 1.5rem 0;
 }
 .countdown-block {
-  background: rgba(250, 250, 250, 0.1);
-  border: 1px solid rgba(156, 160, 76, 0.35);
+  background: rgb(from var(--clr-sky) r g b / 0.1);
+  border: 1px solid rgb(from var(--clr-moss) r g b / 0.35);
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
   min-width: 88px;
@@ -383,12 +384,12 @@ section {
    7. Expedition / Coordinates card
    -------------------------------------------------------------------------- */
 .expedition-card {
-  background: linear-gradient(135deg, var(--clr-rock), #292E38);
+  background: linear-gradient(135deg, var(--clr-rock), var(--clr-rock));
   color: var(--clr-sky);
   border-radius: 1rem;
   padding: 3rem 2rem;
-  border: 1px solid rgba(156, 160, 76, 0.25);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgb(from var(--clr-moss) r g b / 0.25);
+  box-shadow: 0 10px 40px rgb(from var(--clr-rock) r g b / 0.25);
 }
 .expedition-card .coord-label {
   text-transform: uppercase;
@@ -487,7 +488,7 @@ section {
   background: var(--clr-sky);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgb(from var(--clr-rock) r g b / 0.06);
 }
 .timeline-date {
   font-size: 0.85rem;
@@ -498,11 +499,12 @@ section {
 
 /* Featured milestone: Kerlingarfjöll */
 .timeline-item.featured .timeline-card {
-  background: linear-gradient(160deg, var(--clr-rock), #292E38);
+  background: linear-gradient(160deg, var(--clr-rock), var(--clr-rock));
   color: var(--clr-sky);
   padding: 2.5rem;
-  border: 1px solid rgba(200, 168, 107, 0.6);
-  box-shadow: 0 8px 24px rgba(41, 46, 56, 0.18);
+  margin-top: 1.5rem;
+  border: 1px solid rgb(from var(--clr-gold) r g b / 0.6);
+  box-shadow: 0 8px 24px rgb(from var(--clr-rock) r g b / 0.18);
 }
 .timeline-item.featured .timeline-icon {
   background: var(--clr-moss);
@@ -587,7 +589,7 @@ section {
   display: flex;
   gap: 1.25rem;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(128, 145, 165, 0.2);
+  border-bottom: 1px solid rgb(from var(--clr-slate) r g b / 0.2);
 }
 .schedule-item:last-child {
   border-bottom: none;
@@ -596,6 +598,12 @@ section {
   min-width: 100px;
   font-weight: 600;
   color: var(--clr-lichen);
+}
+.schedule-note {
+  margin-top: 0.2rem;
+  color: rgb(from var(--clr-rock) r g b / 0.68);
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 .schedule-icon {
   color: var(--clr-moss);
@@ -648,7 +656,7 @@ section {
 .gallery-caption {
   position: absolute;
   inset: auto 0 0 0;
-  background: linear-gradient(0deg, rgba(41, 46, 56, 0.85), transparent);
+  background: linear-gradient(0deg, rgb(from var(--clr-rock) r g b / 0.85), transparent);
   color: var(--clr-sky);
   padding: 0.75rem 1rem;
   transform: translateY(100%);
@@ -715,16 +723,17 @@ section {
 .location-map {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(68, 69, 46, 0.22);
+  border: 1px solid rgb(from var(--clr-lichen) r g b / 0.22);
   border-radius: 0.75rem;
   background: var(--clr-sky);
-  box-shadow: 0 4px 14px rgba(41, 46, 56, 0.08);
+  box-shadow: 0 4px 14px rgb(from var(--clr-rock) r g b / 0.08);
 }
 .location-map iframe {
   display: block;
   width: 100%;
   height: 320px;
   border: 0;
+  pointer-events: none;
 }
 .location-map__pin {
   position: absolute;
@@ -737,7 +746,7 @@ section {
   place-items: center;
   color: var(--clr-heart);
   font-size: 1.55rem;
-  text-shadow: 0 1px 3px rgba(41, 46, 56, 0.7);
+  text-shadow: 0 1px 3px rgb(from var(--clr-rock) r g b / 0.7);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -753,25 +762,39 @@ section {
 .dress-code-card,
 .gift-card,
 .ceremony-master-card {
-  border: 1px solid rgba(128, 145, 165, 0.2);
+  border: 1px solid rgb(from var(--clr-gold) r g b / 0.42);
   border-radius: 0.75rem;
-  background: var(--clr-sky);
+  background: var(--clr-rock);
+  color: var(--clr-sky);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+}
+.dress-code-card .text-moss,
+.gift-card .text-moss,
+.ceremony-master-card .text-moss {
+  color: var(--clr-moss) !important;
+}
+.dress-code-card h3,
+.gift-card h3,
+.ceremony-master-card h3 {
+  color: var(--clr-sky);
+}
+.dress-code-card a,
+.gift-card a,
+.ceremony-master-card a {
+  color: var(--clr-gold);
 }
 .dress-code-card:hover,
 .gift-card:hover,
 .ceremony-master-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: var(--clr-moss);
+  box-shadow: 0 10px 25px rgb(from var(--clr-rock) r g b / 0.22);
 }
 
-/* --------------------------------------------------------------------------
-   17. FAQ accordion
-   -------------------------------------------------------------------------- */
 .accordion-item {
   border: none;
-  border-bottom: 1px solid rgba(128, 145, 165, 0.2);
+  border-bottom: 1px solid rgb(from var(--clr-slate) r g b / 0.2);
   background: transparent;
 }
 .accordion-button {
@@ -798,7 +821,7 @@ section {
 }
 .accordion-button:not(.collapsed) {
   color: var(--clr-lichen);
-  background: rgba(156, 160, 76, 0.08);
+  background: rgb(from var(--clr-moss) r g b / 0.08);
   box-shadow: none;
 }
 .accordion-button:focus {
@@ -864,7 +887,7 @@ section {
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgb(from var(--clr-rock) r g b / 0.2);
 }
 .back-to-top.is-visible {
   opacity: 1;
@@ -956,8 +979,8 @@ section {
 }
 .lang-btn {
   background: transparent;
-  border: 1px solid rgba(250, 250, 250, 0.3);
-  color: rgba(250, 250, 250, 0.65);
+  border: 1px solid rgb(from var(--clr-sky) r g b / 0.3);
+  color: rgb(from var(--clr-sky) r g b / 0.65);
   padding: 0.18rem 0.5rem;
   border-radius: 0.3rem;
   font-size: 0.7rem;
@@ -968,7 +991,7 @@ section {
   line-height: 1.6;
 }
 .lang-btn:hover {
-  border-color: rgba(156, 160, 76, 0.6);
+  border-color: rgb(from var(--clr-moss) r g b / 0.6);
   color: var(--clr-moss);
 }
 .lang-btn.active {
@@ -985,7 +1008,7 @@ section {
   display: flex;
   gap: 6px;
   padding: 0.75rem 0;
-  border-top: 1px solid rgba(250, 250, 250, 0.1);
+  border-top: 1px solid rgb(from var(--clr-sky) r g b / 0.1);
   margin-top: 0.5rem;
 }
 .offcanvas-lang-switcher .lang-btn {
@@ -993,124 +1016,6 @@ section {
   text-align: center;
   padding: 0.4rem 0.25rem;
   font-size: 0.8rem;
-}
-
-/* --------------------------------------------------------------------------
-   26. Glossary section
-   -------------------------------------------------------------------------- */
-#glossary {
-  background: linear-gradient(160deg, #292E38 0%, var(--clr-rock) 60%, #44452E 100%);
-  color: var(--clr-sky);
-  position: relative;
-  overflow: hidden;
-}
-/* Subtle volcanic texture overlay */
-#glossary::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-radial-gradient(circle at 30% 50%, rgba(200, 168, 107, 0.06) 0, transparent 60px),
-    repeating-radial-gradient(circle at 70% 20%, rgba(156, 160, 76, 0.04) 0, transparent 80px);
-  pointer-events: none;
-}
-#glossary .section-label {
-  color: var(--clr-gold);
-}
-#glossary h2 {
-  color: var(--clr-sky);
-}
-#glossary .glossary-intro {
-  color: var(--clr-sky);
-  max-width: 600px;
-  margin-inline: auto;
-}
-
-/* Glossary grid */
-.glossary-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-top: 3rem;
-}
-@media (min-width: 576px) {
-  .glossary-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 992px) {
-  .glossary-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* Individual glossary card */
-.glossary-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(200, 168, 107, 0.25);
-  border-radius: 1rem;
-  padding: 2rem 1.75rem;
-  position: relative;
-  transition: border-color 0.3s, transform 0.3s;
-}
-.glossary-card:hover {
-  border-color: rgba(200, 168, 107, 0.55);
-  transform: translateY(-3px);
-}
-/* Accent line on left edge */
-.glossary-card::before {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  bottom: 1.5rem;
-  left: 0;
-  width: 3px;
-  border-radius: 0 2px 2px 0;
-  background: linear-gradient(180deg, var(--clr-gold), var(--clr-moss));
-}
-.glossary-term {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
-  color: var(--clr-sky);
-  margin-bottom: 0.15rem;
-  line-height: 1.2;
-}
-.glossary-phonetic {
-  font-size: 0.75rem;
-  color: rgba(250, 250, 250, 0.45);
-  letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
-  font-family: 'Courier New', Courier, monospace;
-}
-.glossary-translation {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--clr-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.75rem;
-}
-.glossary-desc {
-  font-size: 0.9rem;
-  color: var(--clr-sky);
-  line-height: 1.65;
-  margin-bottom: 0;
-}
-
-/* Featured card (the proposal quote) spans full width on large screens */
-.glossary-card.featured {
-  border-color: rgba(156, 160, 76, 0.35);
-}
-.glossary-card.featured::before {
-  background: linear-gradient(180deg, var(--clr-moss), var(--clr-lichen));
-}
-.glossary-card.featured .glossary-term {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
-.glossary-card.featured .glossary-translation {
-  color: var(--clr-moss);
-}
-@media (min-width: 992px) {
-  .glossary-card.featured {
-    grid-column: span 2;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1199,7 +1104,6 @@ iframe {
     font-size: 0.85rem;
   }
 
-  .glossary-card,
   .timeline-item.featured .timeline-card {
     padding: 1.5rem 1.25rem;
   }
