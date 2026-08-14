@@ -7,28 +7,25 @@
    1. Root variables & Bootstrap overrides
    -------------------------------------------------------------------------- */
 :root {
-  --color-midnight: #292E38;
-  --color-moss:     #44452E;
-  --color-aurora:   #9CA04C;   /* vivid Icelandic moss */
-  --color-volcanic: #8091A5;   /* mountain slate */
-  --color-snow:     #BBC3D4;
-  --color-sand:     #BBC3D4;   /* glacier sky-light */
-  --color-mist:     #BBC3D4;
-  --color-text:     #292E38;
-  --color-earth:    #44452E;
-  --color-ochre:    #8091A5;   /* slate, used as secondary accent */
+  /* ── 6-colour Icelandic palette ── */
+  --clr-rock:   #292E38;   /* volcanic rock  – deepest dark  */
+  --clr-lichen: #44452E;   /* deep lichen    – warm dark     */
+  --clr-slate:  #8091A5;   /* mountain slate – muted grey    */
+  --clr-sky:    #BBC3D4;   /* glacier sky    – lightest      */
+  --clr-moss:   #9CA04C;   /* Icelandic moss – vivid accent  */
+  --clr-gold:   #C8A86B;   /* desert gold    – warm accent   */
 
-  /* Bootstrap variable overrides */
-  --bs-primary: var(--color-moss);
-  --bs-primary-rgb: 68, 69, 46;
-  --bs-secondary: var(--color-volcanic);
-  --bs-body-color: var(--color-text);
-  --bs-body-bg: var(--color-snow);
-  --bs-link-color: var(--color-moss);
-  --bs-link-hover-color: var(--color-aurora);
+  /* ── Bootstrap overrides ── */
+  --bs-primary:          var(--clr-moss);
+  --bs-primary-rgb:      156, 160, 76;
+  --bs-secondary:        var(--clr-slate);
+  --bs-body-color:       var(--clr-rock);
+  --bs-body-bg:          var(--clr-sky);
+  --bs-link-color:       var(--clr-lichen);
+  --bs-link-hover-color: var(--clr-gold);
 
   --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* --------------------------------------------------------------------------
@@ -40,15 +37,15 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-text);
-  background-color: var(--color-snow);
+  color: var(--clr-rock);
+  background-color: var(--clr-sky);
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6,
 .font-heading {
   font-family: var(--font-heading);
-  color: var(--color-midnight);
+  color: var(--clr-rock);
 }
 
 section h2 {
@@ -59,7 +56,7 @@ section h2 {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.8rem;
-  color: var(--color-moss);
+  color: var(--clr-lichen);
   font-weight: 500;
 }
 
@@ -71,10 +68,10 @@ a:hover {
 }
 
 /* Alternating section backgrounds */
-.bg-snow { background-color: var(--color-snow); }
-.bg-mist { background-color: var(--color-mist); }
-.bg-midnight { background-color: var(--color-midnight); color: var(--color-snow); }
-.bg-midnight h2, .bg-midnight h3 { color: var(--color-snow); }
+.bg-snow { background-color: var(--clr-sky); }
+.bg-mist { background-color: var(--clr-sky); }
+.bg-midnight { background-color: var(--clr-rock); color: var(--clr-sky); }
+.bg-midnight h2, .bg-midnight h3 { color: var(--clr-sky); }
 
 section {
   padding-top: 5rem;
@@ -90,8 +87,8 @@ section {
   left: -999px;
   top: auto;
   z-index: 2000;
-  background: var(--color-midnight);
-  color: var(--color-snow);
+  background: var(--clr-rock);
+  color: var(--clr-sky);
   padding: 0.75rem 1.25rem;
   border-radius: 0 0 0.5rem 0;
 }
@@ -101,7 +98,7 @@ section {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-aurora);
+  outline: 3px solid var(--clr-moss);
   outline-offset: 3px;
 }
 
@@ -121,7 +118,7 @@ section {
 .navbar-wedding .navbar-brand {
   font-family: var(--font-heading);
   font-style: italic;
-  color: var(--color-snow);
+  color: var(--clr-sky);
   letter-spacing: 0.03em;
 }
 .navbar-wedding .nav-link {
@@ -130,19 +127,19 @@ section {
 }
 .navbar-wedding .nav-link:hover,
 .navbar-wedding .nav-link.active {
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 .btn-rsvp {
-  background-color: var(--color-aurora);
-  border-color: var(--color-aurora);
-  color: var(--color-midnight);
+  background-color: var(--clr-moss);
+  border-color: var(--clr-moss);
+  color: var(--clr-rock);
   font-weight: 600;
 }
 .btn-rsvp:hover,
 .btn-rsvp:focus {
-  background-color: var(--color-snow);
-  border-color: var(--color-snow);
-  color: var(--color-midnight);
+  background-color: var(--clr-sky);
+  border-color: var(--clr-sky);
+  color: var(--clr-rock);
 }
 
 /* --------------------------------------------------------------------------
@@ -155,7 +152,7 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-snow);
+  color: var(--clr-sky);
   overflow: hidden;
 }
 .hero-parallax {
@@ -179,13 +176,13 @@ section {
   padding: 1.5rem;
 }
 .hero-content h1 {
-  color: var(--color-snow);
+  color: var(--clr-sky);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-style: italic;
 }
 .hero-content .hero-sub {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  color: var(--color-sand);
+  color: var(--clr-gold);
 }
 .hero-content .hero-date {
   letter-spacing: 0.1em;
@@ -198,7 +195,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  color: var(--color-snow);
+  color: var(--clr-sky);
   animation: bounce 2s infinite;
   font-size: 1.5rem;
 }
@@ -229,21 +226,21 @@ section {
   font-family: var(--font-heading);
   font-size: 2rem;
   display: block;
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 .countdown-block .countdown-label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-mist);
+  color: var(--clr-sky);
 }
 
 /* --------------------------------------------------------------------------
    7. Expedition / Coordinates card
    -------------------------------------------------------------------------- */
 .expedition-card {
-  background: linear-gradient(135deg, var(--color-midnight), #292E38);
-  color: var(--color-snow);
+  background: linear-gradient(135deg, var(--clr-rock), #292E38);
+  color: var(--clr-sky);
   border-radius: 1rem;
   padding: 3rem 2rem;
   border: 1px solid rgba(156, 160, 76, 0.25);
@@ -253,7 +250,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.8rem;
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 .expedition-card .coord-value {
   font-family: var(--font-heading);
@@ -273,7 +270,7 @@ section {
   inset: -2px;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(120deg, var(--color-ochre), var(--color-aurora), var(--color-moss));
+  background: linear-gradient(120deg, var(--clr-gold), var(--clr-moss), var(--clr-lichen));
   background-size: 200% 200%;
   animation: aurora-shift 8s ease infinite;
 }
@@ -323,7 +320,7 @@ section {
   bottom: 0;
   left: 24px;
   width: 3px;
-  background: linear-gradient(180deg, var(--color-moss), var(--color-aurora));
+  background: linear-gradient(180deg, var(--clr-lichen), var(--clr-moss));
   opacity: 0.35;
 }
 .timeline-progress {
@@ -332,7 +329,7 @@ section {
   left: 24px;
   width: 3px;
   height: 0%;
-  background: var(--color-aurora);
+  background: var(--clr-moss);
   transition: height 0.2s ease-out;
 }
 .timeline-item {
@@ -354,43 +351,43 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--color-snow);
-  border: 2px solid var(--color-moss);
+  background: var(--clr-sky);
+  border: 2px solid var(--clr-lichen);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-moss);
+  color: var(--clr-lichen);
   font-size: 1.25rem;
   z-index: 1;
 }
 .timeline-card {
-  background: var(--color-mist);
+  background: var(--clr-sky);
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 .timeline-date {
   font-size: 0.85rem;
-  color: var(--color-volcanic);
+  color: var(--clr-slate);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 /* Featured milestone: Kerlingarfjöll */
 .timeline-item.featured .timeline-card {
-  background: linear-gradient(160deg, var(--color-midnight), #292E38);
-  color: var(--color-snow);
+  background: linear-gradient(160deg, var(--clr-rock), #292E38);
+  color: var(--clr-sky);
   padding: 2.5rem;
-  border: 1px solid var(--color-aurora);
+  border: 1px solid var(--clr-moss);
   box-shadow: 0 0 0 1px rgba(156, 160, 76, 0.2), 0 0 28px rgba(156, 160, 76, 0.12);
 }
 .timeline-item.featured .timeline-icon {
-  background: var(--color-aurora);
-  border-color: var(--color-aurora);
-  color: var(--color-midnight);
+  background: var(--clr-moss);
+  border-color: var(--clr-moss);
+  color: var(--clr-rock);
 }
 .timeline-item.featured .timeline-date {
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 
 /* Desktop: alternating left/right layout using a central line */
@@ -445,7 +442,7 @@ section {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.5rem;
-  color: var(--color-moss);
+  color: var(--clr-lichen);
 }
 
 /* --------------------------------------------------------------------------
@@ -463,10 +460,10 @@ section {
 .schedule-time {
   min-width: 100px;
   font-weight: 600;
-  color: var(--color-moss);
+  color: var(--clr-lichen);
 }
 .schedule-icon {
-  color: var(--color-aurora);
+  color: var(--clr-moss);
   font-size: 1.5rem;
 }
 
@@ -501,7 +498,7 @@ section {
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 4 / 3;
-  background-color: var(--color-mist);
+  background-color: var(--clr-sky);
 }
 .gallery-item img {
   width: 100%;
@@ -517,7 +514,7 @@ section {
   position: absolute;
   inset: auto 0 0 0;
   background: linear-gradient(0deg, rgba(41, 46, 56, 0.85), transparent);
-  color: var(--color-snow);
+  color: var(--clr-sky);
   padding: 0.75rem 1rem;
   transform: translateY(100%);
   transition: transform 0.3s ease;
@@ -541,7 +538,7 @@ section {
   height: 0;
   overflow: hidden;
   border-radius: 0.75rem;
-  background: var(--color-mist);
+  background: var(--clr-sky);
 }
 @media (min-width: 768px) {
   .rsvp-iframe-container {
@@ -565,7 +562,7 @@ section {
 .ceremony-master-card {
   border: 1px solid rgba(128, 145, 165, 0.2);
   border-radius: 0.75rem;
-  background: var(--color-snow);
+  background: var(--clr-sky);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
 }
@@ -586,24 +583,24 @@ section {
 }
 .accordion-button {
   font-family: var(--font-heading);
-  color: var(--color-midnight);
+  color: var(--clr-rock);
   background: transparent;
 }
 .accordion-button:not(.collapsed) {
-  color: var(--color-moss);
+  color: var(--clr-lichen);
   background: rgba(156, 160, 76, 0.08);
   box-shadow: none;
 }
 .accordion-button:focus {
-  box-shadow: 0 0 0 3px var(--color-aurora);
+  box-shadow: 0 0 0 3px var(--clr-moss);
 }
 
 /* --------------------------------------------------------------------------
    18. Guestbook
    -------------------------------------------------------------------------- */
 .guestbook-example {
-  background: var(--color-mist);
-  border-left: 4px solid var(--color-aurora);
+  background: var(--clr-sky);
+  border-left: 4px solid var(--clr-moss);
   border-radius: 0.5rem;
   padding: 1.25rem 1.5rem;
 }
@@ -611,28 +608,28 @@ section {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-volcanic);
+  color: var(--clr-slate);
 }
 
 /* --------------------------------------------------------------------------
    19. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background: var(--color-midnight);
-  color: var(--color-mist);
+  background: var(--clr-rock);
+  color: var(--clr-sky);
   padding: 3rem 0 2rem;
 }
 .site-footer a {
-  color: var(--color-mist);
+  color: var(--clr-sky);
 }
 .site-footer a:hover {
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 .site-footer .footer-brand {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.5rem;
-  color: var(--color-snow);
+  color: var(--clr-sky);
 }
 
 /* --------------------------------------------------------------------------
@@ -646,8 +643,8 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--color-moss);
-  color: var(--color-snow);
+  background: var(--clr-lichen);
+  color: var(--clr-sky);
   border: none;
   display: flex;
   align-items: center;
@@ -665,16 +662,30 @@ section {
   transform: translateY(0);
 }
 .back-to-top:hover {
-  background: var(--color-aurora);
-  color: var(--color-midnight);
+  background: var(--clr-moss);
+  color: var(--clr-rock);
 }
 
 /* --------------------------------------------------------------------------
    21. Utilities
    -------------------------------------------------------------------------- */
-.text-aurora { color: var(--color-aurora); }
-.text-moss { color: var(--color-moss); }
-.text-sand { color: var(--color-sand); }
+/* text colour helpers */
+.text-moss   { color: var(--clr-moss);   }
+.text-lichen { color: var(--clr-lichen); }
+.text-slate  { color: var(--clr-slate);  }
+.text-sky    { color: var(--clr-sky);    }
+.text-gold   { color: var(--clr-gold);   }
+/* backward-compat aliases used in markup */
+.text-aurora { color: var(--clr-moss);   }
+.text-sand   { color: var(--clr-gold);   }
+
+/* background helpers (sets paired text colour automatically) */
+.bg-rock   { background-color: var(--clr-rock);   color: var(--clr-sky);  }
+.bg-lichen { background-color: var(--clr-lichen); color: var(--clr-sky);  }
+.bg-slate  { background-color: var(--clr-slate);  color: var(--clr-rock); }
+.bg-sky    { background-color: var(--clr-sky);    color: var(--clr-rock); }
+.bg-moss   { background-color: var(--clr-moss);   color: var(--clr-rock); }
+.bg-gold   { background-color: var(--clr-gold);   color: var(--clr-rock); }
 
 /* --------------------------------------------------------------------------
    22. Reduced motion
@@ -739,15 +750,15 @@ section {
 }
 .lang-btn:hover {
   border-color: rgba(156, 160, 76, 0.6);
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 .lang-btn.active {
-  background: var(--color-aurora);
-  border-color: var(--color-aurora);
-  color: var(--color-midnight);
+  background: var(--clr-moss);
+  border-color: var(--clr-moss);
+  color: var(--clr-rock);
 }
 .lang-btn:focus-visible {
-  outline: 2px solid var(--color-aurora);
+  outline: 2px solid var(--clr-moss);
   outline-offset: 2px;
 }
 /* Offcanvas language switcher */
@@ -769,8 +780,8 @@ section {
    26. Glossary section
    -------------------------------------------------------------------------- */
 #glossary {
-  background: linear-gradient(160deg, #292E38 0%, var(--color-midnight) 60%, #44452E 100%);
-  color: var(--color-snow);
+  background: linear-gradient(160deg, #292E38 0%, var(--clr-rock) 60%, #44452E 100%);
+  color: var(--clr-sky);
   position: relative;
   overflow: hidden;
 }
@@ -780,18 +791,18 @@ section {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-radial-gradient(circle at 30% 50%, rgba(128, 145, 165, 0.06) 0, transparent 60px),
+    repeating-radial-gradient(circle at 30% 50%, rgba(200, 168, 107, 0.06) 0, transparent 60px),
     repeating-radial-gradient(circle at 70% 20%, rgba(156, 160, 76, 0.04) 0, transparent 80px);
   pointer-events: none;
 }
 #glossary .section-label {
-  color: var(--color-ochre);
+  color: var(--clr-gold);
 }
 #glossary h2 {
-  color: var(--color-snow);
+  color: var(--clr-sky);
 }
 #glossary .glossary-intro {
-  color: var(--color-mist);
+  color: var(--clr-sky);
   max-width: 600px;
   margin-inline: auto;
 }
@@ -813,14 +824,14 @@ section {
 /* Individual glossary card */
 .glossary-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(128, 145, 165, 0.25);
+  border: 1px solid rgba(200, 168, 107, 0.25);
   border-radius: 1rem;
   padding: 2rem 1.75rem;
   position: relative;
   transition: border-color 0.3s, transform 0.3s;
 }
 .glossary-card:hover {
-  border-color: rgba(128, 145, 165, 0.55);
+  border-color: rgba(200, 168, 107, 0.55);
   transform: translateY(-3px);
 }
 /* Accent line on left edge */
@@ -832,13 +843,13 @@ section {
   left: 0;
   width: 3px;
   border-radius: 0 2px 2px 0;
-  background: linear-gradient(180deg, var(--color-ochre), var(--color-aurora));
+  background: linear-gradient(180deg, var(--clr-gold), var(--clr-moss));
 }
 .glossary-term {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: clamp(1.3rem, 2.5vw, 1.65rem);
-  color: var(--color-snow);
+  color: var(--clr-sky);
   margin-bottom: 0.15rem;
   line-height: 1.2;
 }
@@ -852,14 +863,14 @@ section {
 .glossary-translation {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-ochre);
+  color: var(--clr-gold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
 }
 .glossary-desc {
   font-size: 0.9rem;
-  color: var(--color-mist);
+  color: var(--clr-sky);
   line-height: 1.65;
   margin-bottom: 0;
 }
@@ -869,13 +880,13 @@ section {
   border-color: rgba(156, 160, 76, 0.35);
 }
 .glossary-card.featured::before {
-  background: linear-gradient(180deg, var(--color-aurora), var(--color-moss));
+  background: linear-gradient(180deg, var(--clr-moss), var(--clr-lichen));
 }
 .glossary-card.featured .glossary-term {
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .glossary-card.featured .glossary-translation {
-  color: var(--color-aurora);
+  color: var(--clr-moss);
 }
 @media (min-width: 992px) {
   .glossary-card.featured {
