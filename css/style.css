@@ -401,30 +401,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   8. Aurora gradient effect
-   -------------------------------------------------------------------------- */
-.aurora-effect {
-  position: relative;
-  isolation: isolate;
-}
-.aurora-effect::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  z-index: -1;
-  border-radius: inherit;
-  background: linear-gradient(120deg, var(--clr-gold), var(--clr-moss), var(--clr-lichen));
-  background-size: 200% 200%;
-  animation: aurora-shift 8s ease infinite;
-}
-@keyframes aurora-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* --------------------------------------------------------------------------
-   9. Mountain section dividers
+   8. Mountain section dividers
    -------------------------------------------------------------------------- */
 .mountain-divider {
   width: 100%;
@@ -439,7 +416,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   10. Topographic subtle pattern
+  9. Topographic subtle pattern
    -------------------------------------------------------------------------- */
 .topo-pattern {
   background-color: var(--clr-sky);
@@ -450,7 +427,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   11. Timeline (Our Journey)
+  10. Timeline (Our Journey)
    -------------------------------------------------------------------------- */
 .timeline {
   position: relative;
@@ -523,8 +500,8 @@ section {
   background: linear-gradient(160deg, var(--clr-rock), #292E38);
   color: var(--clr-sky);
   padding: 2.5rem;
-  border: 1px solid var(--clr-moss);
-  box-shadow: 0 0 0 1px rgba(156, 160, 76, 0.2), 0 0 28px rgba(156, 160, 76, 0.12);
+  border: 1px solid rgba(200, 168, 107, 0.6);
+  box-shadow: 0 8px 24px rgba(41, 46, 56, 0.18);
 }
 .timeline-item.featured .timeline-icon {
   background: var(--clr-moss);
@@ -533,6 +510,18 @@ section {
 }
 .timeline-item.featured .timeline-date {
   color: var(--clr-moss);
+}
+.timeline-item.featured picture {
+  display: block;
+  margin: 1rem 0;
+}
+.timeline-item.featured picture img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 42%;
+  margin: 0 !important;
 }
 
 /* Desktop: alternating left/right layout using a central line */
