@@ -894,3 +894,99 @@ section {
   }
 }
 
+/* --------------------------------------------------------------------------
+   27. Responsive polish
+   -------------------------------------------------------------------------- */
+img,
+iframe {
+  max-width: 100%;
+}
+
+.container {
+  --bs-gutter-x: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-wedding .container {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 6rem 1rem 4rem;
+  }
+
+  .hero-content {
+    width: min(100%, 34rem);
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.35rem, 10vw, 4rem);
+  }
+
+  .countdown {
+    gap: 0.55rem;
+  }
+
+  .countdown-block {
+    flex: 1 1 4.5rem;
+    min-width: 0;
+    padding: 0.65rem 0.45rem;
+  }
+
+  .countdown-block .countdown-number {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+
+  .countdown-block .countdown-label {
+    font-size: 0.65rem;
+  }
+
+  section {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    --bs-gutter-x: 1.5rem;
+  }
+
+  section {
+    padding-block: 3.5rem;
+  }
+
+  .hero {
+    padding-inline: 0.5rem;
+  }
+
+  .hero-content .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn {
+    width: 100%;
+    margin-inline: 0 !important;
+  }
+
+  .schedule-item {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .schedule-time {
+    min-width: 5.5rem;
+    font-size: 0.85rem;
+  }
+
+  .glossary-card,
+  .timeline-item.featured .timeline-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .gallery-filters .btn {
+    flex: 1 1 auto;
+  }
+}
+
