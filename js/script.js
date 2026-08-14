@@ -11,7 +11,7 @@
 const translations = {
   nl: {
     // Navigation
-    'nav.home': 'Home', 'nav.story': 'Ons Verhaal', 'nav.journey': 'Onze Reis',
+    'nav.home': 'Home', 'nav.more': 'Meer', 'nav.story': 'Ons Verhaal', 'nav.journey': 'Onze Reis',
     'nav.proposal': 'Het Aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus',
     'nav.gallery': 'Galerij', 'nav.ceremony': 'Ceremoniemeesters', 'nav.faq': 'FAQ',
@@ -43,7 +43,7 @@ const translations = {
     'journey.item1.title': 'Eerste ontmoeting', 'journey.item2.title': 'Eerste afspraak',
     'journey.item3.title': 'Verliefd worden', 'journey.item4.title': 'Eerste groot avontuur',
     'journey.item5.title': 'Een leven opbouwen samen', 'journey.item6.title': 'IJsland avontuur',
-    'journey.item7.title': 'Kerlingarfjöll', 'journey.item7.label': 'Het Aanzoek',
+    'journey.item7.title': 'Kerlingarfjöll', 'journey.item7.label': 'Het Aanzoek', 'journey.item7.date': '15 september 2025',
     'journey.item7.text': 'Hoog in de bergen van Kerlingarfjöll, omgeven door IJslands adembenemend landschap, begon ons nieuwe hoofdstuk.',
     'journey.item8.title': 'Verloving', 'journey.item9.title': 'Trouwdag',
     'journey.item9.text': 'We kunnen niet wachten om dit nieuwe hoofdstuk te vieren met onze familie en vrienden.',
@@ -97,9 +97,9 @@ const translations = {
     'faq.q1': 'Hoe laat moet ik er zijn?',
     'faq.a1': 'Wees er om 14:30 voor ontvangst van gasten, voor aanvang van de ceremonie om 15:00.',
     'faq.q2': 'Wat is de dresscode?', 'faq.a2': 'Formele zomerse chic. Zie het dresscode-gedeelte voor meer informatie.',
-    'faq.q3': 'Zijn kinderen welkom?', 'faq.a3': '[KINDERBELEID TOEVOEGEN]',
-    'faq.q4': 'Kan ik een partner meebrengen?', 'faq.a4': '[BELEID PLUS ONE TOEVOEGEN]',
-    'faq.q5': 'Is er parkeergelegenheid bij de locatie?', 'faq.a5': '[PARKEERINFORMATIE TOEVOEGEN]',
+    'faq.q3': 'Zijn kinderen welkom?', 'faq.a3': 'Nee. Kinderen en huisdieren zijn niet uitgenodigd.',
+    'faq.q4': 'Kan ik een partner meebrengen?', 'faq.a4': 'Nee. We versturen persoonlijke uitnodigingen waarop precies staat wie is uitgenodigd.',
+    'faq.q5': 'Is er parkeergelegenheid bij de locatie?', 'faq.a5': 'Ja. Bij Buitenplaats Sparrendaal is parkeergelegenheid. Gebruik de parkeerroute in de sectie Locatie.',
     'faq.q6': 'Wordt er rekening gehouden met dieetwensen?', 'faq.a6': '[DIEETBELEID TOEVOEGEN — verzameld in RSVP-formulier]',
     'faq.q7': 'Hoe is het weer waarschijnlijk?', 'faq.a7': '[WEERSADVIES TOEVOEGEN]',
     'faq.q8': 'Waar kan ik overnachten?', 'faq.a8': '[HOTEL OF OVERNACHTINGSINFORMATIE TOEVOEGEN]',
@@ -141,13 +141,13 @@ const translations = {
   },
 
   en: {
-    'nav.home': 'Home', 'nav.story': 'Our Story', 'nav.journey': 'Our Journey',
+    'nav.home': 'Home', 'nav.more': 'More', 'nav.story': 'Our Story', 'nav.journey': 'Our Journey',
     'nav.proposal': 'The Proposal', 'nav.wedding': 'Wedding Day', 'nav.location': 'Location',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress Code', 'nav.gifts': 'Gifts',
     'nav.gallery': 'Gallery', 'nav.ceremony': 'Ceremony Masters', 'nav.faq': 'FAQ',
     'nav.guestbook': 'Guestbook',
     'nav.glossary': 'Glossary',
-    'hero.sub': 'From Kerlingarfj\u00f6ll to Forever',
+    'hero.sub': 'From Kerlingarfj\u00f6ll to forever',
     'hero.date': '15 July 2027',
     'hero.countdown_prefix': "Counting down to the moment we say \u2018I do\u2019.",
     'hero.countdown_today': 'Today is the day!',
@@ -169,7 +169,7 @@ const translations = {
     'journey.item1.title': 'First Meeting', 'journey.item2.title': 'First Date',
     'journey.item3.title': 'Falling in Love', 'journey.item4.title': 'First Big Adventure',
     'journey.item5.title': 'Building a Life Together', 'journey.item6.title': 'Iceland Adventure',
-    'journey.item7.title': 'Kerlingarfj\u00f6ll', 'journey.item7.label': 'The Proposal',
+    'journey.item7.title': 'Kerlingarfj\u00f6ll', 'journey.item7.label': 'The Proposal', 'journey.item7.date': '15 September 2025',
     'journey.item7.text': "High in the mountains of Kerlingarfj\u00f6ll, surrounded by Iceland\u2019s breathtaking landscape, our next chapter began.",
     'journey.item8.title': 'Engagement', 'journey.item9.title': 'Wedding Day',
     'journey.item9.text': 'We cannot wait to celebrate this next chapter with our family and friends.',
@@ -214,9 +214,9 @@ const translations = {
     'faq.q1': 'What time should I arrive?',
     'faq.a1': 'Please arrive by 14:30 for guest welcome ahead of the 15:00 ceremony.',
     'faq.q2': 'What is the dress code?', 'faq.a2': 'Formal summer chic. See the Dress Code section above for details.',
-    'faq.q3': 'Are children welcome?', 'faq.a3': '[ADD CHILDREN POLICY]',
-    'faq.q4': 'Can I bring a plus one?', 'faq.a4': '[ADD PLUS ONE POLICY]',
-    'faq.q5': 'Is there parking at the venue?', 'faq.a5': '[ADD PARKING INSTRUCTIONS]',
+    'faq.q3': 'Are children welcome?', 'faq.a3': 'No. Children and pets are not invited.',
+    'faq.q4': 'Can I bring a plus one?', 'faq.a4': 'No. We send personal invitations, so each invitation states exactly who is invited.',
+    'faq.q5': 'Is there parking at the venue?', 'faq.a5': 'Yes. Parking is available at Buitenplaats Sparrendaal. Use the parking route in the Location section for directions.',
     'faq.q6': 'Are dietary requirements catered for?', 'faq.a6': '[ADD DIETARY POLICY \u2014 collected in RSVP form]',
     'faq.q7': 'What is the weather likely to be like?', 'faq.a7': '[ADD WEATHER GUIDANCE]',
     'faq.q8': 'Where should I stay?', 'faq.a8': '[ADD HOTEL OR ACCOMMODATION INFORMATION]',
@@ -255,7 +255,7 @@ const translations = {
   },
 
   fr: {
-    'nav.home': 'Accueil', 'nav.story': 'Notre Histoire', 'nav.journey': 'Notre Voyage',
+    'nav.home': 'Accueil', 'nav.more': 'Plus', 'nav.story': 'Notre Histoire', 'nav.journey': 'Notre Voyage',
     'nav.proposal': 'La Demande', 'nav.wedding': 'Le Mariage', 'nav.location': 'Lieu',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux',
     'nav.gallery': 'Galerie', 'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie', 'nav.faq': 'FAQ',
@@ -283,7 +283,7 @@ const translations = {
     'journey.item1.title': 'Premi\u00e8re rencontre', 'journey.item2.title': 'Premier rendez-vous',
     'journey.item3.title': 'Tomber amoureux', 'journey.item4.title': 'Premi\u00e8re grande aventure',
     'journey.item5.title': 'Construire une vie ensemble', 'journey.item6.title': 'Aventure en Islande',
-    'journey.item7.title': 'Kerlingarfj\u00f6ll', 'journey.item7.label': 'La Demande',
+    'journey.item7.title': 'Kerlingarfj\u00f6ll', 'journey.item7.label': 'La Demande', 'journey.item7.date': '15 septembre 2025',
     'journey.item7.text': "Haut dans les montagnes de Kerlingarfj\u00f6ll, entour\u00e9s du paysage \u00e0 couper le souffle de l\u2019Islande, notre prochain chapitre a commenc\u00e9.",
     'journey.item8.title': 'Fian\u00e7ailles', 'journey.item9.title': 'Jour du mariage',
     'journey.item9.text': 'Nous avons h\u00e2te de c\u00e9l\u00e9brer ce prochain chapitre avec notre famille et nos amis.',
@@ -325,9 +325,9 @@ const translations = {
     'faq.q1': '\u00c0 quelle heure dois-je arriver\u00a0?',
     'faq.a1': "Veuillez arriver \u00e0 14h30 pour l\u2019accueil des invit\u00e9s, avant la c\u00e9r\u00e9monie \u00e0 15h00.",
     'faq.q2': 'Quel est le code vestimentaire\u00a0?', 'faq.a2': 'Chic estival formel. Consultez la section tenue vestimentaire pour plus de d\u00e9tails.',
-    'faq.q3': 'Les enfants sont-ils les bienvenus\u00a0?', 'faq.a3': '[POLITIQUE ENFANTS \u00c0 AJOUTER]',
-    'faq.q4': 'Puis-je amener un(e) accompagnateur/trice\u00a0?', 'faq.a4': '[POLITIQUE PLUS ONE \u00c0 AJOUTER]',
-    'faq.q5': 'Y a-t-il un parking sur place\u00a0?', 'faq.a5': '[INFORMATIONS DE STATIONNEMENT \u00c0 AJOUTER]',
+    'faq.q3': 'Les enfants sont-ils les bienvenus\u00a0?', 'faq.a3': 'Non. Les enfants et les animaux ne sont pas invit\u00e9s.',
+    'faq.q4': 'Puis-je amener un(e) accompagnateur/trice\u00a0?', 'faq.a4': 'Non. Nous envoyons des invitations personnelles qui indiquent exactement qui est invit\u00e9.',
+    'faq.q5': 'Y a-t-il un parking sur place\u00a0?', 'faq.a5': 'Oui. Un parking est disponible \u00e0 Buitenplaats Sparrendaal. Consultez l\u2019itin\u00e9raire du parking dans la section Lieu.',
     'faq.q6': 'Les r\u00e9gimes alimentaires sont-ils pris en compte\u00a0?', 'faq.a6': '[POLITIQUE ALIMENTAIRE \u00c0 AJOUTER]',
     'faq.q7': 'Quel temps fera-t-il probablement\u00a0?', 'faq.a7': '[CONSEILS M\u00c9T\u00c9O \u00c0 AJOUTER]',
     'faq.q8': 'O\u00f9 puis-je s\u00e9journer\u00a0?', 'faq.a8': "[INFORMATIONS D\u2019H\u00c9BERGEMENT \u00c0 AJOUTER]",
@@ -450,7 +450,7 @@ const initSiteLoader = () => {
   };
 
   const heroImage = new Image();
-  heroImage.src = 'img/DT2025-09-15_150740000_2307_5.jpg';
+  heroImage.src = 'img/hero-kerlingarfjoll-md.webp';
   const imageReady = heroImage.decode ? heroImage.decode().catch(() => undefined) : Promise.resolve();
   const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
 
@@ -458,6 +458,33 @@ const initSiteLoader = () => {
     Promise.all([imageReady, fontsReady]),
     new Promise((resolve) => window.setTimeout(resolve, 2200)),
   ]).then(finishLoading);
+};
+
+const initLazyRsvp = () => {
+  const iframe = document.querySelector('.rsvp-iframe-container iframe[data-src]');
+  if (!iframe) {
+    return;
+  }
+
+  const loadForm = () => {
+    if (!iframe.src) {
+      iframe.src = iframe.dataset.src;
+    }
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    loadForm();
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      loadForm();
+      observer.disconnect();
+    }
+  }, { rootMargin: '300px 0px' });
+
+  observer.observe(iframe);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -735,6 +762,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ------------------------------------------------------------------ */
   initSiteLoader();
   initI18n();
+  initLazyRsvp();
   initCountdown();
   initOffcanvasClose();
   initTimelineReveal();

@@ -33,6 +33,7 @@
    -------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
   color: var(--clr-rock);
   background-color: var(--clr-sky);
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body[aria-busy="true"] {
@@ -67,7 +69,12 @@ body[aria-busy="true"] {
   inset: 0;
 }
 .site-loader__image {
-  background: url('../img/DT2025-09-15_150740000_2307_5.jpg') center / cover no-repeat;
+  background-image: image-set(
+    url('../img/hero-kerlingarfjoll-md.webp') type('image/webp'),
+    url('../img/hero-kerlingarfjoll-md.jpg') type('image/jpeg')
+  );
+  background-position: center;
+  background-size: cover;
   opacity: 0;
   transform: scale(1.08);
   animation: loader-image-in 2.4s ease forwards;
@@ -216,6 +223,25 @@ section {
 .navbar-wedding .nav-link.active {
   color: var(--clr-moss);
 }
+.navbar-wedding .dropdown-menu {
+  min-width: 13rem;
+  margin-top: 0.65rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(200, 168, 107, 0.35);
+  border-radius: 0.5rem;
+  background: var(--clr-rock);
+  box-shadow: 0 0.75rem 2rem rgba(41, 46, 56, 0.28);
+}
+.navbar-wedding .dropdown-item {
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.25rem;
+  color: var(--clr-sky);
+}
+.navbar-wedding .dropdown-item:hover,
+.navbar-wedding .dropdown-item:focus {
+  color: var(--clr-rock);
+  background: var(--clr-gold);
+}
 .btn-rsvp {
   background-color: var(--clr-moss);
   border-color: var(--clr-moss);
@@ -227,6 +253,33 @@ section {
   background-color: var(--clr-sky);
   border-color: var(--clr-sky);
   color: var(--clr-rock);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--clr-lichen);
+  --bs-btn-border-color: var(--clr-lichen);
+  --bs-btn-hover-color: var(--clr-sky);
+  --bs-btn-hover-bg: var(--clr-lichen);
+  --bs-btn-hover-border-color: var(--clr-lichen);
+  --bs-btn-active-color: var(--clr-rock);
+  --bs-btn-active-bg: var(--clr-moss);
+  --bs-btn-active-border-color: var(--clr-moss);
+  --bs-btn-disabled-color: var(--clr-slate);
+  --bs-btn-disabled-border-color: var(--clr-slate);
+  --bs-btn-focus-shadow-rgb: 68, 69, 46;
+}
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: var(--clr-rock);
+  background-color: var(--clr-moss);
+  border-color: var(--clr-moss);
+}
+.btn-outline-light {
+  --bs-btn-color: var(--clr-sky);
+  --bs-btn-border-color: var(--clr-sky);
+  --bs-btn-hover-color: var(--clr-rock);
+  --bs-btn-hover-bg: var(--clr-sky);
+  --bs-btn-hover-border-color: var(--clr-sky);
 }
 
 /* --------------------------------------------------------------------------
@@ -245,7 +298,10 @@ section {
 .hero-parallax {
   position: absolute;
   inset: 0;
-  background-image: url('../img/DT2025-09-15_150740000_2307_5.jpg');
+  background-image: image-set(
+    url('../img/hero-kerlingarfjoll-lg.webp') type('image/webp'),
+    url('../img/hero-kerlingarfjoll-lg.jpg') type('image/jpeg')
+  );
   background-size: cover;
   background-position: center bottom;
   will-change: transform;
@@ -643,6 +699,56 @@ section {
   border: 0;
 }
 
+.offcanvas.text-bg-dark {
+  --bs-offcanvas-bg: var(--clr-rock);
+  --bs-offcanvas-color: var(--clr-sky);
+  background-color: var(--clr-rock) !important;
+  color: var(--clr-sky) !important;
+}
+.offcanvas .nav-link {
+  color: var(--clr-sky);
+}
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  color: var(--clr-gold);
+}
+.alert-warning {
+  --bs-alert-color: var(--clr-rock);
+  --bs-alert-bg: var(--clr-gold);
+  --bs-alert-border-color: var(--clr-lichen);
+}
+.modal-content.bg-dark {
+  background-color: var(--clr-rock) !important;
+  color: var(--clr-sky);
+}
+
+.location-map {
+  overflow: hidden;
+  border: 1px solid rgba(68, 69, 46, 0.22);
+  border-radius: 0.75rem;
+  background: var(--clr-sky);
+  box-shadow: 0 4px 14px rgba(41, 46, 56, 0.08);
+}
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+.location-map__credit {
+  padding: 0.45rem 0.75rem;
+  color: var(--clr-lichen);
+  background: rgba(187, 195, 212, 0.72);
+}
+.location-map__credit a {
+  color: var(--clr-lichen);
+}
+@media (max-width: 575.98px) {
+  .location-map iframe {
+    height: 250px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    16. Dress code / Gifts cards
    -------------------------------------------------------------------------- */
@@ -674,6 +780,23 @@ section {
   font-family: var(--font-heading);
   color: var(--clr-rock);
   background: transparent;
+}
+.accordion-button::after {
+  width: auto;
+  height: auto;
+  content: "+";
+  color: var(--clr-lichen);
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  line-height: 1;
+  background-image: none;
+  transform: none;
+}
+.accordion-button:not(.collapsed)::after {
+  content: "−";
+  color: var(--clr-moss);
+  background-image: none;
+  transform: none;
 }
 .accordion-button:not(.collapsed) {
   color: var(--clr-lichen);
