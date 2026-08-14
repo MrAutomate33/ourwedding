@@ -9,12 +9,14 @@
 :root {
   --color-midnight: #2C3E50;
   --color-moss: #58735C;
-  --color-aurora: #65E6C5;
+  --color-aurora: #7AB832;   /* vivid moss green from the Kerlingarfjöll landscape */
   --color-volcanic: #6D5E52;
   --color-snow: #FAFAFA;
   --color-sand: #DCC7A1;
-  --color-mist: #E8EEEC;
+  --color-mist: #E9E6DF;     /* warm sandy off-white, inspired by steam and rock */
   --color-text: #253238;
+  --color-earth: #7A5C3A;
+  --color-ochre: #B8864E;
 
   /* Bootstrap variable overrides */
   --bs-primary: var(--color-moss);
@@ -107,14 +109,14 @@ section {
    4. Navbar
    -------------------------------------------------------------------------- */
 .navbar-wedding {
-  background-color: rgba(44, 62, 80, 0.65);
+  background-color: rgba(41, 46, 56, 0.65);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar-wedding.scrolled {
-  background-color: rgba(44, 62, 80, 0.92);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  background-color: rgba(41, 46, 56, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 .navbar-wedding .navbar-brand {
   font-family: var(--font-heading);
@@ -168,7 +170,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(21, 34, 50, 0.55) 0%, rgba(44, 62, 80, 0.75) 65%, rgba(21, 30, 40, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(20, 22, 28, 0.45) 0%, rgba(41, 46, 56, 0.72) 65%, rgba(20, 22, 28, 0.92) 100%);
   z-index: 1;
 }
 .hero-content {
@@ -217,7 +219,7 @@ section {
 }
 .countdown-block {
   background: rgba(250, 250, 250, 0.1);
-  border: 1px solid rgba(101, 230, 197, 0.4);
+  border: 1px solid rgba(156, 160, 76, 0.35);
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
   min-width: 88px;
@@ -240,11 +242,11 @@ section {
    7. Expedition / Coordinates card
    -------------------------------------------------------------------------- */
 .expedition-card {
-  background: linear-gradient(135deg, var(--color-midnight), #1c2a37);
+  background: linear-gradient(135deg, var(--color-midnight), #1c1f26);
   color: var(--color-snow);
   border-radius: 1rem;
   padding: 3rem 2rem;
-  border: 1px solid rgba(101, 230, 197, 0.3);
+  border: 1px solid rgba(156, 160, 76, 0.25);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 }
 .expedition-card .coord-label {
@@ -271,7 +273,7 @@ section {
   inset: -2px;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(120deg, var(--color-aurora), var(--color-moss), var(--color-aurora));
+  background: linear-gradient(120deg, var(--color-ochre), var(--color-aurora), var(--color-moss));
   background-size: 200% 200%;
   animation: aurora-shift 8s ease infinite;
 }
@@ -301,8 +303,8 @@ section {
    -------------------------------------------------------------------------- */
 .topo-pattern {
   background-image:
-    repeating-radial-gradient(circle at 20% 30%, rgba(88, 115, 92, 0.06) 0, rgba(88, 115, 92, 0.06) 1px, transparent 1px, transparent 40px),
-    repeating-radial-gradient(circle at 80% 70%, rgba(101, 230, 197, 0.05) 0, rgba(101, 230, 197, 0.05) 1px, transparent 1px, transparent 60px);
+    repeating-radial-gradient(circle at 20% 30%, rgba(68, 69, 46, 0.07) 0, rgba(68, 69, 46, 0.07) 1px, transparent 1px, transparent 40px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(156, 160, 76, 0.05) 0, rgba(156, 160, 76, 0.05) 1px, transparent 1px, transparent 60px);
 }
 
 /* --------------------------------------------------------------------------
@@ -376,11 +378,11 @@ section {
 
 /* Featured milestone: Kerlingarfjöll */
 .timeline-item.featured .timeline-card {
-  background: linear-gradient(160deg, var(--color-midnight), #22323f);
+  background: linear-gradient(160deg, var(--color-midnight), #1e2228);
   color: var(--color-snow);
   padding: 2.5rem;
   border: 1px solid var(--color-aurora);
-  box-shadow: 0 0 0 1px rgba(101, 230, 197, 0.3), 0 0 40px rgba(101, 230, 197, 0.35);
+  box-shadow: 0 0 0 1px rgba(156, 160, 76, 0.2), 0 0 28px rgba(156, 160, 76, 0.12);
 }
 .timeline-item.featured .timeline-icon {
   background: var(--color-aurora);
@@ -453,7 +455,7 @@ section {
   display: flex;
   gap: 1.25rem;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(109, 94, 82, 0.2);
+  border-bottom: 1px solid rgba(128, 145, 165, 0.2);
 }
 .schedule-item:last-child {
   border-bottom: none;
@@ -561,7 +563,7 @@ section {
 .dress-code-card,
 .gift-card,
 .ceremony-master-card {
-  border: 1px solid rgba(109, 94, 82, 0.15);
+  border: 1px solid rgba(128, 145, 165, 0.2);
   border-radius: 0.75rem;
   background: var(--color-snow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -579,7 +581,7 @@ section {
    -------------------------------------------------------------------------- */
 .accordion-item {
   border: none;
-  border-bottom: 1px solid rgba(109, 94, 82, 0.2);
+  border-bottom: 1px solid rgba(128, 145, 165, 0.2);
   background: transparent;
 }
 .accordion-button {
@@ -589,7 +591,7 @@ section {
 }
 .accordion-button:not(.collapsed) {
   color: var(--color-moss);
-  background: rgba(101, 230, 197, 0.08);
+  background: rgba(156, 160, 76, 0.08);
   box-shadow: none;
 }
 .accordion-button:focus {
@@ -711,3 +713,173 @@ section {
     padding: 2rem 1.25rem;
   }
 }
+
+
+
+/* --------------------------------------------------------------------------
+   25. Language switcher
+   -------------------------------------------------------------------------- */
+.lang-switcher {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.3);
+  color: rgba(250, 250, 250, 0.65);
+  padding: 0.18rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  line-height: 1.6;
+}
+.lang-btn:hover {
+  border-color: rgba(156, 160, 76, 0.6);
+  color: var(--color-aurora);
+}
+.lang-btn.active {
+  background: var(--color-aurora);
+  border-color: var(--color-aurora);
+  color: var(--color-midnight);
+}
+.lang-btn:focus-visible {
+  outline: 2px solid var(--color-aurora);
+  outline-offset: 2px;
+}
+/* Offcanvas language switcher */
+.offcanvas-lang-switcher {
+  display: flex;
+  gap: 6px;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+  margin-top: 0.5rem;
+}
+.offcanvas-lang-switcher .lang-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem 0.25rem;
+  font-size: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   26. Glossary section
+   -------------------------------------------------------------------------- */
+#glossary {
+  background: linear-gradient(160deg, #1a1c22 0%, var(--color-midnight) 60%, #1e2118 100%);
+  color: var(--color-snow);
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle volcanic texture overlay */
+#glossary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-radial-gradient(circle at 30% 50%, rgba(128, 145, 165, 0.06) 0, transparent 60px),
+    repeating-radial-gradient(circle at 70% 20%, rgba(156, 160, 76, 0.04) 0, transparent 80px);
+  pointer-events: none;
+}
+#glossary .section-label {
+  color: var(--color-ochre);
+}
+#glossary h2 {
+  color: var(--color-snow);
+}
+#glossary .glossary-intro {
+  color: var(--color-mist);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Glossary grid */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+@media (min-width: 576px) {
+  .glossary-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 992px) {
+  .glossary-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Individual glossary card */
+.glossary-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(128, 145, 165, 0.25);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.glossary-card:hover {
+  border-color: rgba(128, 145, 165, 0.55);
+  transform: translateY(-3px);
+}
+/* Accent line on left edge */
+.glossary-card::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 0;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(180deg, var(--color-ochre), var(--color-aurora));
+}
+.glossary-term {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  color: var(--color-snow);
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+.glossary-phonetic {
+  font-size: 0.75rem;
+  color: rgba(250, 250, 250, 0.45);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+.glossary-translation {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ochre);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.glossary-desc {
+  font-size: 0.9rem;
+  color: var(--color-mist);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Featured card (the proposal quote) spans full width on large screens */
+.glossary-card.featured {
+  border-color: rgba(156, 160, 76, 0.35);
+}
+.glossary-card.featured::before {
+  background: linear-gradient(180deg, var(--color-aurora), var(--color-moss));
+}
+.glossary-card.featured .glossary-term {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.glossary-card.featured .glossary-translation {
+  color: var(--color-aurora);
+}
+@media (min-width: 992px) {
+  .glossary-card.featured {
+    grid-column: span 2;
+  }
+}
+
