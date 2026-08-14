@@ -15,8 +15,9 @@ const translations = {
     'nav.proposal': 'Het aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus',
     'nav.gallery': 'Galerij', 'nav.ceremony': 'Ceremoniemeesters',
-    'nav.guestbook': 'Gastenboek',
     // Hero
+    'invite.label': 'Persoonlijke uitnodiging',
+    'invite.message': 'Beste {name}, met veel liefde nodigen we je uit om onze trouwdag met ons te vieren. Van de bergen van Kerlingarfjöll tot dit nieuwe hoofdstuk: jouw aanwezigheid maakt onze dag nog mooier. We kijken ernaar uit om samen te proosten, te lachen en herinneringen voor altijd te maken.',
     'journey.label': 'Onze Reis', 'journey.h2': 'Onze Reis naar Kerlingarfjöll',
     'journey.intro': 'Elk avontuur bracht ons een klein beetje dichter bij deze dag.',
     'journey.item1.title': 'Eerste ontmoeting', 'journey.item2.title': 'Eerste afspraak',
@@ -30,6 +31,7 @@ const translations = {
     // Proposal
     'proposal.label': 'Het Aanzoek', 'proposal.h2': 'Het aanzoek bij Kerlingarfjöll',
     'proposal.h3_journey': 'De reis erheen', 'proposal.h3_moment': 'Het moment', 'proposal.h3_answer': 'Het antwoord',
+    'proposal.location_caption': 'Kerlingarfjöll, IJsland · 64°38\'41.8"N 19°17\'14.9"W',
     // Wedding Day
     'wedding.label': 'De Grote Dag', 'wedding.h2': 'De Trouwdag',
     'wedding.date': 'Donderdag, 15 juli 2027',
@@ -65,7 +67,6 @@ const translations = {
     'gifts.lead': 'Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, volgt hier binnenkort meer informatie.',
     'gifts.honeymoon.h': 'Bijdrage aan huwelijksreis', 'gifts.honeymoon.text': 'Willen jullie ons iets geven? Een bijdrage aan onze huwelijksreis is van harte welkom en helpt ons om samen nieuwe herinneringen te maken.',
     'gifts.wishlist.h': 'Verlanglijst', 'gifts.wishlist.text': 'Weten jullie iets waarvan jullie zeker weten dat het bij ons past? Dan zijn we natuurlijk blij met een persoonlijk cadeau. Anders is een bijdrage aan onze huwelijksreis altijd een fijne keuze.',
-    'gifts.personal.h': 'Persoonlijk cadeau', 'gifts.personal.text': 'Het allerbelangrijkste is dat jullie erbij zijn. Voel je vooral niet verplicht om iets mee te brengen.',
     // Gallery
     'gallery.label': 'Galerij', 'gallery.h2': 'Onze avonturen',
     'gallery.filter.all': 'Alles', 'gallery.filter.iceland': 'IJsland', 'gallery.filter.proposal': 'Aanzoek',
@@ -73,12 +74,6 @@ const translations = {
     // Ceremony Masters
     'ceremony.label': 'Ceremoniemeesters', 'ceremony.h2': 'Ontmoet onze ceremoniemeesters',
     'ceremony.lead': 'Onze ceremoniemeesters begeleiden de dag en beantwoorden praktische vragen.',
-    // Guestbook
-    'guestbook.label': 'Gastenboek', 'guestbook.h2': 'Laat een berichtje achter',
-    'guestbook.lead': 'We zijn van plan om dichter bij de trouwdag een gastenboek toe te voegen.',
-    'guestbook.example_label': 'Voorbeeldbericht',
-    'guestbook.example_text': '"Wij wensen jullie beiden een leven vol liefde en avontuur \u2014 we kunnen niet wachten om samen te vieren!"',
-    'guestbook.placeholder': 'Een gastenboek is hier binnenkort beschikbaar.',
     // Footer
     'footer.thanks': 'Dank je wel dat je dit met ons viert.',
     'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP', 'footer.nav.gallery': 'Galerij',
@@ -92,7 +87,8 @@ const translations = {
     'nav.proposal': 'The proposal', 'nav.wedding': 'Wedding day', 'nav.location': 'Location',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress code', 'nav.gifts': 'Gifts',
     'nav.gallery': 'Gallery', 'nav.ceremony': 'Ceremony masters',
-    'nav.guestbook': 'Guestbook',
+    'invite.label': 'Personal invitation',
+    'invite.message': 'Dear {name}, with so much love, we invite you to celebrate our wedding day with us. From the mountains of Kerlingarfjöll to this new chapter, your presence will make our day even more meaningful. We cannot wait to toast, laugh, and create memories to carry with us forever.',
     'hero.sub': 'From Kerlingarfj\u00f6ll to forever',
     'hero.date': '15 July 2027',
     'hero.countdown_prefix': "Counting down to the moment we say \u2018I do\u2019.",
@@ -122,6 +118,7 @@ const translations = {
     'journey.continues': 'The journey continues\u2026', 'journey.btn': 'Read the Proposal Story',
     'proposal.label': 'The Proposal', 'proposal.h2': 'The Proposal at Kerlingarfj\u00f6ll',
     'proposal.h3_journey': 'The Journey There', 'proposal.h3_moment': 'The Moment', 'proposal.h3_answer': 'The Answer',
+    'proposal.location_caption': 'Kerlingarfjöll, Iceland · 64°38\'41.8"N 19°17\'14.9"W',
     'wedding.label': 'The Big Day', 'wedding.h2': 'The Wedding Day',
     'wedding.date': 'Thursday, 15 July 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Guest Arrival & Welcome', 'wedding.arr.note': 'Take your time arriving and greeting one another.',
@@ -152,17 +149,11 @@ const translations = {
     'gifts.lead': 'Your presence is the greatest gift. If you would still like to give something, more information will be shared here.',
     'gifts.honeymoon.h': 'Honeymoon Contribution', 'gifts.honeymoon.text': 'If you would like to give us something, a contribution towards our honeymoon would be warmly welcomed and will help us create new memories together.',
     'gifts.wishlist.h': 'Wishlist', 'gifts.wishlist.text': 'If you know of something you are sure would suit us, a personal gift is always lovely. Otherwise, a contribution towards our honeymoon is a wonderful choice.',
-    'gifts.personal.h': 'Personal Gift', 'gifts.personal.text': 'Most importantly, we are simply happy that you are celebrating with us. Please do not feel obliged to bring anything.',
     'gallery.label': 'Gallery', 'gallery.h2': 'Our Adventures',
     'gallery.filter.all': 'All', 'gallery.filter.iceland': 'Iceland', 'gallery.filter.proposal': 'Proposal',
     'gallery.filter.us': 'Us', 'gallery.filter.friends': 'Friends & Family',
     'ceremony.label': 'Ceremony Masters', 'ceremony.h2': 'Meet Our Ceremony Masters',
     'ceremony.lead': 'Our ceremony masters will help guide the day and answer practical questions.',
-    'guestbook.label': 'Guestbook', 'guestbook.h2': 'Leave Us a Message',
-    'guestbook.lead': "We're planning to add a guestbook closer to the wedding.",
-    'guestbook.example_label': 'Example message',
-    'guestbook.example_text': '"Wishing you both a lifetime of love and adventure \u2014 can\'t wait to celebrate with you!"',
-    'guestbook.placeholder': 'A guestbook will be available here. Check back soon.',
     'footer.thanks': 'Thank you for celebrating with us.',
     'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP', 'footer.nav.gallery': 'Gallery',
     'footer.backtop': 'Back to top \u2191',
@@ -175,7 +166,8 @@ const translations = {
     'nav.proposal': 'La demande', 'nav.wedding': 'Le mariage', 'nav.location': 'Lieu',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux',
     'nav.gallery': 'Galerie', 'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie',
-    'nav.guestbook': "Livre d\u2019Or",
+    'invite.label': 'Invitation personnelle',
+    'invite.message': 'Cher/Chère {name}, c’est avec beaucoup d’amour que nous vous invitons à célébrer notre mariage avec nous. Des montagnes de Kerlingarfjöll à ce nouveau chapitre, votre présence rendra cette journée encore plus précieuse. Nous avons hâte de trinquer, de rire et de créer ensemble des souvenirs pour toujours.',
     'hero.sub': "De Kerlingarfj\u00f6ll \u00e0 l\u2019\u00e9ternit\u00e9",
     'hero.date': '15 juillet 2027',
     'hero.countdown_prefix': "D\u00e9compte jusqu\u2019au moment o\u00f9 nous disons \u2018oui\u2019.",
@@ -205,6 +197,7 @@ const translations = {
     'journey.continues': 'Le voyage continue\u2026', 'journey.btn': "Lire l\u2019histoire de la demande",
     'proposal.label': 'La Demande', 'proposal.h2': 'La demande \u00e0 Kerlingarfj\u00f6ll',
     'proposal.h3_journey': 'Le voyage l\u00e0-bas', 'proposal.h3_moment': 'Le moment', 'proposal.h3_answer': 'La r\u00e9ponse',
+    'proposal.location_caption': 'Kerlingarfjöll, Islande · 64°38\'41.8"N 19°17\'14.9"W',
     'wedding.label': 'Le Grand Jour', 'wedding.h2': 'Le Mariage',
     'wedding.date': 'Jeudi, 15 juillet 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Accueil des invit\u00e9s', 'wedding.arr.note': 'Prenez le temps d’arriver tranquillement et de vous saluer.',
@@ -231,17 +224,11 @@ const translations = {
     'gifts.lead': "Votre pr\u00e9sence est le plus beau des cadeaux. Si vous souhaitez tout de m\u00eame offrir quelque chose, plus d\u2019informations seront partag\u00e9es ici.",
     'gifts.honeymoon.h': 'Contribution au voyage de noces', 'gifts.honeymoon.text': 'Si vous souhaitez nous offrir quelque chose, une contribution pour notre voyage de noces sera chaleureusement accueillie et nous aidera à créer de nouveaux souvenirs ensemble.',
     'gifts.wishlist.h': 'Liste de souhaits', 'gifts.wishlist.text': 'Si vous connaissez quelque chose qui nous correspond vraiment, un cadeau personnel nous fera plaisir. Sinon, une contribution à notre voyage de noces est une très belle idée.',
-    'gifts.personal.h': 'Cadeau personnel', 'gifts.personal.text': 'Le plus important est de vous avoir à nos côtés. Ne vous sentez surtout pas obligés d’apporter quoi que ce soit.',
     'gallery.label': 'Galerie', 'gallery.h2': 'Nos aventures',
     'gallery.filter.all': 'Tout', 'gallery.filter.iceland': 'Islande', 'gallery.filter.proposal': 'Demande',
     'gallery.filter.us': 'Nous', 'gallery.filter.friends': 'Famille & amis',
     'ceremony.label': 'Ma\u00eetres de C\u00e9r\u00e9monie', 'ceremony.h2': 'Rencontrez nos ma\u00eetres de c\u00e9r\u00e9monie',
     'ceremony.lead': 'Nos ma\u00eetres de c\u00e9r\u00e9monie guideront la journ\u00e9e et r\u00e9pondront aux questions pratiques.',
-    'guestbook.label': "Livre d\u2019Or", 'guestbook.h2': 'Laissez-nous un message',
-    'guestbook.lead': "Nous pr\u00e9voyons d\u2019ajouter un livre d\u2019or plus pr\u00e8s du mariage.",
-    'guestbook.example_label': 'Exemple de message',
-    'guestbook.example_text': '"Nous vous souhaitons une vie pleine d\u2019amour et d\u2019aventures \u2014 nous avons h\u00e2te de f\u00eater \u00e7a avec vous\u00a0!"',
-    'guestbook.placeholder': "Un livre d\u2019or sera disponible ici. Revenez bient\u00f4t.",
     'location.description': 'Une maison de campagne chaleureuse avec des salles classiques et un magnifique parc dans l\u2019Utrechtse Heuvelrug.',
     'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel via 9292 avant votre d\u00e9part.',
     'location.parking.text': 'Un parking est disponible \u00e0 Buitenplaats Sparrendaal.',
@@ -323,6 +310,7 @@ const initI18n = () => {
     lang = targetLang;
     localStorage.setItem(STORAGE_KEY, lang);
     apply(lang);
+    document.dispatchEvent(new CustomEvent('language-changed'));
   };
 
   apply(lang);
@@ -367,6 +355,39 @@ const initSiteLoader = () => {
     Promise.all([imageReady, fontsReady, minimumDisplayTime]),
     hardTimeout,
   ]).then(finishLoading);
+};
+
+const initPersonalInvitation = () => {
+  const invitation = document.getElementById('personal-invitation');
+  const message = document.getElementById('personal-invitation-message');
+  const encodedName = new URLSearchParams(window.location.search).get('invite');
+
+  if (!invitation || !message || !encodedName) {
+    return;
+  }
+
+  let guestName;
+  try {
+    const base64 = encodedName.replace(/-/g, '+').replace(/_/g, '/');
+    const binary = window.atob(base64);
+    guestName = new TextDecoder().decode(Uint8Array.from(binary, (character) => character.charCodeAt(0))).trim();
+  } catch {
+    return;
+  }
+
+  if (!guestName || guestName.length > 80 || /[\r\n<>]/.test(guestName)) {
+    return;
+  }
+
+  const renderMessage = () => {
+    const template = i18nInstance.get('invite.message');
+    const [beforeName, afterName] = template.split('{name}');
+    message.replaceChildren(beforeName, Object.assign(document.createElement('strong'), { textContent: guestName }), afterName || '');
+  };
+
+  renderMessage();
+  invitation.hidden = false;
+  document.addEventListener('language-changed', renderMessage);
 };
 
 const initLazyRsvp = () => {
@@ -730,6 +751,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ------------------------------------------------------------------ */
   initSiteLoader();
   initI18n();
+  initPersonalInvitation();
   initLazyRsvp();
   initStoryHearts();
   initCountdown();

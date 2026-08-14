@@ -8,7 +8,7 @@ This README is written for beginners — no build tools, frameworks, or npm inst
 
 ## 1. Project Description
 
-This repository contains a single-page wedding website with sections for the couple's story, a timeline of their journey to the proposal, wedding day schedule, venue/location info, an RSVP form (embedded via Microsoft Forms), dress code, gifts, a photo gallery, ceremony masters, FAQ, and a guestbook placeholder. The design uses a "Romantic Icelandic Nature" theme: deep midnight blues, moss greens, aurora teal accents, volcanic browns, and soft sand/mist neutrals.
+This repository contains a single-page wedding website with sections for the couple's story, a timeline of their journey to the proposal, wedding day schedule, venue/location info, an RSVP form (embedded via Microsoft Forms), dress code, gifts, a photo gallery, ceremony masters, and FAQ. The design uses a "Romantic Icelandic Nature" theme: deep midnight blues, moss greens, aurora teal accents, volcanic browns, and soft sand/mist neutrals.
 
 ---
 
@@ -215,18 +215,6 @@ Confirm `css/style.css` is loaded with a relative path (`css/style.css`) and tha
 
 **Gallery lightbox doesn't open.**
 Ensure Bootstrap's JS bundle loads before `js/script.js` at the bottom of the page, and check the browser console for errors.
-
----
-
-## 15. Guestbook Options
-
-The current guestbook section is a placeholder with one static example message. Options to make it live:
-
-1. **Microsoft Forms** — Create a second short form ("Leave us a message") and either embed it inline or link out, similar to the RSVP form. Simplest option, consistent with the rest of the site.
-2. **GitHub Discussions** — Enable Discussions on this repository and link guests to a "Wedding Guestbook" discussion thread. Requires guests to have (or create) a GitHub account.
-3. **Third-party guestbook widget** — Services like Guestbook.ly, Elfsight, or a simple Google Form + Google Sheet + manual moderation. Review each service's privacy policy before adding any embedded widget or script, since some may include tracking.
-
-Whichever option you choose, moderate messages before they go public and avoid embedding any service that requires visitors to accept invasive tracking/cookies.
 
 ---
 

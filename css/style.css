@@ -436,6 +436,34 @@ section {
   text-transform: uppercase;
   font-weight: 500;
 }
+.personal-invitation {
+  width: min(100%, 35rem);
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgb(from var(--clr-gold) r g b / 0.58);
+  border-radius: 0.5rem;
+  background: rgb(from var(--clr-rock) r g b / 0.42);
+  box-shadow: 0 0.75rem 2rem rgb(from var(--clr-rock) r g b / 0.2);
+  backdrop-filter: blur(6px);
+}
+.personal-invitation__eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--clr-gold);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.personal-invitation__message {
+  margin: 0;
+  color: var(--clr-sky);
+  line-height: 1.55;
+}
+.personal-invitation__message strong {
+  color: var(--clr-gold);
+  font-family: var(--font-heading);
+  font-size: 1.15em;
+}
 .scroll-indicator {
   position: absolute;
   bottom: 1.5rem;
@@ -628,17 +656,6 @@ section {
   color: var(--clr-rock);
   z-index: 4;
 }
-.timeline-item.featured .timeline-icon::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  width: 2px;
-  height: 1.5rem;
-  background: linear-gradient(180deg, var(--clr-moss), var(--clr-gold));
-  transform: translateX(-50%);
-  pointer-events: none;
-}
 .timeline-item.featured .timeline-date {
   color: var(--clr-moss);
 }
@@ -688,7 +705,7 @@ section {
     width: 100%;
     left: 0 !important;
     text-align: center;
-    padding: 1.5rem 3.5rem 0;
+    padding: 4rem 3.5rem 0;
   }
   .timeline-item.featured .timeline-icon {
     left: 50%;
@@ -964,23 +981,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   18. Guestbook
-   -------------------------------------------------------------------------- */
-.guestbook-example {
-  background: var(--clr-sky);
-  border-left: 4px solid var(--clr-moss);
-  border-radius: 0.5rem;
-  padding: 1.25rem 1.5rem;
-}
-.guestbook-example .example-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--clr-slate);
-}
-
-/* --------------------------------------------------------------------------
-   19. Footer
+  18. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
   background: var(--clr-rock);

@@ -104,7 +104,6 @@
             <li><a class="dropdown-item" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
             <li><a class="dropdown-item" href="#gallery" data-i18n="nav.gallery">Galerij</a></li>
             <li><a class="dropdown-item" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
-            <li><a class="dropdown-item" href="#guestbook" data-i18n="nav.guestbook">Gastenboek</a></li>
           </ul>
         </li>
       </ul>
@@ -142,7 +141,6 @@
       <li class="nav-item"><a class="nav-link" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
       <li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav.gallery">Galerij</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
-      <li class="nav-item"><a class="nav-link" href="#guestbook" data-i18n="nav.guestbook">Gastenboek</a></li>
     </ul>
     <!-- Mobile language switcher -->
     <div class="offcanvas-lang-switcher dropdown">
@@ -168,6 +166,10 @@
     <p class="hero-sub font-heading fst-italic" data-i18n="hero.sub">Van Kerlingarfjöll tot voor altijd</p>
     <h1>Mariëlle &amp; Jérémy</h1>
     <p class="hero-date" data-i18n="hero.date">15 juli 2027</p>
+    <div class="personal-invitation" id="personal-invitation" hidden aria-live="polite">
+      <p class="personal-invitation__eyebrow" data-i18n="invite.label">Persoonlijke uitnodiging</p>
+      <p class="personal-invitation__message" id="personal-invitation-message"></p>
+    </div>
 
     <p class="mt-4 mb-2" data-i18n="hero.countdown_prefix">Aftellen naar het moment dat we 'ja' zeggen.</p>
       <div id="countdown-container" class="countdown" aria-live="polite">
@@ -400,8 +402,18 @@
 
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <img src="img/map-placeholder.svg" alt="Placeholder map of the proposal location" class="img-fluid rounded-3">
-          <p class="text-muted mt-2">[ADD LOCATION CAPTION]</p>
+          <div class="location-map">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-21.5%2C63.5%2C-17%2C65.9&amp;layer=mapnik"
+              title="Kaart van de aanzoeklocatie bij Kerlingarfjöll"
+              loading="lazy"
+              referrerpolicy="no-referrer">
+            </iframe>
+            <span class="location-map__pin" aria-label="Aanzoeklocatie bij Kerlingarfjöll" title="Aanzoeklocatie bij Kerlingarfjöll">
+              <i class="bi bi-heart-fill" aria-hidden="true"></i>
+            </span>
+          </div>
+          <p class="text-muted mt-2 mb-0" data-i18n="proposal.location_caption">Kerlingarfjöll, IJsland · 64°38'41.8&quot;N 19°17'14.9&quot;W</p>
         </div>
         <div class="col-lg-6 text-center">
           <!-- IMPORTANT: Verify the Icelandic text "Ástin finnur sér leið" before publishing. -->
@@ -605,13 +617,13 @@
       </div>
 
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="dress-code-card p-4 h-100">
             <h3 class="h6" data-i18n="dresscode.style.h">Stijl</h3>
             <p class="small mb-0">[ADD STYLE GUIDANCE]</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="dress-code-card p-4 h-100">
             <h3 class="h6" data-i18n="dresscode.colours.h">Kleuren</h3>
             <p class="small mb-0">[ADD COLOUR GUIDANCE]</p>
@@ -633,49 +645,20 @@
       </div>
 
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="gift-card p-4 h-100">
             <i class="bi bi-airplane-engines fs-2 text-moss" aria-hidden="true"></i>
             <h3 class="h6 mt-3" data-i18n="gifts.honeymoon.h">Bijdrage aan huwelijksreis</h3>
             <p class="small mb-0" data-i18n="gifts.honeymoon.text">Willen jullie ons iets geven? Een bijdrage aan onze huwelijksreis is van harte welkom en helpt ons om samen nieuwe herinneringen te maken.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="gift-card p-4 h-100">
             <i class="bi bi-list-check fs-2 text-moss" aria-hidden="true"></i>
             <h3 class="h6 mt-3" data-i18n="gifts.wishlist.h">Verlanglijst</h3>
             <p class="small mb-0" data-i18n="gifts.wishlist.text">Weten jullie iets waarvan jullie zeker weten dat het bij ons past? Dan zijn we natuurlijk blij met een persoonlijk cadeau. Anders is een bijdrage aan onze huwelijksreis altijd een fijne keuze.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="gift-card p-4 h-100">
-            <i class="bi bi-gift fs-2 text-moss" aria-hidden="true"></i>
-            <h3 class="h6 mt-3" data-i18n="gifts.personal.h">Persoonlijk cadeau</h3>
-            <p class="small mb-0" data-i18n="gifts.personal.text">Het allerbelangrijkste is dat jullie erbij zijn. Voel je vooral niet verplicht om iets mee te brengen.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 14 — GUESTBOOK
-       ========================================================================== -->
-  <section id="guestbook" class="bg-mist">
-    <div class="container">
-      <div class="text-center mb-5">
-        <p class="section-label" data-i18n="guestbook.label">Gastenboek</p>
-        <h2 data-i18n="guestbook.h2">Laat een berichtje achter</h2>
-        <p class="lead" data-i18n="guestbook.lead">We zijn van plan om dichter bij de trouwdag een gastenboek toe te voegen.</p>
-      </div>
-
-      <div class="mx-auto" style="max-width: 600px;">
-        <div class="guestbook-example mb-4">
-          <p class="example-label mb-1" data-i18n="guestbook.example_label">Voorbeeldbericht</p>
-          <p class="mb-1 fst-italic" data-i18n="guestbook.example_text">"Wij wensen jullie beiden een leven vol liefde en avontuur — we kunnen niet wachten om samen te vieren!"</p>
-          <p class="small text-muted mb-0">— A Friend</p>
-        </div>
-        <p class="text-center text-muted" data-i18n="guestbook.placeholder">Een gastenboek is hier binnenkort beschikbaar.</p>
       </div>
     </div>
   </section>
