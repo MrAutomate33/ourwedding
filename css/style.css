@@ -245,16 +245,30 @@ section {
   background: var(--clr-gold);
 }
 .btn-rsvp {
-  background-color: var(--clr-moss);
+  background-color: rgb(from var(--clr-moss) r g b / 0.78);
   border-color: var(--clr-moss);
   color: var(--clr-rock);
-  font-weight: 600;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 .btn-rsvp:hover,
-.btn-rsvp:focus {
+.btn-rsvp:focus,
+.btn-rsvp:active {
   background-color: var(--clr-sky);
   border-color: var(--clr-sky);
   color: var(--clr-rock);
+}
+.btn-rsvp:focus-visible {
+  outline: 3px solid var(--clr-gold);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+.btn-rsvp:hover:not(:disabled),
+.btn-rsvp:focus:not(:disabled) {
+  background-color: rgb(from var(--clr-sky) r g b / 0.9) !important;
+  border-color: var(--clr-sky) !important;
+  color: var(--clr-rock) !important;
 }
 .btn-outline-primary {
   --bs-btn-color: var(--clr-lichen);
@@ -275,6 +289,17 @@ section {
   color: var(--clr-rock);
   background-color: var(--clr-moss);
   border-color: var(--clr-moss);
+  font-weight: 500;
+}
+.btn-outline-primary:focus-visible {
+  outline: 3px solid var(--clr-gold);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+.btn-outline-primary:hover:not(:disabled) {
+  background-color: var(--clr-lichen) !important;
+  border-color: var(--clr-lichen) !important;
+  color: var(--clr-sky) !important;
 }
 .btn-outline-light {
   --bs-btn-color: var(--clr-sky);
@@ -282,6 +307,24 @@ section {
   --bs-btn-hover-color: var(--clr-rock);
   --bs-btn-hover-bg: var(--clr-sky);
   --bs-btn-hover-border-color: var(--clr-sky);
+  --bs-btn-active-color: var(--clr-rock);
+  --bs-btn-active-bg: var(--clr-gold);
+  --bs-btn-active-border-color: var(--clr-gold);
+  --bs-btn-focus-shadow-rgb: 200, 168, 107;
+}
+.btn-outline-light:active,
+.btn-outline-light.active {
+  font-weight: 500;
+}
+.btn-outline-light:focus-visible {
+  outline: 3px solid var(--clr-gold);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+.btn-outline-light:hover:not(:disabled) {
+  background-color: var(--clr-sky) !important;
+  border-color: var(--clr-sky) !important;
+  color: var(--clr-rock) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -453,7 +496,8 @@ section {
   left: 24px;
   width: 3px;
   height: 0%;
-  background: var(--clr-moss);
+  background: rgb(from var(--clr-moss) r g b / 0.78);
+  z-index: 0;
   transition: height 0.2s ease-out;
 }
 .timeline-item {
@@ -482,9 +526,11 @@ section {
   justify-content: center;
   color: var(--clr-lichen);
   font-size: 1.25rem;
-  z-index: 1;
+  z-index: 3;
 }
 .timeline-card {
+  position: relative;
+  z-index: 2;
   background: var(--clr-sky);
   border-radius: 0.75rem;
   padding: 1.5rem;
@@ -502,14 +548,24 @@ section {
   background: linear-gradient(160deg, var(--clr-rock), var(--clr-rock));
   color: var(--clr-sky);
   padding: 2.5rem;
-  margin-top: 1.5rem;
   border: 1px solid rgb(from var(--clr-gold) r g b / 0.6);
   box-shadow: 0 8px 24px rgb(from var(--clr-rock) r g b / 0.18);
 }
 .timeline-item.featured .timeline-icon {
-  background: var(--clr-moss);
+  background: rgb(from var(--clr-moss) r g b / 0.82);
   border-color: var(--clr-moss);
   color: var(--clr-rock);
+}
+.timeline-item.featured .timeline-icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(180deg, var(--clr-moss), var(--clr-gold));
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 .timeline-item.featured .timeline-date {
   color: var(--clr-moss);
@@ -560,7 +616,7 @@ section {
     width: 100%;
     left: 0 !important;
     text-align: center;
-    padding: 0 3.5rem;
+    padding: 1.5rem 3.5rem 0;
   }
   .timeline-item.featured .timeline-icon {
     left: 50%;
@@ -683,6 +739,9 @@ section {
   border-radius: 0.75rem;
   background: var(--clr-sky);
 }
+.rsvp-content {
+  max-width: 700px;
+}
 @media (min-width: 768px) {
   .rsvp-iframe-container {
     padding-bottom: 90%;
@@ -762,34 +821,36 @@ section {
 .dress-code-card,
 .gift-card,
 .ceremony-master-card {
-  border: 1px solid rgb(from var(--clr-gold) r g b / 0.42);
+  border: 1px solid rgb(from var(--clr-sky) r g b / 0.52);
   border-radius: 0.75rem;
-  background: var(--clr-rock);
-  color: var(--clr-sky);
+  background: rgb(from var(--clr-moss) r g b / 0.62);
+  color: var(--clr-rock);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
 }
 .dress-code-card .text-moss,
 .gift-card .text-moss,
 .ceremony-master-card .text-moss {
-  color: var(--clr-moss) !important;
+  color: var(--clr-lichen) !important;
 }
 .dress-code-card h3,
 .gift-card h3,
 .ceremony-master-card h3 {
-  color: var(--clr-sky);
+  color: var(--clr-rock);
 }
 .dress-code-card a,
 .gift-card a,
 .ceremony-master-card a {
-  color: var(--clr-gold);
+  color: var(--clr-rock);
 }
 .dress-code-card:hover,
 .gift-card:hover,
 .ceremony-master-card:hover {
   transform: translateY(-4px);
-  border-color: var(--clr-moss);
-  box-shadow: 0 10px 25px rgb(from var(--clr-rock) r g b / 0.22);
+  border-color: var(--clr-gold);
+  box-shadow: 0 10px 25px rgb(from var(--clr-rock) r g b / 0.18);
 }
 
 .accordion-item {
@@ -993,6 +1054,11 @@ section {
 .lang-btn:hover {
   border-color: rgb(from var(--clr-moss) r g b / 0.6);
   color: var(--clr-moss);
+}
+.lang-btn:active {
+  background: rgb(from var(--clr-moss) r g b / 0.78);
+  border-color: var(--clr-moss);
+  color: var(--clr-rock);
 }
 .lang-btn.active {
   background: var(--clr-moss);

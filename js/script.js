@@ -337,8 +337,8 @@ const initSiteLoader = () => {
   heroImage.src = 'img/hero-kerlingarfjoll-md.webp';
   const imageReady = heroImage.decode ? heroImage.decode().catch(() => undefined) : Promise.resolve();
   const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
-  const minimumDisplayTime = new Promise((resolve) => window.setTimeout(resolve, 3500));
-  const hardTimeout = new Promise((resolve) => window.setTimeout(resolve, 6000));
+  const minimumDisplayTime = new Promise((resolve) => window.setTimeout(resolve, 2400));
+  const hardTimeout = new Promise((resolve) => window.setTimeout(resolve, 4500));
 
   Promise.race([
     Promise.all([imageReady, fontsReady, minimumDisplayTime]),
