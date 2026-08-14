@@ -11,8 +11,8 @@
 const translations = {
   nl: {
     // Navigation
-    'nav.home': 'Home', 'nav.more': 'Meer', 'nav.story': 'Ons Verhaal', 'nav.journey': 'Onze Reis',
-    'nav.proposal': 'Het Aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
+    'nav.home': 'Home', 'nav.more': 'Meer', 'nav.story': 'Ons verhaal', 'nav.journey': 'Onze reis',
+    'nav.proposal': 'Het aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus',
     'nav.gallery': 'Galerij', 'nav.ceremony': 'Ceremoniemeesters',
     'nav.guestbook': 'Gastenboek',
@@ -88,10 +88,10 @@ const translations = {
   },
 
   en: {
-    'nav.home': 'Home', 'nav.more': 'More', 'nav.story': 'Our Story', 'nav.journey': 'Our Journey',
-    'nav.proposal': 'The Proposal', 'nav.wedding': 'Wedding Day', 'nav.location': 'Location',
-    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress Code', 'nav.gifts': 'Gifts',
-    'nav.gallery': 'Gallery', 'nav.ceremony': 'Ceremony Masters',
+    'nav.home': 'Home', 'nav.more': 'More', 'nav.story': 'Our story', 'nav.journey': 'Our journey',
+    'nav.proposal': 'The proposal', 'nav.wedding': 'Wedding day', 'nav.location': 'Location',
+    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress code', 'nav.gifts': 'Gifts',
+    'nav.gallery': 'Gallery', 'nav.ceremony': 'Ceremony masters',
     'nav.guestbook': 'Guestbook',
     'hero.sub': 'From Kerlingarfj\u00f6ll to forever',
     'hero.date': '15 July 2027',
@@ -171,8 +171,8 @@ const translations = {
   },
 
   fr: {
-    'nav.home': 'Accueil', 'nav.more': 'Plus', 'nav.story': 'Notre Histoire', 'nav.journey': 'Notre Voyage',
-    'nav.proposal': 'La Demande', 'nav.wedding': 'Le Mariage', 'nav.location': 'Lieu',
+    'nav.home': 'Accueil', 'nav.more': 'Plus', 'nav.story': 'Notre histoire', 'nav.journey': 'Notre voyage',
+    'nav.proposal': 'La demande', 'nav.wedding': 'Le mariage', 'nav.location': 'Lieu',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux',
     'nav.gallery': 'Galerie', 'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie',
     'nav.guestbook': "Livre d\u2019Or",
@@ -276,6 +276,11 @@ const initI18n = () => {
   };
 
   let lang = detect();
+  const languageLabels = {
+    nl: { flagClass: 'flag-nl', short: 'NL', name: 'Nederlands' },
+    en: { flagClass: 'flag-us', short: 'EN', name: 'English' },
+    fr: { flagClass: 'flag-fr', short: 'FR', name: 'Français' },
+  };
 
   const apply = (targetLang) => {
     const dict = translations[targetLang] || translations[DEFAULT];
@@ -299,6 +304,17 @@ const initI18n = () => {
     document.querySelectorAll('[data-lang-btn]').forEach((btn) => {
       btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === targetLang);
       btn.setAttribute('aria-pressed', btn.getAttribute('data-lang-btn') === targetLang ? 'true' : 'false');
+    });
+
+    const current = languageLabels[targetLang];
+    document.querySelectorAll('.lang-trigger').forEach((trigger) => {
+      const flag = trigger.querySelector('.lang-current-flag');
+      const label = trigger.querySelector('.lang-current');
+      if (flag) {
+        flag.classList.remove('flag-nl', 'flag-us', 'flag-fr');
+        flag.classList.add(current.flagClass);
+      }
+      if (label) label.textContent = trigger.closest('.offcanvas-lang-switcher') ? current.name : current.short;
     });
   };
 
@@ -328,13 +344,20 @@ const initSiteLoader = () => {
   }
 
   const finishLoading = () => {
+    document.body.classList.add('page-ready');
+    document.dispatchEvent(new CustomEvent('site-ready'));
     loader.classList.add('is-ready');
     document.body.removeAttribute('aria-busy');
+    const targetId = window.location.hash.slice(1);
+    const target = targetId ? document.getElementById(targetId) : null;
+    if (target) {
+      window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'auto' }));
+    }
     window.setTimeout(() => loader.remove(), 1000);
   };
 
   const heroImage = new Image();
-  heroImage.src = 'img/hero-kerlingarfjoll-md.webp';
+  heroImage.src = 'img/hero-kerlingarfjoll-lg.webp';
   const imageReady = heroImage.decode ? heroImage.decode().catch(() => undefined) : Promise.resolve();
   const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
   const minimumDisplayTime = new Promise((resolve) => window.setTimeout(resolve, 2400));
@@ -371,6 +394,57 @@ const initLazyRsvp = () => {
   }, { rootMargin: '300px 0px' });
 
   observer.observe(iframe);
+};
+
+const initStoryHearts = () => {
+  const imageWrap = document.querySelector('[data-heart-reveal]');
+  if (!imageWrap || !('IntersectionObserver' in window)) {
+    return;
+  }
+
+  const createHearts = () => {
+    if (imageWrap.querySelector('.story-heart')) {
+      return;
+    }
+
+    const heartSettings = [
+      { left: 68, delay: 0.54 },
+      { left: 24, delay: 0.12 },
+      { left: 84, delay: 0.82 },
+      { left: 43, delay: 0.3 },
+      { left: 14, delay: 0.68 },
+    ];
+    heartSettings.forEach(({ left, delay }) => {
+      const size = `${(0.85 + Math.random() * 0.7).toFixed(2)}rem`;
+      const animationDelay = `${delay + Math.random() * 0.16}s`;
+    const heart = document.createElement('span');
+    heart.className = 'story-heart bi bi-heart-fill';
+    heart.setAttribute('aria-hidden', 'true');
+      heart.style.setProperty('--heart-left', `${left}%`);
+    heart.style.setProperty('--heart-size', size);
+    heart.style.setProperty('--heart-delay', animationDelay);
+    imageWrap.appendChild(heart);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting && document.body.classList.contains('page-ready'))) {
+      createHearts();
+      imageWrap.classList.add('hearts-visible');
+      observer.disconnect();
+    }
+  }, { threshold: 0.45 });
+  observer.observe(imageWrap);
+
+  document.addEventListener('site-ready', () => {
+    const bounds = imageWrap.getBoundingClientRect();
+    const isVisible = bounds.top < window.innerHeight * 0.55 && bounds.bottom > window.innerHeight * 0.45;
+    if (isVisible) {
+      createHearts();
+      imageWrap.classList.add('hearts-visible');
+      observer.disconnect();
+    }
+  }, { once: true });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -445,6 +519,14 @@ document.addEventListener('DOMContentLoaded', () => {
         instance.hide();
       });
     });
+
+    const closeOnHashChange = () => {
+      const instance = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      if (instance && offcanvasEl.classList.contains('show')) {
+        instance.hide();
+      }
+    };
+    window.addEventListener('hashchange', closeOnHashChange);
   };
 
   /* ------------------------------------------------------------------
@@ -649,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSiteLoader();
   initI18n();
   initLazyRsvp();
+  initStoryHearts();
   initCountdown();
   initOffcanvasClose();
   initTimelineReveal();
