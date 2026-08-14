@@ -7,20 +7,20 @@
    1. Root variables & Bootstrap overrides
    -------------------------------------------------------------------------- */
 :root {
-  --color-midnight: #2C3E50;
-  --color-moss: #58735C;
-  --color-aurora: #7AB832;   /* vivid moss green from the Kerlingarfjöll landscape */
-  --color-volcanic: #6D5E52;
-  --color-snow: #FAFAFA;
-  --color-sand: #DCC7A1;
-  --color-mist: #E9E6DF;     /* warm sandy off-white, inspired by steam and rock */
-  --color-text: #253238;
-  --color-earth: #7A5C3A;
-  --color-ochre: #B8864E;
+  --color-midnight: #292E38;
+  --color-moss:     #44452E;
+  --color-aurora:   #9CA04C;   /* vivid Icelandic moss */
+  --color-volcanic: #8091A5;   /* mountain slate */
+  --color-snow:     #BBC3D4;
+  --color-sand:     #BBC3D4;   /* glacier sky-light */
+  --color-mist:     #BBC3D4;
+  --color-text:     #292E38;
+  --color-earth:    #44452E;
+  --color-ochre:    #8091A5;   /* slate, used as secondary accent */
 
   /* Bootstrap variable overrides */
   --bs-primary: var(--color-moss);
-  --bs-primary-rgb: 88, 115, 92;
+  --bs-primary-rgb: 68, 69, 46;
   --bs-secondary: var(--color-volcanic);
   --bs-body-color: var(--color-text);
   --bs-body-bg: var(--color-snow);
@@ -242,7 +242,7 @@ section {
    7. Expedition / Coordinates card
    -------------------------------------------------------------------------- */
 .expedition-card {
-  background: linear-gradient(135deg, var(--color-midnight), #1c1f26);
+  background: linear-gradient(135deg, var(--color-midnight), #292E38);
   color: var(--color-snow);
   border-radius: 1rem;
   padding: 3rem 2rem;
@@ -378,7 +378,7 @@ section {
 
 /* Featured milestone: Kerlingarfjöll */
 .timeline-item.featured .timeline-card {
-  background: linear-gradient(160deg, var(--color-midnight), #1e2228);
+  background: linear-gradient(160deg, var(--color-midnight), #292E38);
   color: var(--color-snow);
   padding: 2.5rem;
   border: 1px solid var(--color-aurora);
@@ -516,7 +516,7 @@ section {
 .gallery-caption {
   position: absolute;
   inset: auto 0 0 0;
-  background: linear-gradient(0deg, rgba(44, 62, 80, 0.85), transparent);
+  background: linear-gradient(0deg, rgba(41, 46, 56, 0.85), transparent);
   color: var(--color-snow);
   padding: 0.75rem 1rem;
   transform: translateY(100%);
@@ -769,7 +769,7 @@ section {
    26. Glossary section
    -------------------------------------------------------------------------- */
 #glossary {
-  background: linear-gradient(160deg, #1a1c22 0%, var(--color-midnight) 60%, #1e2118 100%);
+  background: linear-gradient(160deg, #292E38 0%, var(--color-midnight) 60%, #44452E 100%);
   color: var(--color-snow);
   position: relative;
   overflow: hidden;
