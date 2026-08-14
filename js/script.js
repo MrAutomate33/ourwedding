@@ -437,6 +437,29 @@ const initI18n = () => {
   };
 };
 
+const initSiteLoader = () => {
+  const loader = document.getElementById('site-loader');
+  if (!loader) {
+    return;
+  }
+
+  const finishLoading = () => {
+    loader.classList.add('is-ready');
+    document.body.removeAttribute('aria-busy');
+    window.setTimeout(() => loader.remove(), 1000);
+  };
+
+  const heroImage = new Image();
+  heroImage.src = 'img/DT2025-09-15_150740000_2307_5.jpg';
+  const imageReady = heroImage.decode ? heroImage.decode().catch(() => undefined) : Promise.resolve();
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+
+  Promise.race([
+    Promise.all([imageReady, fontsReady]),
+    new Promise((resolve) => window.setTimeout(resolve, 2200)),
+  ]).then(finishLoading);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -710,6 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ------------------------------------------------------------------
      Init all
      ------------------------------------------------------------------ */
+  initSiteLoader();
   initI18n();
   initCountdown();
   initOffcanvasClose();

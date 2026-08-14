@@ -53,7 +53,18 @@
 }
 </script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0" aria-busy="true">
+
+<div class="site-loader" id="site-loader" role="status" aria-label="Mariëlle en Jeremy laden">
+  <div class="site-loader__image" aria-hidden="true"></div>
+  <div class="site-loader__veil" aria-hidden="true"></div>
+  <div class="site-loader__content">
+    <p class="site-loader__eyebrow">15 juli 2027</p>
+    <p class="site-loader__names">Mariëlle <span>&amp;</span> Jeremy</p>
+    <div class="site-loader__line" aria-hidden="true"><span></span></div>
+    <p class="site-loader__place">Buitenplaats Sparrendaal</p>
+  </div>
+</div>
 
 <a href="#main-content" class="skip-link">Ga naar de inhoud</a>
 
