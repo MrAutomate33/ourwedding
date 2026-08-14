@@ -1326,7 +1326,10 @@ iframe {
   .wind-game { grid-template-columns: 1fr; }
   .wind-game__scene { min-height: 14rem; grid-row: 1; }
   .wind-game__copy { grid-row: 2; }
-  .wind-game__portrait { width: min(34rem, 120%); right: -8%; height: 100%; object-position: right top; }
+  .wind-game__portrait { width: min(34rem, 120%); right: 0; height: 100%; object-position: right top; }
+  .wind-game:not(.is-windy):not(.is-won) .wind-game__portrait { opacity: 0; transform: translateX(115%) scale(1); }
+  .wind-game.is-windy .wind-game__portrait { opacity: 0.92; transform: translateX(8%) scale(1); }
+  .wind-game.is-won .wind-game__portrait { opacity: 1; transform: translateX(0) scale(1); }
 
   .countdown {
     gap: 0.55rem;
