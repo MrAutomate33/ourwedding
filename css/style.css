@@ -1107,6 +1107,16 @@ section {
 .ceremony-master-card h3 {
   color: var(--clr-rock);
 }
+.ceremony-master-photo {
+  display: block;
+  width: min(100%, 11rem);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border: 1px solid rgb(from var(--clr-sky) r g b / 0.72);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--clr-sky);
+}
 .dress-code-card a,
 .gift-card a,
 .ceremony-master-card a {
