@@ -2,6 +2,8 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
+<!-- Restore scroll position and skip the loader when returning from another site page. -->
+<script>history.scrollRestoration='manual';window.__weddingScrollKey=`wedding-scroll:${location.pathname}`;window.__weddingSavedScrollY=Number(sessionStorage.getItem(window.__weddingScrollKey))||0;window.__weddingSkipLoader=sessionStorage.getItem('wedding-skip-loader')===location.pathname;if(window.__weddingSkipLoader){sessionStorage.removeItem('wedding-skip-loader');document.documentElement.classList.add('skip-site-loader');}if(window.location.hash)history.replaceState(null,'',location.pathname+location.search);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mariëlle &amp; Jérémy · 15 July 2027</title>
 <meta name="description" content="Join Mariëlle &amp; Jérémy as they celebrate their wedding on 15 July 2027. From a proposal in Kerlingarfjöll, Iceland, to forever — find our story, schedule, [...]">
@@ -54,7 +56,7 @@
 }
 </script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0" aria-busy="true">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" aria-busy="true">
 
 <div class="site-loader" id="site-loader" role="status" aria-label="Mariëlle en Jérémy laden">
   <div class="site-loader__image" aria-hidden="true"></div>
@@ -71,7 +73,7 @@
 
 <noscript>
   <div class="alert alert-warning m-3" role="alert">
-    De belangrijkste huwelijksinformatie is beschikbaar zonder JavaScript. De countdown, galerij-lightbox en
+    De belangrijkste huwelijksinformatie is beschikbaar zonder JavaScript. De countdown en
     interactieve functies vereisen JavaScript. Je kunt het RSVP-formulier nog steeds openen via de knop hieronder.
   </div>
 </noscript>
@@ -102,13 +104,13 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#dress-code" data-i18n="nav.dresscode">Dresscode</a></li>
             <li><a class="dropdown-item" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
-            <li><a class="dropdown-item" href="#gallery" data-i18n="nav.gallery">Galerij</a></li>
             <li><a class="dropdown-item" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
           </ul>
         </li>
       </ul>
+      <a href="#rsvp" class="btn btn-rsvp btn-sm me-2" data-i18n="nav.rsvp">RSVP</a>
       <!-- Language switcher -->
-      <div class="lang-switcher dropdown me-2">
+      <div class="lang-switcher dropdown">
         <button class="lang-trigger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Taal kiezen"><span class="lang-flag flag-nl lang-current-flag"></span><span class="lang-current">NL</span></button>
         <ul class="dropdown-menu dropdown-menu-end lang-menu">
           <li><button class="dropdown-item lang-btn active" data-lang-btn="nl"><span class="lang-flag flag-nl"></span> Nederlands</button></li>
@@ -116,7 +118,6 @@
           <li><button class="dropdown-item lang-btn" data-lang-btn="fr"><span class="lang-flag flag-fr"></span> Français</button></li>
         </ul>
       </div>
-      <a href="#rsvp" class="btn btn-rsvp btn-sm" data-i18n="nav.rsvp">RSVP</a>
     </div>
   </div>
 
@@ -139,7 +140,6 @@
       <li class="nav-item"><a class="nav-link" href="#rsvp" data-i18n="nav.rsvp">RSVP</a></li>
       <li class="nav-item"><a class="nav-link" href="#dress-code" data-i18n="nav.dresscode">Dresscode</a></li>
       <li class="nav-item"><a class="nav-link" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
-      <li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav.gallery">Galerij</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
     </ul>
     <!-- Mobile language switcher -->
@@ -328,10 +328,10 @@
             <p class="section-label text-aurora" data-i18n="journey.item7.label">Het Aanzoek</p>
             <p class="timeline-date" data-i18n="journey.item7.date">15 september 2025</p>
             <h3 class="h4" data-i18n="journey.item7.title">Kerlingarfjöll</h3>
-            <picture>
-              <source type="image/webp" srcset="img/story-kerlingarfjoll-sm.webp 800w, img/story-kerlingarfjoll-md.webp 1280w" sizes="(max-width: 991px) 100vw, 700px">
-              <img src="img/story-kerlingarfjoll-md.jpg" srcset="img/story-kerlingarfjoll-sm.jpg 800w, img/story-kerlingarfjoll-md.jpg 1280w" sizes="(max-width: 991px) 100vw, 700px" alt="Mariëlle en Jérémy tijdens het aanzoek bij Kerlingarfjöll" class="img-fluid rounded-3 my-3" loading="lazy" decoding="async">
-            </picture>
+            <video class="timeline-proposal-video rounded-3 my-3" muted playsinline autoplay preload="metadata" poster="img/story-kerlingarfjoll-md.jpg">
+              <source src="img/Video Project.mp4" type="video/mp4">
+              Je browser ondersteunt geen HTML5-video.
+            </video>
             <p class="mb-0" data-i18n="journey.item7.text">Hoog in de bergen van Kerlingarfjöll, omgeven door IJslands adembenemend landschap, begon ons nieuwe hoofdstuk.</p>
           </div>
         </div>
@@ -374,10 +374,7 @@
 
       <div class="row g-5 align-items-center mb-5">
         <div class="col-lg-6">
-          <picture>
-            <source type="image/webp" srcset="img/hero-kerlingarfjoll-sm.webp 800w, img/hero-kerlingarfjoll-md.webp 1280w, img/hero-kerlingarfjoll-lg.webp 1920w" sizes="(max-width: 991px) 100vw, 50vw">
-            <img src="img/hero-kerlingarfjoll-md.jpg" srcset="img/hero-kerlingarfjoll-sm.jpg 800w, img/hero-kerlingarfjoll-md.jpg 1280w, img/hero-kerlingarfjoll-lg.jpg 1920w" sizes="(max-width: 991px) 100vw, 50vw" alt="Het aanzoeklandschap bij Kerlingarfjöll, IJsland" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async">
-          </picture>
+          <img src="img/DT2025-09-15_130415000_2205_5.jpg" alt="Mariëlle laat haar verlovingsring zien na het aanzoek" class="proposal-main-image img-fluid rounded-4 shadow" loading="lazy" decoding="async">
         </div>
         <div class="col-lg-6">
           <h3 class="h5" data-i18n="proposal.h3_journey">De reis erheen</h3>
@@ -392,11 +389,17 @@
       </div>
 
       <div class="row g-3 mb-5">
-        <div class="col-md-6">
-          <img src="img/gallery-placeholder-1.svg" alt="Placeholder photo from Iceland" class="img-fluid rounded-3">
+        <div class="col-md-4">
+          <img src="img/story-kerlingarfjoll-md.jpg" srcset="img/story-kerlingarfjoll-sm.jpg 800w, img/story-kerlingarfjoll-md.jpg 1280w" sizes="(max-width: 991px) 100vw, 50vw" alt="Mariëlle en Jérémy tijdens het aanzoek bij Kerlingarfjöll" class="proposal-gallery-image img-fluid rounded-3" loading="lazy" decoding="async">
         </div>
-        <div class="col-md-6">
-          <img src="img/gallery-placeholder-4.svg" alt="Placeholder photo from Iceland" class="img-fluid rounded-3">
+        <div class="col-md-4">
+          <img src="img/DT2025-09-15_154811000_2365_5-md.jpg" srcset="img/DT2025-09-15_154811000_2365_5-sm.jpg 800w, img/DT2025-09-15_154811000_2365_5-md.jpg 1280w" sizes="(max-width: 767px) 100vw, 33vw" alt="Het kleurrijke landschap van Kerlingarfjöll, IJsland" class="proposal-gallery-image img-fluid rounded-3" loading="lazy" decoding="async">
+        </div>
+        <div class="col-md-4">
+          <picture>
+            <source type="image/webp" srcset="img/hero-kerlingarfjoll-sm.webp 800w, img/hero-kerlingarfjoll-md.webp 1280w, img/hero-kerlingarfjoll-lg.webp 1920w" sizes="(max-width: 991px) 100vw, 33vw">
+            <img src="img/hero-kerlingarfjoll-md.jpg" srcset="img/hero-kerlingarfjoll-sm.jpg 800w, img/hero-kerlingarfjoll-md.jpg 1280w, img/hero-kerlingarfjoll-lg.jpg 1920w" sizes="(max-width: 991px) 100vw, 33vw" alt="Het aanzoeklandschap bij Kerlingarfjöll, IJsland" class="proposal-gallery-image img-fluid rounded-3" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
 
@@ -428,6 +431,7 @@
        SECTION 6 — WEDDING DAY
        ========================================================================== -->
   <section id="wedding-day" class="bg-mist">
+    <span class="wedding-flower wedding-flower--middle" aria-hidden="true">✾</span>
     <div class="container">
       <div class="text-center mb-5">
         <p class="section-label" data-i18n="wedding.label">De Grote Dag</p>
@@ -487,8 +491,8 @@
       </div>
 
       <div class="wedding-note mx-auto mt-4" style="max-width: 700px;">
+        <p class="small mb-2" data-i18n="wedding.note">We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.</p>
         <p class="small mb-0" data-i18n="wedding.photo_note">Tijdens de ceremonie hebben we een professionele fotograaf en vragen we jullie om telefoons weg te leggen. Buiten de ceremonie zijn jullie vrij om foto&apos;s en filmpjes te maken. Film je? Houd je telefoon dan horizontaal. En vooral: wees samen met ons in het moment.</p>
-        <p class="small mt-2 mb-0" data-i18n="wedding.note">Kinderen en huisdieren blijven deze dag thuis, zodat iedereen onbezorgd van het feest kan genieten. We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.</p>
       </div>
     </div>
   </section>
@@ -501,6 +505,12 @@
       <div class="text-center mb-5">
         <p class="section-label" data-i18n="location.label">Locatie</p>
         <h2 data-i18n="location.h2">Hier naartoe</h2>
+      </div>
+
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <img src="img/jeroen_savelkouls_fotografie-01-e1676978044127-1920x950.jpg" alt="Buitenplaats Sparrendaal achter de open toegangspoort" class="venue-exterior-image img-fluid rounded-4 shadow" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="row g-5 mb-5 align-items-center">
@@ -544,17 +554,24 @@
           <div class="dress-code-card p-4">
             <i class="bi bi-building fs-2 text-moss" aria-hidden="true"></i>
             <h3 class="h6 mt-3" data-i18n="location.accom.h">Overnachting</h3>
-            <p class="small mb-0" data-i18n="location.accom.text">Informatie over overnachtingen volgt.</p>
+            <p class="small mb-2" data-i18n="location.accom.text">Gasten regelen en boeken hun overnachting zelf.</p>
+            <a class="small" href="accommodation.html" data-i18n="location.accom.link">Bekijk overnachtingsmogelijkheden</a>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="dress-code-card p-4">
             <i class="bi bi-taxi-front fs-2 text-moss" aria-hidden="true"></i>
             <h3 class="h6 mt-3" data-i18n="location.taxi.h">Taxi &amp; vervoer</h3>
-            <p class="small mb-0" data-i18n="location.taxi.text">Informatie over taxi's en vervoer volgt.</p>
+            <p class="small mb-2" data-i18n="location.taxi.intro">Hieronder vind je een aantal lokale taxi-opties.</p>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><a href="https://www.taxihoek.nl/" target="_blank" rel="noopener noreferrer">Taxi Centrale Driebergen</a></li>
+              <li class="mb-2"><a href="https://utc.nl/taxi-de-bilt/" target="_blank" rel="noopener noreferrer">Taxi De Bilt / Bilthoven</a></li>
+              <li><a href="https://sneleentaxi.nl/?utm_campaign=Swijnenenburg&amp;utm_source=tradetracker&amp;utm_medium=affiliate" target="_blank" rel="noopener noreferrer">Sneleentaxi.nl</a></li>
+            </ul>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -587,7 +604,6 @@
               title="RSVP Form for the wedding of Mariëlle and Jérémy"
               allowfullscreen
               loading="lazy"
-              tabindex="-1"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
@@ -641,7 +657,7 @@
       <div class="text-center mb-5">
         <p class="section-label" data-i18n="gifts.label">Cadeaus</p>
         <h2 data-i18n="gifts.h2">Cadeaus</h2>
-        <p class="lead" data-i18n="gifts.lead">Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, volgt hier binnenkort meer informatie.</p>
+        <p class="lead" data-i18n="gifts.lead">Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, lees dan gerust verder.</p>
       </div>
 
       <div class="row g-4">
@@ -663,6 +679,36 @@
     </div>
   </section>
 
+  <!-- ======================================================================
+       SECTION 11 — CEREMONY MASTERS
+       ========================================================================== -->
+  <section id="ceremony-masters">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-label" data-i18n="ceremony.label">Ceremoniemeesters</p>
+        <h2 data-i18n="ceremony.h2">Ontmoet onze ceremoniemeesters</h2>
+        <p class="lead" data-i18n="ceremony.lead">Onze ceremoniemeesters begeleiden de dag en beantwoorden praktische vragen.</p>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-md-5">
+          <div class="ceremony-master-card p-4 h-100 text-center">
+            <i class="bi bi-person-heart fs-2 text-moss" aria-hidden="true"></i>
+            <h3 class="h5 mt-3">[NAAM CEREMONIEMEESTER]</h3>
+            <p class="small mb-0">[CONTACTGEGEVENS TOEVOEGEN]</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="ceremony-master-card p-4 h-100 text-center">
+            <i class="bi bi-person-heart fs-2 text-moss" aria-hidden="true"></i>
+            <h3 class="h5 mt-3">[NAAM CEREMONIEMEESTER]</h3>
+            <p class="small mb-0">[CONTACTGEGEVENS TOEVOEGEN]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="wind-game" class="wind-game-section" aria-labelledby="wind-game-title">
     <div class="container">
       <div class="wind-game" data-wind-game>
@@ -676,7 +722,7 @@
           <p class="wind-game__status" aria-live="polite" data-wind-status data-i18n="wind.status_ready">Klaar voor een frisse bries?</p>
           <div class="wind-game__actions">
             <button type="button" class="btn btn-rsvp" data-wind-start><i class="bi bi-mic-fill" aria-hidden="true"></i><span data-i18n="wind.start">Gebruik microfoon</span></button>
-            <button type="button" class="btn btn-outline-light" data-wind-fallback><i class="bi bi-wind" aria-hidden="true"></i><span data-i18n="wind.fallback">Roep de wind op</span></button>
+            <button type="button" class="btn btn-outline-light wind-game__fallback" data-wind-fallback><i class="bi bi-wind" aria-hidden="true"></i><span data-i18n="wind.fallback">Roep de wind op</span></button>
           </div>
         </div>
         <div class="wind-game__scene" aria-hidden="true">
@@ -702,11 +748,7 @@
         <p class="mb-1">15 juli 2027</p>
         <p class="mb-0" data-i18n="footer.thanks">Dank je wel dat je dit met ons viert.</p>
       </div>
-      <div class="col-md-4">
-        <!-- Social placeholders
-        <a href="[ADD INSTAGRAM URL]">Instagram</a>
-        <a href="[ADD FACEBOOK URL]">Facebook</a>
-        -->
+      <div class="col-md-4 offset-md-4">
         <p class="small mb-1">&copy; <span id="copyright-year"></span> Mariëlle &amp; Jérémy</p>
         <p class="footer-privacy mb-0" data-i18n="footer.privacy">Deze site gebruikt geen analytics of tracking. RSVP-gegevens worden verwerkt via Microsoft Forms.</p>
         <!-- Optional credit: Site by [ADD CREDIT] -->

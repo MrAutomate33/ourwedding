@@ -14,8 +14,13 @@ const translations = {
     'nav.home': 'Home', 'nav.more': 'Meer', 'nav.story': 'Ons verhaal', 'nav.journey': 'Onze reis',
     'nav.proposal': 'Het aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus',
-    'nav.gallery': 'Galerij', 'nav.ceremony': 'Ceremoniemeesters',
+    'nav.ceremony': 'Ceremoniemeesters',
     // Hero
+    'hero.sub': 'Van Kerlingarfjöll tot voor altijd',
+    'hero.date': '15 juli 2027',
+    'hero.countdown_prefix': 'Aftellen naar het moment dat we ‘ja’ zeggen.',
+    'hero.days': 'Dagen', 'hero.hours': 'Uren', 'hero.minutes': 'Minuten', 'hero.seconds': 'Seconden',
+    'hero.btn_rsvp': 'RSVP', 'hero.btn_day': 'Bekijk de dag',
     'invite.label': 'Persoonlijke uitnodiging',
     'invite.message': 'Beste {name}, met veel liefde nodigen we je uit om onze trouwdag met ons te vieren. Van de bergen van Kerlingarfjöll tot dit nieuwe hoofdstuk: jouw aanwezigheid maakt onze dag nog mooier. We kijken ernaar uit om samen te proosten, te lachen en herinneringen voor altijd te maken.',
     'journey.label': 'Onze Reis', 'journey.h2': 'Onze Reis naar Kerlingarfjöll',
@@ -29,6 +34,16 @@ const translations = {
     'journey.item9.text': 'We kunnen niet wachten om dit nieuwe hoofdstuk te vieren met onze familie en vrienden.',
     'journey.continues': 'De reis gaat verder\u2026', 'journey.btn': 'Lees het aanzoeksverhaal',
     // Proposal
+    'coord.label': 'IJsland', 'coord.h2': 'Coördinaten van ons verhaal',
+    'coord.location_label': 'Aanzoeklocatie', 'coord.tagline': 'Waar avontuur voor eeuwig werd.',
+    'coord.btn': 'Lees ons verhaal',
+    'story.label': 'Ons Verhaal', 'story.h2': 'Ons Verhaal',
+    'story.h3_met': 'Hoe wij elkaar ontmoetten',
+    'story.p_met': 'Voeg hier toe hoe Mariëlle en Jérémy elkaar ontmoetten.',
+    'story.h3_adventure': 'Avonturen beleven samen',
+    'story.p_adventure': 'Voeg hier een favoriete gedeelde herinnering of avontuur toe.',
+    'story.h3_chapter': 'Het volgende hoofdstuk',
+    'story.p_chapter': 'Voeg hier een korte introductie van het huwelijksfeest toe.',
     'proposal.label': 'Het Aanzoek', 'proposal.h2': 'Het aanzoek bij Kerlingarfjöll',
     'proposal.h3_journey': 'De reis erheen', 'proposal.h3_moment': 'Het moment', 'proposal.h3_answer': 'Het antwoord',
     'proposal.location_caption': 'Kerlingarfjöll, IJsland · 64°38\'41.8"N 19°17\'14.9"W',
@@ -47,15 +62,25 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'Diner', 'wedding.dinner.note': 'Samen aan tafel, met tijd voor goed eten en mooie gesprekken.',
     'wedding.speeches.time': 'Tijdens het diner', 'wedding.speeches.desc': 'Toespraken', 'wedding.speeches.note': 'Een paar woorden uit het hart, tussen de gangen door.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Feest', 'wedding.party.note': 'Daarna gaat de muziek aan en vieren we samen tot laat.',
-    'wedding.note': 'Kinderen en huisdieren blijven deze dag thuis, zodat iedereen onbezorgd van het feest kan genieten. We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.',
+    'wedding.note': 'We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.',
     'wedding.photo_note': "Tijdens de ceremonie hebben we een professionele fotograaf en vragen we jullie om telefoons weg te leggen. Buiten de ceremonie zijn jullie vrij om foto\'s en filmpjes te maken. Film je? Houd je telefoon dan horizontaal. En vooral: wees samen met ons in het moment.",
     // Location
     'location.label': 'Locatie', 'location.h2': 'Hier naartoe',
     'location.description': 'Een sfeervol landhuis met klassieke ruimtes en een prachtige parktuin op de Utrechtse Heuvelrug.',
     'location.travel.h': 'Reizen', 'location.travel.text': 'Reis naar station Driebergen-Zeist. Vanaf daar kun je lopen of de bus nemen. Plan vlak voor vertrek je actuele route via 9292.',
     'location.parking.h': 'Parkeren', 'location.parking.text': 'Parkeren kan bij Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parkeerroute',
-    'location.accom.h': 'Overnachting', 'location.accom.text': 'Informatie over overnachtingen volgt.',
-    'location.taxi.h': 'Taxi & vervoer', 'location.taxi.text': "Informatie over taxi's en vervoer volgt.",
+    'location.accom.h': 'Overnachting', 'location.accom.text': 'Gasten regelen en boeken hun overnachting zelf.', 'location.accom.link': 'Bekijk overnachtingsmogelijkheden',
+    'location.taxi.h': 'Taxi & vervoer', 'location.taxi.intro': 'Hieronder vind je een aantal lokale taxi-opties.',
+    'accommodation.label': 'Overnachten', 'accommodation.h3': 'Overnachtingsmogelijkheden in de buurt', 'accommodation.lead': 'Hieronder vind je enkele mogelijkheden.',
+    'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hotel in Driebergen-Rijsenburg, met parkeergelegenheid en ontbijtopties.', 'accommodation.bergse': 'Hotel aan de rand van Nationaal Park Utrechtse Heuvelrug met verschillende kamertypes.', 'accommodation.passage': 'Kleinschalige bed & breakfast in Driebergen-Rijsenburg, op loopafstand van Buitenplaats Sparrendaal.',
+    'accommodation.horst.one': 'Overnacht na het trouwfeest op Buitenplaats Sparrendaal op Landgoed de Horst te Driebergen. Om in de romantische sfeer te blijven wordt je de volgende ochtend heerlijk wakker tussen de boomtoppen onder het genot van vogelgezang. Je begint de dag goed met een uitgebreid ontbijtbuffet waar je kunt nagenieten van het gezellige feest van de avond ervoor. Kamerprijzen vanaf € 90,- per nacht inclusief ontbijt (exclusief toeristenbelasting).',
+    'accommodation.horst.two': 'Landgoed de Horst is gunstig gelegen, met gratis parkeergelegenheid. Mocht je gebruik willen maken van een taxi, dan kan dat uiteraard via de receptie van het landgoed geregeld worden. Verder beschikt het hotel over gratis Wi-fi.',
+    'accommodation.bergse.full': 'Midden in Nationaal Park Utrechtse Heuvelrug staat Hotel Bergse Bossen. Centraal gelegen, goed bereikbaar en omringd door prachtige natuur. Je kunt bij Hotel Bergse Bossen overnachten in één van de 65 comfortabele hotelkamers. Alle kamers kijken uit op het omliggende groen en het hele hotel is gelijkvloers. De kamers beschikken over douche en toilet, televisie, radio, telefoon en een kluisje. Kamerprijzen vanaf €50,- per persoon inclusief ontbijt. Je kunt kiezen voor een één- of tweepersoonskamer, maar ze hebben ook een bruidskamer, driepersoonskamers, mindervalidenkamers en hotelbungalows. Voor het boeken van een kamer kun je contact opnemen via banqueting@bergsebossen.nl. Wanneer je bij ons op de trouwlocatie gaat trouwen, kunnen wij een kortingscode aanbieden waarmee jullie en jullie gasten 10% korting krijgen op een hotelovernachting, exclusief citytax. Laat het ons weten wanneer je wilt boeken, dan sturen wij de kortingscode naar je toe.',
+    'accommodation.passage.full': 'B&B Passage | 3 kamers | Op loopafstand van Buitenplaats Sparrendaal treft u tevens B&B Passage met 3 kamers.',
+    'accommodation.nearby.h': 'In de omgeving', 'accommodation.jans': 'Bed & breakfast in Langbroek, op ongeveer een kwartier rijden van de locatie.', 'accommodation.valk': 'Groter hotel in Veenendaal met kamers en wellness- en fitnessfaciliteiten.', 'accommodation.overberg': 'Viersterrenhotel in Overberg, aan de rand van Nationaal Park Utrechtse Heuvelrug.',
+    'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed & breakfast met vier kamers in een gerestaureerde boerderij, inclusief ontbijt.', 'accommodation.buitenlust': 'Restaurant met vijf hotelkamers in Amerongen.', 'accommodation.napoleonschuur': 'Vijf designkamers in een gerestaureerd historisch pand in Amerongen.',
+    'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Vijf lodges op een historisch boerderijterrein, op ongeveer tien minuten rijden van de locatie.',
+    'accommodation.smallbnb.h': 'Andere kleine B&Bs in Amerongen', 'accommodation.bestegoed': 'Bed & breakfast met een kamer in Amerongen.', 'accommodation.overtuin': 'Bed & breakfast met een kamer in Amerongen. Telefoon: 0343 454 989.', 'accommodation.bb23': 'Bed & breakfast met twee kamers in Amerongen. Telefoon: 0343 451 692.', 'accommodation.back': 'Terug naar de bruiloftssite',
     'location.directions_btn': 'Routebeschrijving openen',
     // RSVP
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Kom je ook?',
@@ -69,19 +94,16 @@ const translations = {
     'dresscode.style.h': 'Stijl', 'dresscode.colours.h': 'Kleuren', 'dresscode.practical.h': 'Praktische opmerkingen',
     // Gifts
     'gifts.label': 'Cadeaus', 'gifts.h2': 'Cadeaus',
-    'gifts.lead': 'Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, volgt hier binnenkort meer informatie.',
-    'gifts.honeymoon.h': 'Bijdrage aan huwelijksreis', 'gifts.honeymoon.text': 'Willen jullie ons iets geven? Een bijdrage aan onze huwelijksreis is van harte welkom en helpt ons om samen nieuwe herinneringen te maken.',
+    'gifts.lead': 'Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, lees dan gerust verder.',
+    'gifts.honeymoon.h': 'Bijdrage aan huwelijksreis',
+    'gifts.honeymoon.text': 'Willen jullie ons iets geven? Een bijdrage aan onze huwelijksreis is van harte welkom en helpt ons om samen nieuwe herinneringen te maken.',
     'gifts.wishlist.h': 'Verlanglijst', 'gifts.wishlist.text': 'Weten jullie iets waarvan jullie zeker weten dat het bij ons past? Dan zijn we natuurlijk blij met een persoonlijk cadeau. Anders is een bijdrage aan onze huwelijksreis altijd een fijne keuze.',
-    // Gallery
-    'gallery.label': 'Galerij', 'gallery.h2': 'Onze avonturen',
-    'gallery.filter.all': 'Alles', 'gallery.filter.iceland': 'IJsland', 'gallery.filter.proposal': 'Aanzoek',
-    'gallery.filter.us': 'Wij', 'gallery.filter.friends': 'Familie & vrienden',
     // Ceremony Masters
     'ceremony.label': 'Ceremoniemeesters', 'ceremony.h2': 'Ontmoet onze ceremoniemeesters',
     'ceremony.lead': 'Onze ceremoniemeesters begeleiden de dag en beantwoorden praktische vragen.',
     // Footer
     'footer.thanks': 'Dank je wel dat je dit met ons viert.',
-    'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP', 'footer.nav.gallery': 'Galerij',
+    'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Terug naar boven \u2191',
     'footer.privacy': 'Deze site gebruikt geen analytics of tracking. RSVP-gegevens worden verwerkt via Microsoft Forms.',
     'lang.label': 'Taal',
@@ -91,7 +113,7 @@ const translations = {
     'nav.home': 'Home', 'nav.more': 'More', 'nav.story': 'Our story', 'nav.journey': 'Our journey',
     'nav.proposal': 'The proposal', 'nav.wedding': 'Wedding day', 'nav.location': 'Location',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress code', 'nav.gifts': 'Gifts',
-    'nav.gallery': 'Gallery', 'nav.ceremony': 'Ceremony masters',
+    'nav.ceremony': 'Ceremony masters',
     'invite.label': 'Personal invitation',
     'invite.message': 'Dear {name}, with so much love, we invite you to celebrate our wedding day with us. From the mountains of Kerlingarfjöll to this new chapter, your presence will make our day even more meaningful. We cannot wait to toast, laugh, and create memories to carry with us forever.',
     'hero.sub': 'From Kerlingarfj\u00f6ll to forever',
@@ -138,14 +160,24 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'Dinner', 'wedding.dinner.note': 'Time to sit together, enjoy good food and share lovely conversations.',
     'wedding.speeches.time': 'During dinner', 'wedding.speeches.desc': 'Speeches', 'wedding.speeches.note': 'A few words from the heart, shared between courses.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Party', 'wedding.party.note': 'Then the music starts and we celebrate together into the night.',
-    'wedding.note': 'Children and pets will stay at home so everyone can enjoy the celebration carefree. We are inviting exactly the people named on their personal invitation.',
+    'wedding.note': 'We are inviting exactly the people named on their personal invitation.',
     'wedding.photo_note': 'We have a professional photographer during the ceremony, so please put your phones away. Outside the ceremony, feel free to take photos and videos. If you film, please hold your phone horizontally. Above all, be present in the moment with us.',
     'location.label': 'Venue', 'location.h2': 'Getting There',
     'location.description': 'An atmospheric country house with classic rooms and a beautiful park garden in the Utrechtse Heuvelrug.',
     'location.travel.h': 'Travel', 'location.travel.text': 'Travel to Driebergen-Zeist station. From there, walk or take a bus. Check the current route via 9292 shortly before you leave.',
     'location.parking.h': 'Parking', 'location.parking.text': 'Parking is available at Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parking route',
-    'location.accom.h': 'Accommodation', 'location.accom.text': 'Accommodation information will follow.',
-    'location.taxi.h': 'Taxi & Transport', 'location.taxi.text': 'Taxi and transport information will follow.',
+    'location.accom.h': 'Accommodation', 'location.accom.text': 'Guests arrange and book their own accommodation.', 'location.accom.link': 'View accommodation options',
+    'location.taxi.h': 'Taxi & Transport', 'location.taxi.intro': 'Here are several local taxi options.',
+    'accommodation.label': 'Accommodation', 'accommodation.h3': 'Accommodation options nearby', 'accommodation.lead': 'Here are several options.',
+    'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hotel in Driebergen-Rijsenburg, with parking and breakfast options.', 'accommodation.bergse': 'Hotel on the edge of Utrechtse Heuvelrug National Park with several room types.', 'accommodation.passage': 'Small bed and breakfast in Driebergen-Rijsenburg, within walking distance of Buitenplaats Sparrendaal.',
+    'accommodation.horst.one': 'Stay at Landgoed de Horst in Driebergen after the wedding celebration at Buitenplaats Sparrendaal. Wake the next morning among the treetops, with birdsong all around, and start the day with an extensive breakfast buffet. Rates start at EUR 90 per night including breakfast, excluding tourist tax.',
+    'accommodation.horst.two': 'Landgoed de Horst is conveniently located and offers free parking. A taxi can be arranged through the hotel reception, and the hotel also provides free Wi-Fi.',
+    'accommodation.bergse.full': 'Hotel Bergse Bossen is located in Utrechtse Heuvelrug National Park, with 65 comfortable rooms overlooking the surrounding greenery. The hotel is fully on one level and offers a range of room types, including accessible rooms, family rooms and hotel bungalows. Rates start at EUR 50 per person including breakfast. For bookings, contact banqueting@bergsebossen.nl. A 10% accommodation discount code may be available for wedding guests, excluding city tax; contact us when you would like to book so we can send it to you.',
+    'accommodation.passage.full': 'B&B Passage | 3 rooms | B&B Passage is within walking distance of Buitenplaats Sparrendaal and has three rooms.',
+    'accommodation.nearby.h': 'In the area', 'accommodation.jans': 'Bed and breakfast in Langbroek, about a 15-minute drive from the venue.', 'accommodation.valk': 'Larger hotel in Veenendaal with rooms, wellness and fitness facilities.', 'accommodation.overberg': 'Four-star hotel in Overberg on the edge of Utrechtse Heuvelrug National Park.',
+    'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Four-room bed and breakfast in a restored farmhouse, with breakfast included.', 'accommodation.buitenlust': 'Restaurant with five hotel rooms in Amerongen.', 'accommodation.napoleonschuur': 'Five design rooms in a restored historic building in Amerongen.',
+    'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Five lodges on a historic farm site, approximately a 10-minute drive from the venue.',
+    'accommodation.smallbnb.h': 'Other small B&Bs in Amerongen', 'accommodation.bestegoed': 'One-room bed and breakfast in Amerongen.', 'accommodation.overtuin': 'One-room bed and breakfast in Amerongen. Telephone: 0343 454 989.', 'accommodation.bb23': 'Two-room bed and breakfast in Amerongen. Telephone: 0343 451 692.', 'accommodation.back': 'Back to the wedding site',
     'location.directions_btn': 'Open Directions',
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Will You Join Us?',
     'rsvp.lead': 'We would love to celebrate with you. Please let us know whether you can attend.',
@@ -156,16 +188,14 @@ const translations = {
     'dresscode.lead': 'Celebrate with us in elegant summer attire. Choose something festive, comfortable, and suitable for the venue.',
     'dresscode.style.h': 'Style', 'dresscode.colours.h': 'Colours', 'dresscode.practical.h': 'Practical Notes',
     'gifts.label': 'Gifts', 'gifts.h2': 'Gifts',
-    'gifts.lead': 'Your presence is the greatest gift. If you would still like to give something, more information will be shared here.',
-    'gifts.honeymoon.h': 'Honeymoon Contribution', 'gifts.honeymoon.text': 'If you would like to give us something, a contribution towards our honeymoon would be warmly welcomed and will help us create new memories together.',
+    'gifts.lead': 'Your presence is the greatest gift. If you would still like to give something.',
+    'gifts.honeymoon.h': 'Honeymoon Contribution',
+    'gifts.honeymoon.text': 'If you would like to give us something, a contribution towards our honeymoon would be warmly welcomed and will help us create new memories together.',
     'gifts.wishlist.h': 'Wishlist', 'gifts.wishlist.text': 'If you know of something you are sure would suit us, a personal gift is always lovely. Otherwise, a contribution towards our honeymoon is a wonderful choice.',
-    'gallery.label': 'Gallery', 'gallery.h2': 'Our Adventures',
-    'gallery.filter.all': 'All', 'gallery.filter.iceland': 'Iceland', 'gallery.filter.proposal': 'Proposal',
-    'gallery.filter.us': 'Us', 'gallery.filter.friends': 'Friends & Family',
     'ceremony.label': 'Ceremony Masters', 'ceremony.h2': 'Meet Our Ceremony Masters',
     'ceremony.lead': 'Our ceremony masters will help guide the day and answer practical questions.',
     'footer.thanks': 'Thank you for celebrating with us.',
-    'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP', 'footer.nav.gallery': 'Gallery',
+    'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Back to top \u2191',
     'footer.privacy': 'This site does not use analytics or tracking. RSVP data is processed only via Microsoft Forms.',
     'lang.label': 'Language',
@@ -175,7 +205,7 @@ const translations = {
     'nav.home': 'Accueil', 'nav.more': 'Plus', 'nav.story': 'Notre histoire', 'nav.journey': 'Notre voyage',
     'nav.proposal': 'La demande', 'nav.wedding': 'Le mariage', 'nav.location': 'Lieu',
     'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux',
-    'nav.gallery': 'Galerie', 'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie',
+    'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie',
     'invite.label': 'Invitation personnelle',
     'invite.message': 'Cher/Chère {name}, c’est avec beaucoup d’amour que nous vous invitons à célébrer notre mariage avec nous. Des montagnes de Kerlingarfjöll à ce nouveau chapitre, votre présence rendra cette journée encore plus précieuse. Nous avons hâte de trinquer, de rire et de créer ensemble des souvenirs pour toujours.',
     'hero.sub': "De Kerlingarfj\u00f6ll \u00e0 l\u2019\u00e9ternit\u00e9",
@@ -221,7 +251,7 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'D\u00eener', 'wedding.dinner.note': 'Un moment autour de la table, avec de bons plats et de belles conversations.',
     'wedding.speeches.time': 'Pendant le d\u00eener', 'wedding.speeches.desc': 'Discours', 'wedding.speeches.note': 'Quelques mots du cœur, entre les plats.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'F\u00eate', 'wedding.party.note': 'Puis la musique commence et la f\u00eate continue jusque tard dans la nuit.',
-    'wedding.note': 'Nous c\u00e9l\u00e9brons cette journ\u00e9e entre adultes. Les enfants et les animaux resteront \u00e0 la maison afin que chacun puisse profiter pleinement de la f\u00eate. Nous invitons exactement les personnes indiqu\u00e9es sur leur invitation personnelle.',
+    'wedding.note': 'Nous invitons exactement les personnes indiquées sur leur invitation personnelle.',
     'wedding.photo_note': 'Un photographe professionnel sera pr\u00e9sent pendant la c\u00e9r\u00e9monie\u00a0: merci de ranger vos t\u00e9l\u00e9phones. En dehors de la c\u00e9r\u00e9monie, vous pouvez prendre des photos et des vid\u00e9os. Si vous filmez, tenez votre t\u00e9l\u00e9phone horizontalement. Et surtout, profitez de ce moment avec nous.',
     'location.label': 'Lieu', 'location.h2': 'Comment venir',
     'location.travel.h': 'Transport', 'location.parking.h': 'Parking',
@@ -236,24 +266,31 @@ const translations = {
     'dresscode.lead': "C\u00e9l\u00e9brez avec nous en tenue \u00e9l\u00e9gante d\u2019\u00e9t\u00e9. Choisissez quelque chose de festif, confortable et adapt\u00e9 au lieu.",
     'dresscode.style.h': 'Style', 'dresscode.colours.h': 'Couleurs', 'dresscode.practical.h': 'Conseils pratiques',
     'gifts.label': 'Cadeaux', 'gifts.h2': 'Cadeaux',
-    'gifts.lead': "Votre pr\u00e9sence est le plus beau des cadeaux. Si vous souhaitez tout de m\u00eame offrir quelque chose, plus d\u2019informations seront partag\u00e9es ici.",
-    'gifts.honeymoon.h': 'Contribution au voyage de noces', 'gifts.honeymoon.text': 'Si vous souhaitez nous offrir quelque chose, une contribution pour notre voyage de noces sera chaleureusement accueillie et nous aidera à créer de nouveaux souvenirs ensemble.',
+    'gifts.lead': 'Votre présence est le plus beau des cadeaux. Si vous souhaitez tout de même nous offrir quelque chose.',
+    'gifts.honeymoon.h': 'Contribution au voyage de noces',
+    'gifts.honeymoon.text': 'Si vous souhaitez nous offrir quelque chose, une contribution pour notre voyage de noces sera chaleureusement accueillie et nous aidera à créer de nouveaux souvenirs ensemble.',
     'gifts.wishlist.h': 'Liste de souhaits', 'gifts.wishlist.text': 'Si vous connaissez quelque chose qui nous correspond vraiment, un cadeau personnel nous fera plaisir. Sinon, une contribution à notre voyage de noces est une très belle idée.',
-    'gallery.label': 'Galerie', 'gallery.h2': 'Nos aventures',
-    'gallery.filter.all': 'Tout', 'gallery.filter.iceland': 'Islande', 'gallery.filter.proposal': 'Demande',
-    'gallery.filter.us': 'Nous', 'gallery.filter.friends': 'Famille & amis',
     'ceremony.label': 'Ma\u00eetres de C\u00e9r\u00e9monie', 'ceremony.h2': 'Rencontrez nos ma\u00eetres de c\u00e9r\u00e9monie',
     'ceremony.lead': 'Nos ma\u00eetres de c\u00e9r\u00e9monie guideront la journ\u00e9e et r\u00e9pondront aux questions pratiques.',
     'location.description': 'Une maison de campagne chaleureuse avec des salles classiques et un magnifique parc dans l\u2019Utrechtse Heuvelrug.',
     'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel via 9292 avant votre d\u00e9part.',
     'location.parking.text': 'Un parking est disponible \u00e0 Buitenplaats Sparrendaal.',
     'location.parking.link': 'Ouvrir l\u2019itin\u00e9raire du parking',
-    'location.accom.text': 'Les informations sur l\u2019h\u00e9bergement suivront.',
-    'location.taxi.text': 'Les informations sur les taxis et le transport suivront.',
+    'location.accom.text': 'Les invités organisent et réservent eux-mêmes leur hébergement.', 'location.accom.link': 'Voir les possibilités d’hébergement',
+    'location.taxi.intro': 'Voici quelques options de taxis locaux.',
+    'accommodation.label': 'Hébergement', 'accommodation.h3': 'Possibilités d’hébergement à proximité', 'accommodation.lead': 'Voici quelques possibilités.',
+    'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hôtel à Driebergen-Rijsenburg, avec parking et possibilités de petit-déjeuner.', 'accommodation.bergse': 'Hôtel à la lisière du parc national Utrechtse Heuvelrug avec plusieurs types de chambres.', 'accommodation.passage': 'Petit bed and breakfast à Driebergen-Rijsenburg, à distance de marche de Buitenplaats Sparrendaal.',
+    'accommodation.horst.one': 'Après la fête de mariage à Buitenplaats Sparrendaal, passez la nuit à Landgoed de Horst à Driebergen. Réveillez-vous le lendemain matin parmi les arbres, au chant des oiseaux, puis commencez la journée avec un copieux buffet de petit-déjeuner. Les tarifs commencent à 90 EUR par nuit, petit-déjeuner compris et hors taxe de séjour.',
+    'accommodation.horst.two': 'Landgoed de Horst est idéalement situé et dispose d’un parking gratuit. Un taxi peut être organisé par la réception, et l’hôtel propose également le Wi-Fi gratuit.',
+    'accommodation.bergse.full': 'L’Hôtel Bergse Bossen se trouve dans le parc national Utrechtse Heuvelrug et propose 65 chambres confortables donnant sur la verdure. L’hôtel est entièrement de plain-pied et offre différents types de chambres, notamment des chambres accessibles, familiales et des bungalows. Les tarifs commencent à 50 EUR par personne, petit-déjeuner compris. Pour réserver, contactez banqueting@bergsebossen.nl. Un code de réduction de 10% peut être disponible pour les invités du mariage, hors taxe de séjour ; contactez-nous lorsque vous souhaitez réserver afin que nous puissions vous l’envoyer.',
+    'accommodation.passage.full': 'B&B Passage | 3 chambres | B&B Passage se trouve à distance de marche de Buitenplaats Sparrendaal et propose trois chambres.',
+    'accommodation.nearby.h': 'Dans les environs', 'accommodation.jans': 'Bed and breakfast à Langbroek, à environ 15 minutes de route du lieu.', 'accommodation.valk': 'Hôtel plus grand à Veenendaal avec chambres, espace bien-être et salle de fitness.', 'accommodation.overberg': 'Hôtel quatre étoiles à Overberg, à la lisière du parc national Utrechtse Heuvelrug.',
+    'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed and breakfast de quatre chambres dans une ferme restaurée, petit-déjeuner compris.', 'accommodation.buitenlust': 'Restaurant avec cinq chambres d’hôtel à Amerongen.', 'accommodation.napoleonschuur': 'Cinq chambres design dans un bâtiment historique restauré à Amerongen.',
+    'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Cinq lodges sur un ancien domaine agricole, à environ dix minutes de route du lieu.',
+    'accommodation.smallbnb.h': 'Autres petits B&B à Amerongen', 'accommodation.bestegoed': 'Bed and breakfast avec une chambre à Amerongen.', 'accommodation.overtuin': 'Bed and breakfast avec une chambre à Amerongen. Téléphone : 0343 454 989.', 'accommodation.bb23': 'Bed and breakfast avec deux chambres à Amerongen. Téléphone : 0343 451 692.', 'accommodation.back': 'Retour au site du mariage',
     'rsvp.deadline_date': '[DATE \u00c0 AJOUTER]',
-    'wedding.note': 'Les enfants, les animaux et les accompagnants ne sont pas invit\u00e9s. Les invitations personnelles indiquent qui est invit\u00e9.',
     'footer.thanks': 'Merci de c\u00e9l\u00e9brer avec nous.',
-    'footer.nav.home': 'Accueil', 'footer.nav.rsvp': 'RSVP', 'footer.nav.gallery': 'Galerie',
+    'footer.nav.home': 'Accueil', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Retour en haut \u2191',
     'footer.privacy': "Ce site n\u2019utilise ni analyses ni suivi. Les donn\u00e9es RSVP sont trait\u00e9es uniquement via Microsoft Forms.",
     'lang.label': 'Langue',
@@ -340,22 +377,34 @@ const initI18n = () => {
   };
 };
 
+const restoreScrollPosition = (top) => {
+  const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = 'auto';
+  window.scrollTo({ top, left: 0, behavior: 'auto' });
+  document.documentElement.style.scrollBehavior = originalScrollBehavior;
+};
+
 const initSiteLoader = () => {
   const loader = document.getElementById('site-loader');
   if (!loader) {
     return;
   }
 
+  if (window.__weddingSkipLoader) {
+    document.body.classList.add('page-ready');
+    document.body.removeAttribute('aria-busy');
+    loader.remove();
+    restoreScrollPosition(window.__weddingSavedScrollY || 0);
+    document.dispatchEvent(new CustomEvent('site-ready'));
+    return;
+  }
+
   const finishLoading = () => {
     document.body.classList.add('page-ready');
-    document.dispatchEvent(new CustomEvent('site-ready'));
     loader.classList.add('is-ready');
     document.body.removeAttribute('aria-busy');
-    const targetId = window.location.hash.slice(1);
-    const target = targetId ? document.getElementById(targetId) : null;
-    if (target) {
-      window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'auto' }));
-    }
+    restoreScrollPosition(window.__weddingSavedScrollY || 0);
+    document.dispatchEvent(new CustomEvent('site-ready'));
     window.setTimeout(() => loader.remove(), 1000);
   };
 
@@ -370,6 +419,46 @@ const initSiteLoader = () => {
     Promise.all([imageReady, fontsReady, minimumDisplayTime]),
     hardTimeout,
   ]).then(finishLoading);
+};
+
+const initInitialHashGuard = () => {
+  if (!window.location.hash) {
+    return;
+  }
+
+  window.history.replaceState(null, document.title, `${window.location.pathname}${window.location.search}`);
+};
+
+const initScrollPosition = () => {
+  const storageKey = window.__weddingScrollKey || `wedding-scroll:${window.location.pathname}`;
+  const savedScrollY = Number(sessionStorage.getItem(storageKey)) || 0;
+  const restore = () => {
+    if (savedScrollY > 0) {
+      restoreScrollPosition(savedScrollY);
+    }
+  };
+  const save = () => sessionStorage.setItem(storageKey, String(window.scrollY));
+
+  window.addEventListener('pagehide', save);
+  document.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+    const link = event.target.closest('a[href]');
+    if (!link || link.target === '_blank') {
+      return;
+    }
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin === window.location.origin && destination.pathname !== window.location.pathname) {
+      sessionStorage.setItem('wedding-skip-loader', destination.pathname);
+    }
+  });
+
+  if (document.getElementById('site-loader')) {
+    document.addEventListener('site-ready', restore, { once: true });
+  } else {
+    window.requestAnimationFrame(restore);
+  }
 };
 
 const initPersonalInvitation = () => {
@@ -412,24 +501,40 @@ const initLazyRsvp = () => {
   }
 
   const loadForm = () => {
-    if (!iframe.src) {
+    // getAttribute avoids the document URL that the .src property returns when unset
+    if (!iframe.getAttribute('src')) {
+      const scrollPosition = { top: window.scrollY, left: window.scrollX };
+      iframe.addEventListener('load', () => restoreScrollPosition(scrollPosition.top), { once: true });
       iframe.src = iframe.dataset.src;
     }
   };
 
-  if (!('IntersectionObserver' in window)) {
-    loadForm();
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting)) {
-      loadForm();
-      observer.disconnect();
+  let started = false;
+  const startObserver = () => {
+    if (started) {
+      return;
     }
-  }, { rootMargin: '300px 0px' });
+    started = true;
 
-  observer.observe(iframe);
+    window.requestAnimationFrame(() => {
+      if (!('IntersectionObserver' in window)) {
+        loadForm();
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          loadForm();
+          observer.disconnect();
+        }
+      }, { rootMargin: '400px 0px' });
+      observer.observe(iframe);
+    });
+  };
+
+  // Only start after the loading screen ends so scroll is guaranteed at 0
+  document.addEventListener('site-ready', startObserver, { once: true });
+  // Fallback if site-ready never fires
+  window.setTimeout(startObserver, 8000);
 };
 
 const initWindGame = () => {
@@ -455,6 +560,9 @@ const initWindGame = () => {
     game.classList.toggle('is-windy', windLevel > 14);
     if (!won && windLevel >= 65) {
       won = true;
+      windLevel = 100;
+      game.style.setProperty('--wind-level', '100%');
+      meter.setAttribute('aria-valuenow', '100');
       window.clearInterval(fallbackInterval);
       game.classList.add('is-won');
       status.textContent = text('wind.status_success');
@@ -522,6 +630,11 @@ const initWindGame = () => {
   });
 };
 
+const isFullyVisibleWithBottomMargin = (element, bottomMargin = 96) => {
+  const bounds = element.getBoundingClientRect();
+  return bounds.top >= 0 && bounds.bottom <= window.innerHeight + bottomMargin;
+};
+
 const initStoryHearts = () => {
   const imageWrap = document.querySelector('[data-heart-reveal]');
   if (!imageWrap || !('IntersectionObserver' in window)) {
@@ -554,23 +667,50 @@ const initStoryHearts = () => {
   };
 
   const observer = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting && document.body.classList.contains('page-ready'))) {
+    if (entries.some((entry) => entry.isIntersecting) && document.body.classList.contains('page-ready')) {
       createHearts();
       imageWrap.classList.add('hearts-visible');
       observer.disconnect();
     }
-  }, { threshold: 0.45 });
+  }, { rootMargin: '0px 0px 96px', threshold: 1 });
   observer.observe(imageWrap);
 
   document.addEventListener('site-ready', () => {
-    const bounds = imageWrap.getBoundingClientRect();
-    const isVisible = bounds.top < window.innerHeight * 0.55 && bounds.bottom > window.innerHeight * 0.45;
-    if (isVisible) {
+    if (isFullyVisibleWithBottomMargin(imageWrap)) {
       createHearts();
       imageWrap.classList.add('hearts-visible');
       observer.disconnect();
     }
   }, { once: true });
+};
+
+const initTimelineVideo = () => {
+  const video = document.querySelector('.timeline-proposal-video');
+  if (!video || !('IntersectionObserver' in window)) return;
+
+  let hasStarted = false;
+  let loopTimeout;
+  video.addEventListener('ended', () => {
+    loopTimeout = window.setTimeout(() => {
+      video.currentTime = 0;
+      video.play().catch(() => {
+        video.controls = false;
+      });
+    }, 3000);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    if (hasStarted || !entries.some((entry) => entry.isIntersecting)) return;
+
+    video.muted = true;
+    video.play().catch(() => {
+      video.controls = false;
+    });
+    hasStarted = true;
+    observer.disconnect();
+  }, { rootMargin: '0px 0px 96px', threshold: 1 });
+
+  observer.observe(video);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -702,110 +842,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ------------------------------------------------------------------
-     Gallery filtering
-     ------------------------------------------------------------------ */
-  const initGalleryFilter = () => {
-    const filterButtons = document.querySelectorAll('.gallery-filters [data-filter]');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    if (filterButtons.length === 0 || galleryItems.length === 0) {
-      return;
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-
-        filterButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        galleryItems.forEach((item) => {
-          const category = item.getAttribute('data-category');
-          const shouldShow = filter === 'all' || category === filter;
-          item.classList.toggle('d-none', !shouldShow);
-        });
-      });
-    });
-  };
-
-  /* ------------------------------------------------------------------
-     Gallery lightbox modal with prev/next navigation
-     ------------------------------------------------------------------ */
-  const initGalleryLightbox = () => {
-    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
-    const modalEl = document.getElementById('galleryModal');
-
-    if (galleryItems.length === 0 || !modalEl || typeof bootstrap === 'undefined') {
-      return;
-    }
-
-    const modalImage = document.getElementById('galleryModalImage');
-    const modalCaption = document.getElementById('galleryModalCaption');
-    const prevBtn = document.getElementById('galleryModalPrev');
-    const nextBtn = document.getElementById('galleryModalNext');
-    const modalInstance = new bootstrap.Modal(modalEl);
-
-    let currentIndex = 0;
-
-    const getVisibleItems = () => galleryItems.filter(el => !el.classList.contains('d-none'));
-
-    const showItem = (index) => {
-      const visible = getVisibleItems();
-      if (visible.length === 0) return;
-      const total = visible.length;
-      currentIndex = ((index % total) + total) % total;
-      const item = visible[currentIndex];
-      const img = item.querySelector('img');
-
-      if (modalImage && img) {
-        modalImage.src = img.getAttribute('src') || '';
-        modalImage.alt = img.getAttribute('alt') || '';
-      }
-      if (modalCaption) {
-        const captionEl = item.querySelector('.gallery-caption');
-        modalCaption.textContent = captionEl ? captionEl.textContent.trim() : '';
-      }
-    };
-
-    galleryItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const visible = getVisibleItems();
-        const idx = visible.indexOf(item);
-        if (idx >= 0) {
-          showItem(idx);
-          modalInstance.show();
-        }
-      });
-      item.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          const visible = getVisibleItems();
-          const idx = visible.indexOf(item);
-          if (idx >= 0) {
-            showItem(idx);
-            modalInstance.show();
-          }
-        }
-      });
-    });
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => showItem(currentIndex - 1));
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => showItem(currentIndex + 1));
-    }
-
-    modalEl.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') {
-        showItem(currentIndex - 1);
-      } else if (event.key === 'ArrowRight') {
-        showItem(currentIndex + 1);
-      }
-    });
-  };
-
-  /* ------------------------------------------------------------------
      Back-to-top button
      ------------------------------------------------------------------ */
   const initBackToTop = () => {
@@ -854,17 +890,18 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ------------------------------------------------------------------
      Init all
      ------------------------------------------------------------------ */
+  initScrollPosition();
   initSiteLoader();
+  initInitialHashGuard();
   initI18n();
   initPersonalInvitation();
   initWindGame();
   initLazyRsvp();
   initStoryHearts();
+  initTimelineVideo();
   initCountdown();
   initOffcanvasClose();
   initTimelineReveal();
-  initGalleryFilter();
-  initGalleryLightbox();
   initBackToTop();
   initCopyrightYear();
   initNavbarScrollState();
