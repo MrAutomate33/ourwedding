@@ -504,7 +504,48 @@ const initLazyRsvp = () => {
     // getAttribute avoids the document URL that the .src property returns when unset
     if (!iframe.getAttribute('src')) {
       const scrollPosition = { top: window.scrollY, left: window.scrollX };
-      iframe.addEventListener('load', () => restoreScrollPosition(scrollPosition.top), { once: true });
+      const restoreScroll = () => {
+        if (Math.abs(window.scrollY - scrollPosition.top) > 2) {
+          restoreScrollPosition(scrollPosition.top);
+        }
+      };
+      let userInteracted = false;
+      let focusGuard;
+      const handleAutoFocus = () => {
+        if (!userInteracted) {
+          restoreScroll();
+          iframe.blur();
+        }
+      };
+      const handleWindowBlur = () => {
+        window.setTimeout(() => {
+          if (!userInteracted && document.activeElement === iframe) {
+            handleAutoFocus();
+          }
+        });
+      };
+      const allowUserFocus = () => {
+        userInteracted = true;
+        window.clearInterval(focusGuard);
+        iframe.removeEventListener('focus', handleAutoFocus);
+        document.removeEventListener('keydown', allowKeyboardFocus);
+        window.removeEventListener('blur', handleWindowBlur);
+      };
+      const allowKeyboardFocus = (event) => {
+        if (event.key === 'Tab') {
+          allowUserFocus();
+        }
+      };
+
+      iframe.addEventListener('focus', handleAutoFocus);
+      iframe.addEventListener('pointerdown', allowUserFocus, { once: true });
+      document.addEventListener('keydown', allowKeyboardFocus);
+      window.addEventListener('blur', handleWindowBlur);
+      focusGuard = window.setInterval(() => {
+        if (!userInteracted && document.activeElement === iframe) {
+          handleAutoFocus();
+        }
+      }, 100);
       iframe.src = iframe.dataset.src;
     }
   };
@@ -531,10 +572,12 @@ const initLazyRsvp = () => {
     });
   };
 
-  // Only start after the loading screen ends so scroll is guaranteed at 0
-  document.addEventListener('site-ready', startObserver, { once: true });
-  // Fallback if site-ready never fires
-  window.setTimeout(startObserver, 8000);
+  // On internal returns site-ready has already fired before this initializer runs.
+  if (document.body.classList.contains('page-ready')) {
+    startObserver();
+  } else {
+    document.addEventListener('site-ready', startObserver, { once: true });
+  }
 };
 
 const initWindGame = () => {
