@@ -62,13 +62,14 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'Diner', 'wedding.dinner.note': 'Samen aan tafel, met tijd voor goed eten en mooie gesprekken.',
     'wedding.speeches.time': 'Tijdens het diner', 'wedding.speeches.desc': 'Toespraken', 'wedding.speeches.note': 'Een paar woorden uit het hart, tussen de gangen door.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Feest', 'wedding.party.note': 'Daarna gaat de muziek aan en vieren we samen tot laat.',
+    'wedding.end.time': '00:30', 'wedding.end.desc': 'Einde van de avond', 'wedding.end.note': 'Bedankt dat jullie deze bijzondere dag met ons hebben gevierd.',
     'wedding.note': 'We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.',
     'wedding.photo_note': "Tijdens de ceremonie hebben we een professionele fotograaf en vragen we jullie om telefoons weg te leggen. Buiten de ceremonie zijn jullie vrij om foto\'s en filmpjes te maken. Film je? Houd je telefoon dan horizontaal. En vooral: wees samen met ons in het moment.",
     // Location
     'location.label': 'Locatie', 'location.h2': 'Hier naartoe',
     'location.description': 'Een sfeervol landhuis met klassieke ruimtes en een prachtige parktuin op de Utrechtse Heuvelrug.',
-    'location.travel.h': 'Reizen', 'location.travel.text': 'Reis naar station Driebergen-Zeist. Vanaf daar kun je lopen of de bus nemen. Plan vlak voor vertrek je actuele route via 9292.',
-    'location.parking.h': 'Parkeren', 'location.parking.text': 'Parkeren kan bij Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parkeerroute',
+    'location.travel.h': 'Reizen', 'location.travel.text': 'Reis naar station Driebergen-Zeist. Vanaf daar kun je lopen of de bus nemen. Plan vlak voor vertrek je actuele route via',
+    'location.parking.h': 'Parkeren', 'location.parking.text': 'De parkeerplaats ligt vlak bij de locatie, net om de hoek. Vanaf daar is er een aparte ingang naar Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parkeerroute',
     'location.accom.h': 'Overnachting', 'location.accom.text': 'Gasten regelen en boeken hun overnachting zelf.', 'location.accom.link': 'Bekijk overnachtingsmogelijkheden',
     'location.taxi.h': 'Taxi & vervoer', 'location.taxi.intro': 'Hieronder vind je een aantal lokale taxi-opties.',
     'accommodation.label': 'Overnachten', 'accommodation.h3': 'Overnachtingsmogelijkheden in de buurt', 'accommodation.lead': 'Hieronder vind je enkele mogelijkheden.',
@@ -85,7 +86,7 @@ const translations = {
     // RSVP
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Kom je ook?',
     'rsvp.lead': 'We vieren dit het liefst samen met jou. Laat ons weten of je erbij kunt zijn.',
-    'rsvp.deadline': 'Reageer voor:', 'rsvp.deadline_date': '20 mei 2027', 'rsvp.btn': 'Open RSVP-formulier',
+    'rsvp.deadline': 'Reageer voor:', 'rsvp.deadline_date': '20 mei 2027', 'rsvp.load': 'Toon RSVP-formulier', 'rsvp.btn': 'Open RSVP-formulier',
     'rsvp.privacy': 'Je RSVP-gegevens worden uitsluitend gebruikt voor de organisatie van ons huwelijk en relevante communicatie.',
     // Dress Code
     'dresscode.label': 'Wat te dragen', 'dresscode.h2': 'Dresscode',
@@ -160,12 +161,13 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'Dinner', 'wedding.dinner.note': 'Time to sit together, enjoy good food and share lovely conversations.',
     'wedding.speeches.time': 'During dinner', 'wedding.speeches.desc': 'Speeches', 'wedding.speeches.note': 'A few words from the heart, shared between courses.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Party', 'wedding.party.note': 'Then the music starts and we celebrate together into the night.',
+    'wedding.end.time': '00:30', 'wedding.end.desc': 'End of the evening', 'wedding.end.note': 'Thank you for celebrating this special day with us.',
     'wedding.note': 'We are inviting exactly the people named on their personal invitation.',
     'wedding.photo_note': 'We have a professional photographer during the ceremony, so please put your phones away. Outside the ceremony, feel free to take photos and videos. If you film, please hold your phone horizontally. Above all, be present in the moment with us.',
     'location.label': 'Venue', 'location.h2': 'Getting There',
     'location.description': 'An atmospheric country house with classic rooms and a beautiful park garden in the Utrechtse Heuvelrug.',
-    'location.travel.h': 'Travel', 'location.travel.text': 'Travel to Driebergen-Zeist station. From there, walk or take a bus. Check the current route via 9292 shortly before you leave.',
-    'location.parking.h': 'Parking', 'location.parking.text': 'Parking is available at Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parking route',
+    'location.travel.h': 'Travel', 'location.travel.text': 'Travel to Driebergen-Zeist station. From there, walk or take a bus. Check the current route shortly before you leave via',
+    'location.parking.h': 'Parking', 'location.parking.text': 'The parking area is close to the venue, just around the corner. From there, a separate entrance leads to Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parking route',
     'location.accom.h': 'Accommodation', 'location.accom.text': 'Guests arrange and book their own accommodation.', 'location.accom.link': 'View accommodation options',
     'location.taxi.h': 'Taxi & Transport', 'location.taxi.intro': 'Here are several local taxi options.',
     'accommodation.label': 'Accommodation', 'accommodation.h3': 'Accommodation options nearby', 'accommodation.lead': 'Here are several options.',
@@ -181,7 +183,7 @@ const translations = {
     'location.directions_btn': 'Open Directions',
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Will You Join Us?',
     'rsvp.lead': 'We would love to celebrate with you. Please let us know whether you can attend.',
-    'rsvp.deadline': 'Please respond before:', 'rsvp.deadline_date': '20 May 2027', 'rsvp.btn': 'Open RSVP Form',
+    'rsvp.deadline': 'Please respond before:', 'rsvp.deadline_date': '20 May 2027', 'rsvp.load': 'Show RSVP Form', 'rsvp.btn': 'Open RSVP Form',
     'rsvp.privacy': 'Your RSVP details will only be used to organize our wedding and communicate relevant wedding information.',
     'dresscode.label': 'What to Wear', 'dresscode.h2': 'Dress Code',
     'dresscode.theme': 'Formal Summer Chic',
@@ -251,6 +253,7 @@ const translations = {
     'wedding.dinner.time': '17:30', 'wedding.dinner.desc': 'D\u00eener', 'wedding.dinner.note': 'Un moment autour de la table, avec de bons plats et de belles conversations.',
     'wedding.speeches.time': 'Pendant le d\u00eener', 'wedding.speeches.desc': 'Discours', 'wedding.speeches.note': 'Quelques mots du cœur, entre les plats.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'F\u00eate', 'wedding.party.note': 'Puis la musique commence et la f\u00eate continue jusque tard dans la nuit.',
+    'wedding.end.time': '00:30', 'wedding.end.desc': 'Fin de la soirée', 'wedding.end.note': 'Merci d’avoir célébré cette journée si spéciale avec nous.',
     'wedding.note': 'Nous invitons exactement les personnes indiquées sur leur invitation personnelle.',
     'wedding.photo_note': 'Un photographe professionnel sera pr\u00e9sent pendant la c\u00e9r\u00e9monie\u00a0: merci de ranger vos t\u00e9l\u00e9phones. En dehors de la c\u00e9r\u00e9monie, vous pouvez prendre des photos et des vid\u00e9os. Si vous filmez, tenez votre t\u00e9l\u00e9phone horizontalement. Et surtout, profitez de ce moment avec nous.',
     'location.label': 'Lieu', 'location.h2': 'Comment venir',
@@ -273,8 +276,8 @@ const translations = {
     'ceremony.label': 'Ma\u00eetres de C\u00e9r\u00e9monie', 'ceremony.h2': 'Rencontrez nos ma\u00eetres de c\u00e9r\u00e9monie',
     'ceremony.lead': 'Nos ma\u00eetres de c\u00e9r\u00e9monie guideront la journ\u00e9e et r\u00e9pondront aux questions pratiques.',
     'location.description': 'Une maison de campagne chaleureuse avec des salles classiques et un magnifique parc dans l\u2019Utrechtse Heuvelrug.',
-    'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel via 9292 avant votre d\u00e9part.',
-    'location.parking.text': 'Un parking est disponible \u00e0 Buitenplaats Sparrendaal.',
+    'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel avant votre d\u00e9part via',
+    'location.parking.text': 'Le parking se trouve près du lieu, juste au coin de la rue. De là, une entrée séparée mène à Buitenplaats Sparrendaal.',
     'location.parking.link': 'Ouvrir l\u2019itin\u00e9raire du parking',
     'location.accom.text': 'Les invités organisent et réservent eux-mêmes leur hébergement.', 'location.accom.link': 'Voir les possibilités d’hébergement',
     'location.taxi.intro': 'Voici quelques options de taxis locaux.',
@@ -288,7 +291,7 @@ const translations = {
     'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed and breakfast de quatre chambres dans une ferme restaurée, petit-déjeuner compris.', 'accommodation.buitenlust': 'Restaurant avec cinq chambres d’hôtel à Amerongen.', 'accommodation.napoleonschuur': 'Cinq chambres design dans un bâtiment historique restauré à Amerongen.',
     'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Cinq lodges sur un ancien domaine agricole, à environ dix minutes de route du lieu.',
     'accommodation.smallbnb.h': 'Autres petits B&B à Amerongen', 'accommodation.bestegoed': 'Bed and breakfast avec une chambre à Amerongen.', 'accommodation.overtuin': 'Bed and breakfast avec une chambre à Amerongen. Téléphone : 0343 454 989.', 'accommodation.bb23': 'Bed and breakfast avec deux chambres à Amerongen. Téléphone : 0343 451 692.', 'accommodation.back': 'Retour au site du mariage',
-    'rsvp.deadline_date': '[DATE \u00c0 AJOUTER]',
+    'rsvp.deadline_date': '[DATE \u00c0 AJOUTER]', 'rsvp.load': 'Afficher le formulaire RSVP',
     'footer.thanks': 'Merci de c\u00e9l\u00e9brer avec nous.',
     'footer.nav.home': 'Accueil', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Retour en haut \u2191',
@@ -496,88 +499,18 @@ const initPersonalInvitation = () => {
 
 const initLazyRsvp = () => {
   const iframe = document.querySelector('.rsvp-iframe-container iframe[data-src]');
-  if (!iframe) {
+  const loadButton = document.querySelector('[data-rsvp-load]');
+  if (!iframe || !loadButton) {
     return;
   }
 
   const loadForm = () => {
-    // getAttribute avoids the document URL that the .src property returns when unset
-    if (!iframe.getAttribute('src')) {
-      const scrollPosition = { top: window.scrollY, left: window.scrollX };
-      const restoreScroll = () => {
-        if (Math.abs(window.scrollY - scrollPosition.top) > 2) {
-          restoreScrollPosition(scrollPosition.top);
-        }
-      };
-      let userInteracted = false;
-      let focusGuard;
-      const handleAutoFocus = () => {
-        if (!userInteracted) {
-          restoreScroll();
-          iframe.blur();
-        }
-      };
-      const handleWindowBlur = () => {
-        window.setTimeout(() => {
-          if (!userInteracted && document.activeElement === iframe) {
-            handleAutoFocus();
-          }
-        });
-      };
-      const allowUserFocus = () => {
-        userInteracted = true;
-        window.clearInterval(focusGuard);
-        iframe.removeEventListener('focus', handleAutoFocus);
-        document.removeEventListener('keydown', allowKeyboardFocus);
-        window.removeEventListener('blur', handleWindowBlur);
-      };
-      const allowKeyboardFocus = (event) => {
-        if (event.key === 'Tab') {
-          allowUserFocus();
-        }
-      };
-
-      iframe.addEventListener('focus', handleAutoFocus);
-      iframe.addEventListener('pointerdown', allowUserFocus, { once: true });
-      document.addEventListener('keydown', allowKeyboardFocus);
-      window.addEventListener('blur', handleWindowBlur);
-      focusGuard = window.setInterval(() => {
-        if (!userInteracted && document.activeElement === iframe) {
-          handleAutoFocus();
-        }
-      }, 100);
-      iframe.src = iframe.dataset.src;
-    }
+    if (iframe.getAttribute('src')) return;
+    iframe.src = iframe.dataset.src;
+    iframe.closest('.rsvp-iframe-container').classList.add('is-loaded');
   };
 
-  let started = false;
-  const startObserver = () => {
-    if (started) {
-      return;
-    }
-    started = true;
-
-    window.requestAnimationFrame(() => {
-      if (!('IntersectionObserver' in window)) {
-        loadForm();
-        return;
-      }
-      const observer = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          loadForm();
-          observer.disconnect();
-        }
-      }, { rootMargin: '400px 0px' });
-      observer.observe(iframe);
-    });
-  };
-
-  // On internal returns site-ready has already fired before this initializer runs.
-  if (document.body.classList.contains('page-ready')) {
-    startObserver();
-  } else {
-    document.addEventListener('site-ready', startObserver, { once: true });
-  }
+  loadButton.addEventListener('click', loadForm, { once: true });
 };
 
 const initWindGame = () => {
