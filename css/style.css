@@ -1086,10 +1086,30 @@ section {
   min-height: 100vh;
 }
 .accommodation-page .navbar-wedding {
+  position: relative;
+  z-index: 10;
   background-color: rgb(from var(--clr-rock) r g b / 0.95);
+}
+.accommodation-page .lang-switcher {
+  position: relative;
+  z-index: 11;
 }
 .accommodation-page main {
   flex: 1;
+}
+.dresscode-guide-intro {
+  max-width: 48rem;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+.dresscode-guide-section {
+  height: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid rgb(from var(--clr-slate) r g b / 0.36);
+}
+.dresscode-guide-section p {
+  margin-bottom: 0;
+  line-height: 1.6;
 }
 @media (max-width: 575.98px) {
   .accommodation-page .navbar-wedding {
