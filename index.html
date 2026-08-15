@@ -104,6 +104,7 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#dress-code" data-i18n="nav.dresscode">Dresscode</a></li>
             <li><a class="dropdown-item" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
+            <li><a class="dropdown-item" href="accommodation.html" data-i18n="nav.accommodation">Overnachting</a></li>
             <li><a class="dropdown-item" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
           </ul>
         </li>
@@ -140,8 +141,10 @@
       <li class="nav-item"><a class="nav-link" href="#rsvp" data-i18n="nav.rsvp">RSVP</a></li>
       <li class="nav-item"><a class="nav-link" href="#dress-code" data-i18n="nav.dresscode">Dresscode</a></li>
       <li class="nav-item"><a class="nav-link" href="#gifts" data-i18n="nav.gifts">Cadeaus</a></li>
+      <li class="nav-item"><a class="nav-link" href="accommodation.html" data-i18n="nav.accommodation">Overnachting</a></li>
       <li class="nav-item"><a class="nav-link" href="#ceremony-masters" data-i18n="nav.ceremony">Ceremoniemeesters</a></li>
     </ul>
+    <a href="#rsvp" class="btn btn-rsvp w-100 mt-3" data-i18n="nav.rsvp">RSVP</a>
     <!-- Mobile language switcher -->
     <div class="offcanvas-lang-switcher dropdown">
       <button class="lang-trigger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Taal kiezen"><span class="lang-flag flag-nl lang-current-flag"></span><span class="lang-current">Nederlands</span></button>
@@ -151,7 +154,6 @@
         <li><button class="dropdown-item lang-btn" data-lang-btn="fr"><span class="lang-flag flag-fr"></span> Français</button></li>
       </ul>
     </div>
-    <a href="#rsvp" class="btn btn-rsvp w-100 mt-3" data-i18n="nav.rsvp">RSVP</a>
   </div>
 </div>
 
@@ -444,6 +446,9 @@
           <div class="schedule-icon"><i class="bi bi-door-open" aria-hidden="true"></i></div>
           <div>
             <div class="schedule-time" data-i18n="wedding.arr.time">14:30</div>
+            <div class="wind-game__gust wind-game__gust--one"></div>
+            <div class="wind-game__gust wind-game__gust--two"></div>
+            <div class="wind-game__gust wind-game__gust--three"></div>
             <div data-i18n="wedding.arr.desc">Aankomst gasten &amp; welkom</div>
             <div class="schedule-note" data-i18n="wedding.arr.note">Neem rustig de tijd om aan te komen en elkaar te begroeten.</div>
           </div>
@@ -736,6 +741,12 @@
           <p class="section-label" data-i18n="wind.label">Een beetje IJslandse wind</p>
           <h2 id="wind-game-title" data-i18n="wind.h2">Roep de wind op</h2>
           <p class="wind-game__lead" data-i18n="wind.lead">Blaas in je microfoon en laat de wind opsteken. Bereik de top en Jérémy waait het landschap in.</p>
+          <div class="wind-game__mobile-scene" aria-hidden="true">
+            <div class="wind-game__gust wind-game__gust--one"></div>
+            <div class="wind-game__gust wind-game__gust--two"></div>
+            <div class="wind-game__gust wind-game__gust--three"></div>
+            <img class="wind-game__mobile-portrait" src="img/wind-game-jeremy-waterfall.jpg" alt="" decoding="async">
+          </div>
           <div class="wind-game__meter" role="progressbar" aria-label="Windkracht" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
             <span class="wind-game__meter-fill"></span>
           </div>

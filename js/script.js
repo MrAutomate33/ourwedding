@@ -13,7 +13,7 @@ const translations = {
     // Navigation
     'nav.home': 'Home', 'nav.more': 'Meer', 'nav.story': 'Ons verhaal', 'nav.journey': 'Onze reis',
     'nav.proposal': 'Het aanzoek', 'nav.wedding': 'Trouwdag', 'nav.location': 'Locatie',
-    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus',
+    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dresscode', 'nav.gifts': 'Cadeaus', 'nav.accommodation': 'Overnachting',
     'nav.ceremony': 'Ceremoniemeesters',
     // Hero
     'hero.sub': 'Van Kerlingarfjöll tot voor altijd',
@@ -72,7 +72,7 @@ const translations = {
     'location.parking.h': 'Parkeren', 'location.parking.text': 'De parkeerplaats ligt vlak bij de locatie, net om de hoek. Vanaf daar is er een aparte ingang naar Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parkeerroute',
     'location.accom.h': 'Overnachting', 'location.accom.text': 'Gasten regelen en boeken hun overnachting zelf.', 'location.accom.link': 'Bekijk overnachtingsmogelijkheden',
     'location.taxi.h': 'Taxi & vervoer', 'location.taxi.intro': 'Hieronder vind je een aantal lokale taxi-opties.',
-    'accommodation.label': 'Overnachten', 'accommodation.h3': 'Overnachtingsmogelijkheden in de buurt', 'accommodation.lead': 'Hieronder vind je enkele mogelijkheden.',
+    'accommodation.label': 'Overnachten', 'accommodation.h3': 'Overnachtingsmogelijkheden in de buurt', 'accommodation.lead': 'Gasten regelen en boeken hun eigen overnachting. Hieronder vind je enkele mogelijkheden.', 'accommodation.disclaimer': 'Dit zijn suggesties van de trouwlocatie. Wij hebben geen samenwerking met en geen persoonlijke ervaring met deze accommodaties.',
     'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hotel in Driebergen-Rijsenburg, met parkeergelegenheid en ontbijtopties.', 'accommodation.bergse': 'Hotel aan de rand van Nationaal Park Utrechtse Heuvelrug met verschillende kamertypes.', 'accommodation.passage': 'Kleinschalige bed & breakfast in Driebergen-Rijsenburg, op loopafstand van Buitenplaats Sparrendaal.',
     'accommodation.horst.one': 'Overnacht na het trouwfeest op Buitenplaats Sparrendaal op Landgoed de Horst te Driebergen. Om in de romantische sfeer te blijven wordt je de volgende ochtend heerlijk wakker tussen de boomtoppen onder het genot van vogelgezang. Je begint de dag goed met een uitgebreid ontbijtbuffet waar je kunt nagenieten van het gezellige feest van de avond ervoor. Kamerprijzen vanaf € 90,- per nacht inclusief ontbijt (exclusief toeristenbelasting).',
     'accommodation.horst.two': 'Landgoed de Horst is gunstig gelegen, met gratis parkeergelegenheid. Mocht je gebruik willen maken van een taxi, dan kan dat uiteraard via de receptie van het landgoed geregeld worden. Verder beschikt het hotel over gratis Wi-fi.',
@@ -81,7 +81,7 @@ const translations = {
     'accommodation.nearby.h': 'In de omgeving', 'accommodation.jans': 'Bed & breakfast in Langbroek, op ongeveer een kwartier rijden van de locatie.', 'accommodation.valk': 'Groter hotel in Veenendaal met kamers en wellness- en fitnessfaciliteiten.', 'accommodation.overberg': 'Viersterrenhotel in Overberg, aan de rand van Nationaal Park Utrechtse Heuvelrug.',
     'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed & breakfast met vier kamers in een gerestaureerde boerderij, inclusief ontbijt.', 'accommodation.buitenlust': 'Restaurant met vijf hotelkamers in Amerongen.', 'accommodation.napoleonschuur': 'Vijf designkamers in een gerestaureerd historisch pand in Amerongen.',
     'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Vijf lodges op een historisch boerderijterrein, op ongeveer tien minuten rijden van de locatie.',
-    'accommodation.smallbnb.h': 'Andere kleine B&Bs in Amerongen', 'accommodation.bestegoed': 'Bed & breakfast met een kamer in Amerongen.', 'accommodation.overtuin': 'Bed & breakfast met een kamer in Amerongen. Telefoon: 0343 454 989.', 'accommodation.bb23': 'Bed & breakfast met twee kamers in Amerongen. Telefoon: 0343 451 692.', 'accommodation.back': 'Terug naar de bruiloftssite',
+    'accommodation.smallbnb.h': 'Andere kleine B&Bs in Amerongen', 'accommodation.bestegoed': 'Bed & breakfast met een kamer in Amerongen.', 'accommodation.overtuin': 'Bed & breakfast met een kamer in Amerongen. Telefoon: 0343 454 989.', 'accommodation.bb23': 'Bed & breakfast met twee kamers in Amerongen. Telefoon: 0343 451 692.', 'accommodation.back': 'Terug naar site',
     'location.directions_btn': 'Routebeschrijving openen',
     // RSVP
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Kom je ook?',
@@ -113,7 +113,7 @@ const translations = {
   en: {
     'nav.home': 'Home', 'nav.more': 'More', 'nav.story': 'Our story', 'nav.journey': 'Our journey',
     'nav.proposal': 'The proposal', 'nav.wedding': 'Wedding day', 'nav.location': 'Location',
-    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress code', 'nav.gifts': 'Gifts',
+    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Dress code', 'nav.gifts': 'Gifts', 'nav.accommodation': 'Accommodation',
     'nav.ceremony': 'Ceremony masters',
     'invite.label': 'Personal invitation',
     'invite.message': 'Dear {name}, with so much love, we invite you to celebrate our wedding day with us. From the mountains of Kerlingarfjöll to this new chapter, your presence will make our day even more meaningful. We cannot wait to toast, laugh, and create memories to carry with us forever.',
@@ -170,7 +170,7 @@ const translations = {
     'location.parking.h': 'Parking', 'location.parking.text': 'The parking area is close to the venue, just around the corner. From there, a separate entrance leads to Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parking route',
     'location.accom.h': 'Accommodation', 'location.accom.text': 'Guests arrange and book their own accommodation.', 'location.accom.link': 'View accommodation options',
     'location.taxi.h': 'Taxi & Transport', 'location.taxi.intro': 'Here are several local taxi options.',
-    'accommodation.label': 'Accommodation', 'accommodation.h3': 'Accommodation options nearby', 'accommodation.lead': 'Here are several options.',
+    'accommodation.label': 'Accommodation', 'accommodation.h3': 'Accommodation options nearby', 'accommodation.lead': 'Guests arrange and book their own accommodation. Here are several options.', 'accommodation.disclaimer': 'These are suggestions from the wedding venue. We are not affiliated with these locations and have no personal experience with them.',
     'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hotel in Driebergen-Rijsenburg, with parking and breakfast options.', 'accommodation.bergse': 'Hotel on the edge of Utrechtse Heuvelrug National Park with several room types.', 'accommodation.passage': 'Small bed and breakfast in Driebergen-Rijsenburg, within walking distance of Buitenplaats Sparrendaal.',
     'accommodation.horst.one': 'Stay at Landgoed de Horst in Driebergen after the wedding celebration at Buitenplaats Sparrendaal. Wake the next morning among the treetops, with birdsong all around, and start the day with an extensive breakfast buffet. Rates start at EUR 90 per night including breakfast, excluding tourist tax.',
     'accommodation.horst.two': 'Landgoed de Horst is conveniently located and offers free parking. A taxi can be arranged through the hotel reception, and the hotel also provides free Wi-Fi.',
@@ -179,7 +179,7 @@ const translations = {
     'accommodation.nearby.h': 'In the area', 'accommodation.jans': 'Bed and breakfast in Langbroek, about a 15-minute drive from the venue.', 'accommodation.valk': 'Larger hotel in Veenendaal with rooms, wellness and fitness facilities.', 'accommodation.overberg': 'Four-star hotel in Overberg on the edge of Utrechtse Heuvelrug National Park.',
     'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Four-room bed and breakfast in a restored farmhouse, with breakfast included.', 'accommodation.buitenlust': 'Restaurant with five hotel rooms in Amerongen.', 'accommodation.napoleonschuur': 'Five design rooms in a restored historic building in Amerongen.',
     'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Five lodges on a historic farm site, approximately a 10-minute drive from the venue.',
-    'accommodation.smallbnb.h': 'Other small B&Bs in Amerongen', 'accommodation.bestegoed': 'One-room bed and breakfast in Amerongen.', 'accommodation.overtuin': 'One-room bed and breakfast in Amerongen. Telephone: 0343 454 989.', 'accommodation.bb23': 'Two-room bed and breakfast in Amerongen. Telephone: 0343 451 692.', 'accommodation.back': 'Back to the wedding site',
+    'accommodation.smallbnb.h': 'Other small B&Bs in Amerongen', 'accommodation.bestegoed': 'One-room bed and breakfast in Amerongen.', 'accommodation.overtuin': 'One-room bed and breakfast in Amerongen. Telephone: 0343 454 989.', 'accommodation.bb23': 'Two-room bed and breakfast in Amerongen. Telephone: 0343 451 692.', 'accommodation.back': 'Back to site',
     'location.directions_btn': 'Open Directions',
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Will You Join Us?',
     'rsvp.lead': 'We would love to celebrate with you. Please let us know whether you can attend.',
@@ -206,7 +206,7 @@ const translations = {
   fr: {
     'nav.home': 'Accueil', 'nav.more': 'Plus', 'nav.story': 'Notre histoire', 'nav.journey': 'Notre voyage',
     'nav.proposal': 'La demande', 'nav.wedding': 'Le mariage', 'nav.location': 'Lieu',
-    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux',
+    'nav.rsvp': 'RSVP', 'nav.dresscode': 'Tenue', 'nav.gifts': 'Cadeaux', 'nav.accommodation': 'Hébergement',
     'nav.ceremony': 'Ma\u00eetres de C\u00e9r\u00e9monie',
     'invite.label': 'Invitation personnelle',
     'invite.message': 'Cher/Chère {name}, c’est avec beaucoup d’amour que nous vous invitons à célébrer notre mariage avec nous. Des montagnes de Kerlingarfjöll à ce nouveau chapitre, votre présence rendra cette journée encore plus précieuse. Nous avons hâte de trinquer, de rire et de créer ensemble des souvenirs pour toujours.',
@@ -281,7 +281,7 @@ const translations = {
     'location.parking.link': 'Ouvrir l\u2019itin\u00e9raire du parking',
     'location.accom.text': 'Les invités organisent et réservent eux-mêmes leur hébergement.', 'location.accom.link': 'Voir les possibilités d’hébergement',
     'location.taxi.intro': 'Voici quelques options de taxis locaux.',
-    'accommodation.label': 'Hébergement', 'accommodation.h3': 'Possibilités d’hébergement à proximité', 'accommodation.lead': 'Voici quelques possibilités.',
+    'accommodation.label': 'Hébergement', 'accommodation.h3': 'Possibilités d’hébergement à proximité', 'accommodation.lead': 'Les invités organisent et réservent eux-mêmes leur hébergement. Voici quelques possibilités.', 'accommodation.disclaimer': 'Ces adresses sont des suggestions du lieu du mariage. Nous ne sommes affiliés à aucun de ces établissements et n’avons pas d’expérience personnelle avec eux.',
     'accommodation.driebergen.h': 'Driebergen-Rijsenburg', 'accommodation.horst': 'Hôtel à Driebergen-Rijsenburg, avec parking et possibilités de petit-déjeuner.', 'accommodation.bergse': 'Hôtel à la lisière du parc national Utrechtse Heuvelrug avec plusieurs types de chambres.', 'accommodation.passage': 'Petit bed and breakfast à Driebergen-Rijsenburg, à distance de marche de Buitenplaats Sparrendaal.',
     'accommodation.horst.one': 'Après la fête de mariage à Buitenplaats Sparrendaal, passez la nuit à Landgoed de Horst à Driebergen. Réveillez-vous le lendemain matin parmi les arbres, au chant des oiseaux, puis commencez la journée avec un copieux buffet de petit-déjeuner. Les tarifs commencent à 90 EUR par nuit, petit-déjeuner compris et hors taxe de séjour.',
     'accommodation.horst.two': 'Landgoed de Horst est idéalement situé et dispose d’un parking gratuit. Un taxi peut être organisé par la réception, et l’hôtel propose également le Wi-Fi gratuit.',
@@ -290,7 +290,7 @@ const translations = {
     'accommodation.nearby.h': 'Dans les environs', 'accommodation.jans': 'Bed and breakfast à Langbroek, à environ 15 minutes de route du lieu.', 'accommodation.valk': 'Hôtel plus grand à Veenendaal avec chambres, espace bien-être et salle de fitness.', 'accommodation.overberg': 'Hôtel quatre étoiles à Overberg, à la lisière du parc national Utrechtse Heuvelrug.',
     'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed and breakfast de quatre chambres dans une ferme restaurée, petit-déjeuner compris.', 'accommodation.buitenlust': 'Restaurant avec cinq chambres d’hôtel à Amerongen.', 'accommodation.napoleonschuur': 'Cinq chambres design dans un bâtiment historique restauré à Amerongen.',
     'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Cinq lodges sur un ancien domaine agricole, à environ dix minutes de route du lieu.',
-    'accommodation.smallbnb.h': 'Autres petits B&B à Amerongen', 'accommodation.bestegoed': 'Bed and breakfast avec une chambre à Amerongen.', 'accommodation.overtuin': 'Bed and breakfast avec une chambre à Amerongen. Téléphone : 0343 454 989.', 'accommodation.bb23': 'Bed and breakfast avec deux chambres à Amerongen. Téléphone : 0343 451 692.', 'accommodation.back': 'Retour au site du mariage',
+    'accommodation.smallbnb.h': 'Autres petits B&B à Amerongen', 'accommodation.bestegoed': 'Bed and breakfast avec une chambre à Amerongen.', 'accommodation.overtuin': 'Bed and breakfast avec une chambre à Amerongen. Téléphone : 0343 454 989.', 'accommodation.bb23': 'Bed and breakfast avec deux chambres à Amerongen. Téléphone : 0343 451 692.', 'accommodation.back': 'Retour au site',
     'rsvp.deadline_date': '[DATE \u00c0 AJOUTER]', 'rsvp.load': 'Afficher le formulaire RSVP',
     'footer.thanks': 'Merci de c\u00e9l\u00e9brer avec nous.',
     'footer.nav.home': 'Accueil', 'footer.nav.rsvp': 'RSVP',
@@ -548,7 +548,7 @@ const initWindGame = () => {
         won = false;
         stream = undefined;
         animationFrame = undefined;
-        game.classList.remove('is-won', 'is-windy');
+        game.classList.remove('is-won', 'is-windy', 'is-listening');
         update(0);
         status.textContent = text('wind.status_ready');
         startButton.disabled = false;
@@ -584,6 +584,7 @@ const initWindGame = () => {
     }
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      game.classList.add('is-listening');
       status.textContent = text('wind.status_listening');
       startButton.disabled = true;
       const audioContext = new AudioContext();
@@ -595,7 +596,7 @@ const initWindGame = () => {
         if (won) return;
         analyser.getByteTimeDomainData(samples);
         const average = samples.reduce((sum, value) => sum + Math.abs(value - 128), 0) / samples.length;
-        const detectedWind = Math.min(100, Math.max(0, (average - 2.2) * 22));
+        const detectedWind = Math.min(100, Math.max(0, (average - 12) * 7));
         update(windLevel * 0.2 + detectedWind * 0.8);
         animationFrame = window.requestAnimationFrame(sample);
       };
