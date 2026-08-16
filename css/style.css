@@ -1097,6 +1097,9 @@ section {
 .accommodation-page main {
   flex: 1;
 }
+.save-date-more-info {
+  background: var(--clr-sky);
+}
 .dresscode-guide-intro {
   max-width: 48rem;
   margin: 0 auto 1rem;
