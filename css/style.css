@@ -1100,6 +1100,16 @@ section {
 .save-date-more-info {
   background: var(--clr-sky);
 }
+.save-date-language {
+  position: fixed;
+  z-index: 20;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+.save-date-page .save-date-language .lang-trigger {
+  background: rgb(from var(--clr-rock) r g b / 0.55);
+  backdrop-filter: blur(6px);
+}
 .dresscode-guide-intro {
   max-width: 48rem;
   margin: 0 auto 1rem;
