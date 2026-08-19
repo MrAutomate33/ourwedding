@@ -1,0 +1,50 @@
+.easter-egg-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translate(-50%, 140%);
+  z-index: 1080;
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.45);
+  background: rgb(from var(--clr-rock) r g b / 0.9);
+  color: var(--clr-sky);
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgb(from var(--clr-rock) r g b / 0.28);
+  opacity: 0;
+  transition: transform 0.26s ease, opacity 0.26s ease;
+  pointer-events: none;
+}
+
+.easter-egg-toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.money-rain-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1070;
+}
+
+.money-note {
+  position: absolute;
+  top: -2rem;
+  animation-name: money-fall;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  text-shadow: 0 3px 6px rgb(from var(--clr-rock) r g b / 0.2);
+}
+
+@keyframes money-fall {
+  0% {
+    transform: translate3d(0, -10%, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(3rem, 118vh, 0) rotate(360deg);
+  }
+}

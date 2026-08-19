@@ -1111,18 +1111,243 @@ section {
   backdrop-filter: blur(6px);
 }
 .dresscode-guide-intro {
-  max-width: 48rem;
-  margin: 0 auto 1rem;
+  max-width: 52rem;
+  margin: 0 auto;
   line-height: 1.6;
+}
+.dresscode-selector {
+  max-width: 30rem;
+  margin-inline: auto;
+  padding: 1rem 1.1rem 1.15rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.24);
+  background: linear-gradient(
+    180deg,
+    rgb(from var(--clr-cream) r g b / 0.72) 0%,
+    rgb(from var(--clr-cream) r g b / 0.5) 100%
+  );
+  box-shadow: 0 12px 24px rgb(from var(--clr-rock) r g b / 0.08);
+}
+.dresscode-tabs {
+  gap: 0.6rem;
+}
+.dresscode-tabs .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.35);
+  background: rgb(from var(--clr-cream) r g b / 0.45);
+  color: var(--clr-stone);
+  padding: 0.52rem 1.15rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  opacity: 0.88;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.dresscode-tabs .nav-link:hover,
+.dresscode-tabs .nav-link:focus-visible {
+  color: var(--clr-rock);
+  border-color: rgb(from var(--clr-slate) r g b / 0.55);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.dresscode-tabs .nav-link.active,
+.dresscode-tabs .nav-link[aria-selected="true"] {
+  color: var(--clr-rock);
+  background: rgb(from var(--clr-sky) r g b / 0.92);
+  border-color: rgb(from var(--clr-slate) r g b / 0.62);
+  box-shadow: 0 8px 16px rgb(from var(--clr-slate) r g b / 0.22);
+  font-weight: 700;
+  opacity: 1;
+}
+.dresscode-tabs .nav-link i {
+  font-size: 0.98rem;
+  line-height: 1;
+}
+.dresscode-tabs .nav-link.active::after,
+.dresscode-tabs .nav-link[aria-selected="true"]::after {
+  content: "";
+  width: 0.36rem;
+  height: 0.36rem;
+  border-radius: 50%;
+  background: var(--clr-moss);
+  margin-left: 0.18rem;
+}
+.dresscode-tab-content {
+  min-height: 1px;
+}
+.dresscode-tab-content .tab-pane {
+  outline: none;
+}
+.dresscode-tab-content .tab-pane.fade {
+  transition: opacity 0.26s ease;
+}
+.dresscode-tab-content .tab-pane.fade .dresscode-guide-section,
+.dresscode-tab-content .tab-pane.fade .dresscode-shortlist,
+.dresscode-tab-content .tab-pane.fade .dresscode-image-placeholder,
+.dresscode-tab-content .tab-pane.fade .dresscode-list-card {
+  transition: transform 0.26s ease, opacity 0.26s ease;
+  transform: translateY(6px);
+  opacity: 0;
+}
+.dresscode-tab-content .tab-pane.show .dresscode-guide-section,
+.dresscode-tab-content .tab-pane.show .dresscode-shortlist,
+.dresscode-tab-content .tab-pane.show .dresscode-image-placeholder,
+.dresscode-tab-content .tab-pane.show .dresscode-list-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+.dresscode-hero-copy {
+  max-width: 52rem;
+  margin-inline: auto;
 }
 .dresscode-guide-section {
-  height: 100%;
-  padding: 1.5rem;
-  border-top: 1px solid rgb(from var(--clr-slate) r g b / 0.36);
+  padding: 1.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.22);
+  background: rgb(from var(--clr-cream) r g b / 0.65);
 }
 .dresscode-guide-section p {
-  margin-bottom: 0;
+  margin-bottom: 0.8rem;
   line-height: 1.6;
+}
+.dresscode-shortlist,
+.dresscode-list-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.24);
+  background: rgb(from var(--clr-cream) r g b / 0.52);
+}
+.dresscode-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dresscode-points li {
+  position: relative;
+  padding-left: 1.35rem;
+  line-height: 1.55;
+}
+.dresscode-points li + li {
+  margin-top: 0.6rem;
+}
+.dresscode-points li::before {
+  content: "\2726";
+  color: var(--clr-sand);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.dresscode-subtitle {
+  margin: 0 0 0.5rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-stone);
+}
+.dresscode-dosdont .h3 {
+  text-align: center;
+}
+.dresscode-dosdont {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+.dresscode-dosdont .h3 {
+  margin-bottom: 1.15rem !important;
+}
+.dresscode-list-card {
+  display: flex;
+  flex-direction: column;
+}
+.dresscode-list-card > .h4 {
+  margin-bottom: 0.8rem !important;
+}
+.dresscode-list-card .dresscode-subtitle {
+  margin: 1rem 0 0.45rem;
+}
+.dresscode-list-card .dresscode-subtitle:first-of-type {
+  margin-top: 0;
+}
+.dresscode-list-card .dresscode-points {
+  margin: 0;
+  padding: 0;
+}
+.dresscode-list-card .dresscode-points + .dresscode-subtitle {
+  margin-top: 1.1rem;
+}
+.dresscode-image-placeholder {
+  padding: 1rem 1.1rem;
+  border: 1px dashed rgb(from var(--clr-stone) r g b / 0.55);
+  border-radius: 0.8rem;
+  background: rgb(from var(--clr-cream) r g b / 0.35);
+}
+.dresscode-image-placeholder p {
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+.dresscode-image-placeholder small {
+  color: var(--clr-stone);
+  line-height: 1.4;
+  display: block;
+}
+.dresscode-colour-guide {
+  padding-top: 0;
+}
+.dresscode-colour-card {
+  padding: 1.5rem;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.18);
+  background: rgb(from var(--clr-sky) r g b / 0.34);
+}
+.dresscode-colour-card-approved {
+  border-top: 3px solid var(--clr-moss);
+}
+.dresscode-colour-card-avoid {
+  border-top: 3px solid var(--clr-gold);
+}
+.dresscode-colour-list {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0;
+  list-style: none;
+}
+.dresscode-colour-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.dresscode-colour-swatch {
+  flex: 0 0 1.15rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid rgb(from var(--clr-rock) r g b / 0.22);
+  border-radius: 50%;
+}
+.dresscode-swatch-blue { background: #9ec8dc; }
+.dresscode-swatch-sage { background: #a7b69a; }
+.dresscode-swatch-blush { background: #d9a6a1; }
+.dresscode-swatch-lavender { background: #b9acd1; }
+.dresscode-swatch-yellow { background: #d8bd71; }
+.dresscode-swatch-white { background: #fff; }
+.dresscode-swatch-ivory { background: #f4ead3; }
+.dresscode-swatch-metallic { background: #c7c9ca; }
+.dresscode-swatch-neon { background: #c8ef42; }
+.dresscode-swatch-red { background: #c94b4b; }
+.dresscode-example-figure {
+  margin: 0;
+}
+.dresscode-example-image {
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1px solid rgb(from var(--clr-slate) r g b / 0.28);
+  box-shadow: 0 12px 24px rgb(from var(--clr-rock) r g b / 0.12);
+  object-fit: cover;
+}
+.dresscode-example-caption {
+  margin-top: 0.5rem;
+  font-size: 0.84rem;
+  color: var(--clr-stone);
 }
 @media (max-width: 575.98px) {
   .accommodation-page .navbar-wedding {
@@ -1153,6 +1378,46 @@ section {
   }
   .accommodation-page .navbar-wedding .container > .d-flex > .lang-switcher {
     flex: 0 0 auto;
+  }
+  .dresscode-guide-section,
+  .dresscode-shortlist,
+  .dresscode-list-card {
+    padding: 1.2rem;
+  }
+  .dresscode-dosdont .h3 {
+    margin-bottom: 0.95rem !important;
+  }
+  .dresscode-list-card .dresscode-subtitle {
+    margin-top: 0.9rem;
+  }
+  .dresscode-selector {
+    max-width: 100%;
+    padding: 0.8rem 0.8rem 0.95rem;
+  }
+  .dresscode-tabs {
+    gap: 0.45rem;
+  }
+  .dresscode-tabs .nav-link {
+    padding-inline: 0.95rem;
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dresscode-tabs .nav-link,
+  .dresscode-tab-content .tab-pane.fade,
+  .dresscode-tab-content .tab-pane.fade .dresscode-guide-section,
+  .dresscode-tab-content .tab-pane.fade .dresscode-shortlist,
+  .dresscode-tab-content .tab-pane.fade .dresscode-image-placeholder,
+  .dresscode-tab-content .tab-pane.fade .dresscode-list-card {
+    transition: none !important;
+  }
+  .dresscode-tab-content .tab-pane.fade .dresscode-guide-section,
+  .dresscode-tab-content .tab-pane.fade .dresscode-shortlist,
+  .dresscode-tab-content .tab-pane.fade .dresscode-image-placeholder,
+  .dresscode-tab-content .tab-pane.fade .dresscode-list-card {
+    transform: none;
+    opacity: 1;
   }
 }
 

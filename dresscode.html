@@ -37,43 +37,164 @@
 <main>
   <section class="bg-mist">
     <div class="container">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5 dresscode-hero-copy">
         <p class="section-label" data-i18n="dresscode.label">Wat te dragen</p>
-        <h1 data-i18n="dresscode.guide.h1">Cocktail Attire</h1>
-        <p class="lead mb-0" data-i18n="dresscode.guide.lead">Feestelijk en verzorgd, precies tussen casual en formeel in.</p>
+        <h1 data-i18n="dresscode.guide.h1">Dresscode: Cocktail Attire</h1>
+        <p class="lead mb-0" data-i18n="dresscode.guide.lead">We kijken ernaar uit om samen met jullie te vieren. Hieronder vind je een kleine richtlijn, zodat iedereen zich prettig en passend voelt.</p>
       </div>
 
-      <div class="dresscode-guide-intro" data-i18n="dresscode.guide.intro">Kies iets waarin je je elegant en comfortabel voelt voor een zomerse viering. Denk aan een verzorgde, feestelijke look zonder avondkleding.</div>
-      <div class="row g-4 mt-1">
-        <div class="col-md-6">
-          <section class="dresscode-guide-section">
-            <i class="bi bi-person-dress fs-2 text-moss" aria-hidden="true"></i>
-            <h2 class="h4 mt-3" data-i18n="dresscode.guide.women.h">Jurken, pakken en jumpsuits</h2>
-            <p data-i18n="dresscode.guide.women.text">Een nette midi-, thee- of knielange jurk is altijd passend. Een chic pak of een goed gesneden jumpsuit werkt net zo goed. Combineer met elegante hakken, nette platte schoenen of sandalen die bij de gelegenheid passen.</p>
+      <section class="dresscode-guide-intro mb-5">
+        <h2 class="h3 text-center mb-3" data-i18n="dresscode.guide.intro.h">Een kleine richtlijn voor onze dag</h2>
+        <p data-i18n="dresscode.guide.intro.p1">Voor onze bruiloft kiezen we cocktail attire: feestelijk, verzorgd en comfortabel genoeg om de hele dag mee te vieren.</p>
+        <p class="mb-0" data-i18n="dresscode.guide.intro.p2">Zie het als een stijlvolle middenweg: eleganter dan casual, maar niet formeel als black tie.</p>
+      </section>
+
+      <section class="dresscode-selector mb-5" aria-label="Dresscode tabs">
+        <p class="dresscode-subtitle text-center" data-i18n="dresscode.selector.label">Bekijk dresscode voor</p>
+        <div class="nav nav-pills justify-content-center dresscode-tabs" id="dresscodeTabs" role="tablist">
+          <button class="nav-link active" id="dresscode-tab-her" data-bs-toggle="tab" data-bs-target="#dresscode-pane-her" type="button" role="tab" aria-controls="dresscode-pane-her" aria-selected="true">
+            <i class="bi bi-person-heart" aria-hidden="true"></i>
+            <span data-i18n="dresscode.selector.her">Haar</span>
+          </button>
+          <button class="nav-link" id="dresscode-tab-him" data-bs-toggle="tab" data-bs-target="#dresscode-pane-him" type="button" role="tab" aria-controls="dresscode-pane-him" aria-selected="false">
+            <i class="bi bi-person-standing" aria-hidden="true"></i>
+            <span data-i18n="dresscode.selector.him">Hem</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="tab-content dresscode-tab-content" id="dresscodeTabContent">
+        <div class="tab-pane fade show active" id="dresscode-pane-her" role="tabpanel" aria-labelledby="dresscode-tab-her" tabindex="0">
+          <div class="row g-4 align-items-start mb-5">
+            <div class="col-lg-7">
+              <section class="dresscode-guide-section">
+                <h2 class="h3" data-i18n="dresscode.guide.women.h">Voor dames</h2>
+                <p data-i18n="dresscode.guide.women.p1">Een midi- of knielange jurk past altijd mooi. Een nette jumpsuit of pak mag natuurlijk ook.</p>
+                <p data-i18n="dresscode.guide.women.p2">Kies schoenen waarop je fijn kunt lopen en dansen, en maak je look af met accessoires waar jij je goed bij voelt.</p>
+                <p class="mb-0" data-i18n="dresscode.guide.women.p3">Voel je vooral jezelf: een outfit waarin jij straalt en comfortabel bent, is precies goed.</p>
+              </section>
+            </div>
+            <div class="col-lg-5">
+              <aside class="dresscode-shortlist">
+                <h3 class="h4 mb-3" data-i18n="dresscode.guide.women.short.h">Snelle check</h3>
+                <ul class="dresscode-points mb-0">
+                  <li data-i18n="dresscode.guide.women.short.1">Midi of knielengte is altijd goed</li>
+                  <li data-i18n="dresscode.guide.women.short.2">Jumpsuit of pak mag ook</li>
+                  <li data-i18n="dresscode.guide.women.short.3">Ga voor elegante schoenen</li>
+                  <li data-i18n="dresscode.guide.women.short.4">Kies een look waarin je vrij kunt bewegen</li>
+                  <li data-i18n="dresscode.guide.women.short.5">Vergeet je dansschoenen niet voor het feest later op de avond</li>
+                </ul>
+              </aside>
+              <figure class="dresscode-example-figure mt-3" id="dresscode-image-women" data-image-slot="women-example">
+                <img src="img/koonings-avondmode-cocktailkleding-galakleding-sonia-pena-1230015a-a-819x1024.jpg" class="dresscode-example-image" alt="Voorbeeld cocktailoutfit voor dames" data-i18n-aria="dresscode.image.women.alt" loading="lazy">
+                <figcaption class="dresscode-example-caption" data-i18n="dresscode.image.women.caption">Voorbeeld look voor cocktail attire</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <section class="dresscode-dosdont mb-2">
+            <h2 class="h3 mb-4" data-i18n="dresscode.guide.dos.h">Praktische do's &amp; don'ts</h2>
+            <article class="dresscode-list-card">
+              <h3 class="h4 mb-3" data-i18n="dresscode.guide.dos.women.h">Voor vrouwen</h3>
+              <p class="dresscode-subtitle" data-i18n="dresscode.guide.dos.do">Do's</p>
+              <ul class="dresscode-points">
+                <li data-i18n="dresscode.guide.dos.women.do.1">Kies een feestelijke, verzorgde outfit</li>
+                <li data-i18n="dresscode.guide.dos.women.do.2">Ga voor een jurk, jumpsuit of net pak</li>
+                <li data-i18n="dresscode.guide.dos.women.do.3">Draag schoenen waarop je de dag volhoudt</li>
+              </ul>
+              <p class="dresscode-subtitle" data-i18n="dresscode.guide.dos.dont">Don'ts</p>
+              <ul class="dresscode-points mb-0">
+                <li data-i18n="dresscode.guide.dos.women.dont.1">Vermijd heel casual kleding zoals denim of sportwear</li>
+                <li data-i18n="dresscode.guide.dos.women.dont.2">Laat strandkleding en slippers thuis</li>
+                <li data-i18n="dresscode.guide.dos.women.dont.3">Kies liever niet voor een te formele gala-look</li>
+              </ul>
+            </article>
           </section>
         </div>
-        <div class="col-md-6">
-          <section class="dresscode-guide-section">
-            <i class="bi bi-person-standing-dress fs-2 text-moss" aria-hidden="true"></i>
-            <h2 class="h4 mt-3" data-i18n="dresscode.guide.men.h">Pak</h2>
-            <p data-i18n="dresscode.guide.men.text">Een verzorgd pak past perfect bij deze dresscode. Kies voor een lichte of middentoon voor de zomer en combineer dit met nette, gesloten schoenen en een bijpassende riem.</p>
-          </section>
-        </div>
-        <div class="col-md-6">
-          <section class="dresscode-guide-section">
-            <i class="bi bi-palette fs-2 text-moss" aria-hidden="true"></i>
-            <h2 class="h4 mt-3" data-i18n="dresscode.guide.colours.h">Kleur en materiaal</h2>
-            <p data-i18n="dresscode.guide.colours.text">Zomerse kleuren en luchtige stoffen zijn van harte welkom. Kies een verfijnde stof en accessoires die je outfit afmaken, zonder dat het voelt als galakleding.</p>
-          </section>
-        </div>
-        <div class="col-md-6">
-          <section class="dresscode-guide-section">
-            <i class="bi bi-check2-circle fs-2 text-moss" aria-hidden="true"></i>
-            <h2 class="h4 mt-3" data-i18n="dresscode.guide.avoid.h">Goed om te weten</h2>
-            <p data-i18n="dresscode.guide.avoid.text">Vermijd jeans, sportieve kleding, strandkleding en zeer informele slippers. Het belangrijkste is een verzorgde outfit waarin je comfortabel kunt vieren en dansen.</p>
+
+        <div class="tab-pane fade" id="dresscode-pane-him" role="tabpanel" aria-labelledby="dresscode-tab-him" tabindex="0">
+          <div class="row g-4 align-items-start mb-5">
+            <div class="col-lg-7">
+              <section class="dresscode-guide-section">
+                <h2 class="h3" data-i18n="dresscode.guide.men.h">Voor heren</h2>
+                <p data-i18n="dresscode.guide.men.p1">Een pak of nette pantalon met overhemd past goed bij cocktail attire.</p>
+                <p data-i18n="dresscode.guide.men.p2">Nette schoenen horen erbij. Sneakers laten we liever thuis tijdens ceremonie en diner.</p>
+                <p class="mb-0" data-i18n="dresscode.guide.men.p3">Met een das, strik of pochet kun je eenvoudig je eigen stijl toevoegen.</p>
+              </section>
+            </div>
+            <div class="col-lg-5">
+              <aside class="dresscode-shortlist">
+                <h3 class="h4 mb-3" data-i18n="dresscode.guide.men.short.h">Snelle check</h3>
+                <ul class="dresscode-points mb-0">
+                  <li data-i18n="dresscode.guide.men.short.1">Pak of pantalon met overhemd</li>
+                  <li data-i18n="dresscode.guide.men.short.2">Nette, verzorgde schoenen</li>
+                  <li data-i18n="dresscode.guide.men.short.3">Accessoire mag, hoeft niet</li>
+                  <li data-i18n="dresscode.guide.men.short.4">Comfortabel en verzorgd staat centraal</li>
+                  <li data-i18n="dresscode.guide.men.short.5">Vergeet je dansschoenen niet voor het feest later op de avond</li>
+                </ul>
+              </aside>
+              <figure class="dresscode-example-figure mt-3" id="dresscode-image-men" data-image-slot="men-example">
+                <img src="img/What_To_Wear_To_A_Spring_Wedding_Image2.webp" class="dresscode-example-image" alt="Voorbeeld cocktailoutfit voor heren" data-i18n-aria="dresscode.image.men.alt" loading="lazy">
+                <figcaption class="dresscode-example-caption" data-i18n="dresscode.image.men.caption">Voorbeeld look voor heren tijdens cocktail attire</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <section class="dresscode-dosdont mb-2">
+            <h2 class="h3 mb-4" data-i18n="dresscode.guide.dos.h">Praktische do's &amp; don'ts</h2>
+            <article class="dresscode-list-card">
+              <h3 class="h4 mb-3" data-i18n="dresscode.guide.dos.men.h">Voor mannen</h3>
+              <p class="dresscode-subtitle" data-i18n="dresscode.guide.dos.do">Do's</p>
+              <ul class="dresscode-points">
+                <li data-i18n="dresscode.guide.dos.men.do.1">Kies een pak of nette combinatie</li>
+                <li data-i18n="dresscode.guide.dos.men.do.2">Draag nette schoenen</li>
+                <li data-i18n="dresscode.guide.dos.men.do.3">Voeg gerust een persoonlijk detail toe</li>
+                <li data-i18n="dresscode.guide.dos.men.do.4">Houd het geheel verzorgd en feestelijk</li>
+              </ul>
+              <p class="dresscode-subtitle" data-i18n="dresscode.guide.dos.dont">Don'ts</p>
+              <ul class="dresscode-points mb-0">
+                <li data-i18n="dresscode.guide.dos.men.dont.1">Vermijd sneakers, slippers en sportkleding</li>
+                <li data-i18n="dresscode.guide.dos.men.dont.2">Vermijd jeans en polo's</li>
+                <li data-i18n="dresscode.guide.dos.men.dont.3">Ga niet voor een te casual look</li>
+              </ul>
+            </article>
           </section>
         </div>
       </div>
+
+      <section class="dresscode-colour-guide mt-5" aria-labelledby="dresscode-colour-guide-heading">
+        <div class="text-center mb-4">
+          <p class="section-label" data-i18n="dresscode.colors.label">Kleuradvies</p>
+          <h2 class="h3 mb-2" id="dresscode-colour-guide-heading" data-i18n="dresscode.colors.h">Kleuren voor iedereen</h2>
+          <p class="mb-0" data-i18n="dresscode.colors.intro">Deze suggesties gelden voor iedereen, welke outfit je ook kiest.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="dresscode-colour-card dresscode-colour-card-approved h-100">
+              <h3 class="h4 mb-3" data-i18n="dresscode.colors.approved.h">Kleuren die we mooi vinden</h3>
+              <ul class="dresscode-colour-list mb-0">
+                <li><span class="dresscode-colour-swatch dresscode-swatch-blue" aria-hidden="true"></span><span data-i18n="dresscode.colors.approved.1">Poederblauw en zacht hemelsblauw</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-sage" aria-hidden="true"></span><span data-i18n="dresscode.colors.approved.2">Saliegroen en olijfgroen</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-blush" aria-hidden="true"></span><span data-i18n="dresscode.colors.approved.3">Blush en vergrijsd roze</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-lavender" aria-hidden="true"></span><span data-i18n="dresscode.colors.approved.4">Lavendel en zacht lila</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-yellow" aria-hidden="true"></span><span data-i18n="dresscode.colors.approved.5">Gedempt geel en warm terracotta</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="dresscode-colour-card dresscode-colour-card-avoid h-100">
+              <h3 class="h4 mb-3" data-i18n="dresscode.colors.avoid.h">Kleuren die je beter kunt vermijden</h3>
+              <ul class="dresscode-colour-list mb-0">
+                <li><span class="dresscode-colour-swatch dresscode-swatch-white" aria-hidden="true"></span><span data-i18n="dresscode.colors.avoid.1">Wit en bruidswit</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-ivory" aria-hidden="true"></span><span data-i18n="dresscode.colors.avoid.2">Ivoor, crème en champagne</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-metallic" aria-hidden="true"></span><span data-i18n="dresscode.colors.avoid.3">Bruidsmetallics zoals helder zilver</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-neon" aria-hidden="true"></span><span data-i18n="dresscode.colors.avoid.4">Neonkleuren die veel aandacht trekken</span></li>
+                <li><span class="dresscode-colour-swatch dresscode-swatch-red" aria-hidden="true"></span><span data-i18n="dresscode.colors.avoid.5">Felrood en helderrode tinten</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 </main>

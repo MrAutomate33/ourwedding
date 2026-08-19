@@ -94,11 +94,23 @@ const translations = {
     'dresscode.theme': 'Cocktail Attire',
     'dresscode.lead': 'Feestelijk en verzorgd, precies tussen casual en formeel in.',
     'dresscode.style.h': 'Stijl', 'dresscode.style.text': 'Kies een nette midi-, thee- of knielange jurk, een chic pak of een verzorgde jumpsuit.', 'dresscode.colours.h': 'Kleur en materiaal', 'dresscode.colours.text': 'Zomerse kleuren en luchtige stoffen zijn welkom. Nette schoenen en een verzorgde afwerking passen perfect bij de gelegenheid.', 'dresscode.practical.h': 'Praktische opmerkingen',
-    'dresscode.guide.link': 'Bekijk de dresscode-gids', 'dresscode.back': 'Terug naar site', 'dresscode.guide.h1': 'Cocktail Attire', 'dresscode.guide.lead': 'Feestelijk en verzorgd, precies tussen casual en formeel in.', 'dresscode.guide.intro': 'Kies iets waarin je je elegant en comfortabel voelt voor een zomerse viering. Denk aan een verzorgde, feestelijke look zonder avondkleding.',
-    'dresscode.guide.women.h': 'Jurken, pakken en jumpsuits', 'dresscode.guide.women.text': 'Een nette midi-, thee- of knielange jurk is altijd passend. Een chic pak of een goed gesneden jumpsuit werkt net zo goed. Combineer met elegante hakken, nette platte schoenen of sandalen die bij de gelegenheid passen.',
-    'dresscode.guide.men.h': 'Pak', 'dresscode.guide.men.text': 'Een verzorgd pak past perfect bij deze dresscode. Kies voor een lichte of middentoon voor de zomer en combineer dit met nette, gesloten schoenen en een bijpassende riem.',
-    'dresscode.guide.colours.h': 'Kleur en materiaal', 'dresscode.guide.colours.text': 'Zomerse kleuren en luchtige stoffen zijn van harte welkom. Kies een verfijnde stof en accessoires die je outfit afmaken, zonder dat het voelt als galakleding.',
-    'dresscode.guide.avoid.h': 'Goed om te weten', 'dresscode.guide.avoid.text': 'Vermijd jeans, sportieve kleding, strandkleding en zeer informele slippers. Het belangrijkste is een verzorgde outfit waarin je comfortabel kunt vieren en dansen.',
+    'dresscode.guide.link': 'Bekijk de dresscode-gids', 'dresscode.back': 'Terug naar site', 'dresscode.guide.h1': 'Dresscode: Cocktail Attire', 'dresscode.guide.lead': 'We kijken ernaar uit om samen met jullie te vieren. Hieronder vind je een kleine richtlijn, zodat iedereen zich prettig en passend voelt.', 'dresscode.guide.intro.h': 'Een kleine richtlijn voor onze dag',
+    'dresscode.guide.intro.p1': 'Voor onze bruiloft kiezen we cocktail attire: feestelijk, verzorgd en comfortabel genoeg om de hele dag mee te vieren.', 'dresscode.guide.intro.p2': 'Zie het als een stijlvolle middenweg: eleganter dan casual, maar niet formeel als black tie.',
+    'dresscode.guide.women.h': 'Voor dames', 'dresscode.guide.women.p1': 'Een midi- of knielange jurk past altijd mooi. Een nette jumpsuit of pak mag natuurlijk ook.',
+    'dresscode.guide.women.p2': 'Kies schoenen waarop je fijn kunt lopen en dansen, en maak je look af met accessoires waar jij je goed bij voelt.', 'dresscode.guide.women.p3': 'Voel je vooral jezelf: een outfit waarin jij straalt en comfortabel bent, is precies goed.',
+    'dresscode.guide.women.short.h': 'Snelle check', 'dresscode.guide.women.short.1': 'Midi of knielengte is altijd goed', 'dresscode.guide.women.short.2': 'Jumpsuit of pak mag ook', 'dresscode.guide.women.short.3': 'Ga voor elegante schoenen', 'dresscode.guide.women.short.4': 'Kies een look waarin je vrij kunt bewegen', 'dresscode.guide.women.short.5': 'Vergeet je dansschoenen niet voor het feest later op de avond',
+    'dresscode.guide.men.h': 'Voor heren', 'dresscode.guide.men.p1': 'Een pak of nette pantalon met overhemd past goed bij cocktail attire.',
+    'dresscode.guide.men.p2': 'Nette schoenen horen erbij. Sneakers laten we liever thuis tijdens ceremonie en diner.', 'dresscode.guide.men.p3': 'Met een das, strik of pochet kun je eenvoudig je eigen stijl toevoegen.',
+    'dresscode.guide.men.short.h': 'Snelle check', 'dresscode.guide.men.short.1': 'Pak of pantalon met overhemd', 'dresscode.guide.men.short.2': 'Nette, verzorgde schoenen', 'dresscode.guide.men.short.3': 'Accessoire mag, hoeft niet', 'dresscode.guide.men.short.4': 'Comfortabel en verzorgd staat centraal', 'dresscode.guide.men.short.5': 'Vergeet je dansschoenen niet voor het feest later op de avond',
+    'dresscode.guide.dos.h': 'Praktische do\'s & don\'ts', 'dresscode.guide.dos.women.h': 'Voor vrouwen', 'dresscode.guide.dos.men.h': 'Voor mannen', 'dresscode.guide.dos.do': 'Do\'s', 'dresscode.guide.dos.dont': 'Don\'ts',
+    'dresscode.guide.dos.women.do.1': 'Kies een feestelijke, verzorgde outfit', 'dresscode.guide.dos.women.do.2': 'Ga voor een jurk, jumpsuit of net pak', 'dresscode.guide.dos.women.do.3': 'Draag schoenen waarop je de dag volhoudt',
+    'dresscode.guide.dos.women.dont.1': 'Vermijd heel casual kleding zoals denim of sportwear', 'dresscode.guide.dos.women.dont.2': 'Laat strandkleding en slippers thuis', 'dresscode.guide.dos.women.dont.3': 'Kies liever niet voor een te formele gala-look',
+    'dresscode.guide.dos.men.do.1': 'Kies een pak of nette combinatie', 'dresscode.guide.dos.men.do.2': 'Draag nette schoenen', 'dresscode.guide.dos.men.do.3': 'Voeg gerust een persoonlijk detail toe', 'dresscode.guide.dos.men.do.4': 'Houd het geheel verzorgd en feestelijk',
+    'dresscode.guide.dos.men.dont.1': 'Vermijd sneakers, slippers en sportkleding', 'dresscode.guide.dos.men.dont.2': 'Vermijd jeans en polo\'s', 'dresscode.guide.dos.men.dont.3': 'Ga niet voor een te casual look',
+    'dresscode.colors.label': 'Kleuradvies', 'dresscode.colors.h': 'Kleuren voor iedereen', 'dresscode.colors.intro': 'Deze suggesties gelden voor iedereen, welke outfit je ook kiest.', 'dresscode.colors.approved.h': 'Kleuren die we mooi vinden', 'dresscode.colors.approved.1': 'Poederblauw en zacht hemelsblauw', 'dresscode.colors.approved.2': 'Saliegroen en olijfgroen', 'dresscode.colors.approved.3': 'Blush en vergrijsd roze', 'dresscode.colors.approved.4': 'Lavendel en zacht lila', 'dresscode.colors.approved.5': 'Gedempt geel en warm terracotta', 'dresscode.colors.avoid.h': 'Kleuren die je beter kunt vermijden', 'dresscode.colors.avoid.1': 'Wit en bruidswit', 'dresscode.colors.avoid.2': 'Ivoor, crème en champagne', 'dresscode.colors.avoid.3': 'Bruidsmetallics zoals helder zilver', 'dresscode.colors.avoid.4': 'Neonkleuren die veel aandacht trekken', 'dresscode.colors.avoid.5': 'Felrood en helderrode tinten',
+    'dresscode.selector.label': 'Bekijk dresscode voor', 'dresscode.selector.her': 'Haar', 'dresscode.selector.him': 'Hem',
+    'dresscode.image.women.alt': 'Voorbeeld cocktailoutfit voor dames', 'dresscode.image.women.caption': 'Voorbeeld look voor cocktail attire', 'dresscode.image.men.alt': 'Voorbeeld cocktailoutfit voor heren', 'dresscode.image.men.caption': 'Voorbeeld look voor heren tijdens cocktail attire',
+    'dresscode.placeholder.women.label': 'Voorbeeldafbeelding dames outfit', 'dresscode.placeholder.men.label': 'Voorbeeldafbeelding heren outfit', 'dresscode.placeholder.dev': 'Placeholder: hier kun je later een eigen afbeelding of component inladen.',
     // Gifts
     'gifts.label': 'Cadeaus', 'gifts.h2': 'Cadeaus',
     'gifts.lead': 'Jouw aanwezigheid is het mooiste cadeau. Als je toch iets wilt geven, lees dan gerust verder.',
@@ -196,11 +208,23 @@ const translations = {
     'dresscode.theme': 'Cocktail Attire',
     'dresscode.lead': 'Polished and festive, right between casual and formal.',
     'dresscode.style.h': 'Style', 'dresscode.style.text': 'Choose a polished midi, tea-length or knee-length dress, a chic suit, or a tailored jumpsuit.', 'dresscode.colours.h': 'Colour and fabric', 'dresscode.colours.text': 'Summer colours and lightweight fabrics are welcome. Polished shoes and thoughtful finishing touches are perfect for the occasion.', 'dresscode.practical.h': 'Practical Notes',
-    'dresscode.guide.link': 'View the dress code guide', 'dresscode.back': 'Back to site', 'dresscode.guide.h1': 'Cocktail Attire', 'dresscode.guide.lead': 'Polished and festive, right between casual and formal.', 'dresscode.guide.intro': 'Choose something that feels elegant and comfortable for a summer celebration. Think polished, festive attire without going full eveningwear.',
-    'dresscode.guide.women.h': 'Dresses, suits and jumpsuits', 'dresscode.guide.women.text': 'A polished midi, tea-length or knee-length dress is always appropriate. A chic suit or a tailored jumpsuit works just as well. Pair it with elegant heels, dressy flats, or sandals suited to the occasion.',
-    'dresscode.guide.men.h': 'Suit', 'dresscode.guide.men.text': 'A polished suit fits this dress code perfectly. Choose a light or mid-tone for summer, with polished closed shoes and a matching belt.',
-    'dresscode.guide.colours.h': 'Colour and fabric', 'dresscode.guide.colours.text': 'Summer colours and lightweight fabrics are very welcome. Choose a refined fabric and accessories that finish the outfit without feeling like gala attire.',
-    'dresscode.guide.avoid.h': 'Good to know', 'dresscode.guide.avoid.text': 'Please avoid jeans, sporty clothing, beachwear and very casual flip-flops. The important thing is a polished outfit in which you can celebrate and dance comfortably.',
+    'dresscode.guide.link': 'View the dress code guide', 'dresscode.back': 'Back to site', 'dresscode.guide.h1': 'Dress code: Cocktail Attire', 'dresscode.guide.lead': 'We are so happy to celebrate with you. Here is a small guideline so everyone feels comfortable and in tune with the day.', 'dresscode.guide.intro.h': 'A gentle guideline for our day',
+    'dresscode.guide.intro.p1': 'For our wedding we have chosen cocktail attire: festive, polished, and comfortable enough to enjoy the full day.', 'dresscode.guide.intro.p2': 'Think of it as a stylish middle ground: dressier than casual, but not as formal as black tie.',
+    'dresscode.guide.women.h': 'For women', 'dresscode.guide.women.p1': 'A midi or knee-length dress is always a lovely option. A polished jumpsuit or suit is equally welcome.',
+    'dresscode.guide.women.p2': 'Choose shoes you can comfortably walk and dance in, and add accessories that feel like you.', 'dresscode.guide.women.p3': 'Most of all, be yourself: an outfit that feels beautiful and comfortable on you is exactly right.',
+    'dresscode.guide.women.short.h': 'Quick check', 'dresscode.guide.women.short.1': 'Midi or knee-length works well', 'dresscode.guide.women.short.2': 'Jumpsuit or suit is welcome too', 'dresscode.guide.women.short.3': 'Choose elegant shoes', 'dresscode.guide.women.short.4': 'Pick a look you can move freely in', 'dresscode.guide.women.short.5': 'Do not forget dancing shoes for the party later that night',
+    'dresscode.guide.men.h': 'For men', 'dresscode.guide.men.p1': 'A suit, or tailored trousers with a shirt, works very well for cocktail attire.',
+    'dresscode.guide.men.p2': 'Polished shoes are part of the look. We kindly prefer no sneakers during the ceremony and dinner.', 'dresscode.guide.men.p3': 'A tie, bow tie, or pocket square is an easy way to add your personal style.',
+    'dresscode.guide.men.short.h': 'Quick check', 'dresscode.guide.men.short.1': 'Suit or tailored trousers with shirt', 'dresscode.guide.men.short.2': 'Polished, neat shoes', 'dresscode.guide.men.short.3': 'Accessories optional', 'dresscode.guide.men.short.4': 'Comfortable and polished is the goal', 'dresscode.guide.men.short.5': 'Do not forget dancing shoes for the party later that night',
+    'dresscode.guide.dos.h': 'Practical do\'s & don\'ts', 'dresscode.guide.dos.women.h': 'For women', 'dresscode.guide.dos.men.h': 'For men', 'dresscode.guide.dos.do': 'Do\'s', 'dresscode.guide.dos.dont': 'Don\'ts',
+    'dresscode.guide.dos.women.do.1': 'Choose a festive, polished outfit', 'dresscode.guide.dos.women.do.2': 'Go for a dress, jumpsuit, or neat suit', 'dresscode.guide.dos.women.do.3': 'Wear shoes you can enjoy the day in',
+    'dresscode.guide.dos.women.dont.1': 'Avoid very casual pieces like denim or sportswear', 'dresscode.guide.dos.women.dont.2': 'Leave beachwear and flip-flops at home', 'dresscode.guide.dos.women.dont.3': 'Prefer not to go for a very formal gala look',
+    'dresscode.guide.dos.men.do.1': 'Choose a suit or polished combination', 'dresscode.guide.dos.men.do.2': 'Wear neat shoes', 'dresscode.guide.dos.men.do.3': 'Feel free to add a personal detail', 'dresscode.guide.dos.men.do.4': 'Keep the overall look polished and festive',
+    'dresscode.guide.dos.men.dont.1': 'Avoid sneakers, flip-flops, and sportswear', 'dresscode.guide.dos.men.dont.2': 'Avoid jeans and polos', 'dresscode.guide.dos.men.dont.3': 'Try not to go too casual',
+    'dresscode.colors.label': 'Colour guide', 'dresscode.colors.h': 'Colours for everyone', 'dresscode.colors.intro': 'These suggestions apply to every guest, whatever you choose to wear.', 'dresscode.colors.approved.h': 'Colours we love', 'dresscode.colors.approved.1': 'Dusty blue and soft sky blue', 'dresscode.colors.approved.2': 'Sage and olive green', 'dresscode.colors.approved.3': 'Blush and dusty rose', 'dresscode.colors.approved.4': 'Lavender and soft lilac', 'dresscode.colors.approved.5': 'Muted yellow and warm terracotta', 'dresscode.colors.avoid.h': 'Colours to leave for the couple', 'dresscode.colors.avoid.1': 'White and bridal white', 'dresscode.colors.avoid.2': 'Ivory, cream, and champagne', 'dresscode.colors.avoid.3': 'Bridal metallics such as bright silver', 'dresscode.colors.avoid.4': 'Neon shades that draw focus', 'dresscode.colors.avoid.5': 'Bright red and vivid crimson',
+    'dresscode.selector.label': 'View dress code for', 'dresscode.selector.her': 'Her', 'dresscode.selector.him': 'Him',
+    'dresscode.image.women.alt': 'Example cocktail outfit for her', 'dresscode.image.women.caption': 'Example look for cocktail attire', 'dresscode.image.men.alt': 'Example cocktail outfit for him', 'dresscode.image.men.caption': 'Example look for him in cocktail attire',
+    'dresscode.placeholder.women.label': 'Example image placeholder: women\'s outfit', 'dresscode.placeholder.men.label': 'Example image placeholder: men\'s outfit', 'dresscode.placeholder.dev': 'Placeholder: you can load your own image or component here later.',
     'gifts.label': 'Gifts', 'gifts.h2': 'Gifts',
     'gifts.lead': 'Your presence is the greatest gift. If you would still like to give something.',
     'gifts.honeymoon.h': 'Honeymoon Contribution',
@@ -281,11 +305,23 @@ const translations = {
     'dresscode.theme': 'Tenue cocktail',
     'dresscode.lead': 'Élégante et festive, entre décontracté et formel.',
     'dresscode.style.h': 'Style', 'dresscode.style.text': 'Choisissez une robe midi, longueur thé ou au genou, un costume chic ou une combinaison élégante.', 'dresscode.colours.h': 'Couleur et matière', 'dresscode.colours.text': 'Les couleurs estivales et les matières légères sont les bienvenues. Des chaussures élégantes et une finition soignée conviennent parfaitement.', 'dresscode.practical.h': 'Conseils pratiques',
-    'dresscode.guide.link': 'Voir le guide vestimentaire', 'dresscode.back': 'Retour au site', 'dresscode.guide.h1': 'Tenue cocktail', 'dresscode.guide.lead': 'Élégante et festive, entre décontracté et formel.', 'dresscode.guide.intro': 'Choisissez une tenue élégante et confortable pour une célébration estivale. Pensez à une allure festive et soignée, sans tenue de soirée.',
-    'dresscode.guide.women.h': 'Robes, costumes et combinaisons', 'dresscode.guide.women.text': 'Une robe midi, longueur thé ou au genou est toujours appropriée. Un costume chic ou une combinaison bien coupée convient tout aussi bien. Complétez avec des talons élégants, des chaussures plates habillées ou des sandales adaptées à l’occasion.',
-    'dresscode.guide.men.h': 'Costume', 'dresscode.guide.men.text': 'Un costume soigné convient parfaitement à ce code vestimentaire. Choisissez une teinte claire ou moyenne pour l’été, avec des chaussures fermées élégantes et une ceinture assortie.',
-    'dresscode.guide.colours.h': 'Couleur et matière', 'dresscode.guide.colours.text': 'Les couleurs estivales et les matières légères sont les bienvenues. Choisissez une matière raffinée et des accessoires qui complètent votre tenue sans donner l’impression d’une tenue de gala.',
-    'dresscode.guide.avoid.h': 'Bon à savoir', 'dresscode.guide.avoid.text': 'Évitez les jeans, les vêtements de sport, les tenues de plage et les tongs très décontractées. L’essentiel est une tenue soignée dans laquelle vous pouvez célébrer et danser confortablement.',
+    'dresscode.guide.link': 'Voir le guide vestimentaire', 'dresscode.back': 'Retour au site', 'dresscode.guide.h1': 'Dress code : Cocktail Attire', 'dresscode.guide.lead': 'Nous sommes ravis de celebrer avec vous. Voici un petit guide pour que chacun se sente a l\'aise et en harmonie avec la journee.', 'dresscode.guide.intro.h': 'Un guide simple pour notre journee',
+    'dresscode.guide.intro.p1': 'Pour notre mariage, nous avons choisi la tenue cocktail : festive, soignee et confortable pour profiter de toute la journee.', 'dresscode.guide.intro.p2': 'Pensez a un juste milieu elegant : plus habille que casual, sans aller jusqu\'au black tie.',
+    'dresscode.guide.women.h': 'Pour les femmes', 'dresscode.guide.women.p1': 'Une robe midi ou au genou est toujours une belle option. Une combinaison elegante ou un tailleur sont aussi les bienvenus.',
+    'dresscode.guide.women.p2': 'Choisissez des chaussures dans lesquelles vous pouvez marcher et danser facilement, avec des accessoires qui vous ressemblent.', 'dresscode.guide.women.p3': 'Le plus important : restez vous-meme. Une tenue dans laquelle vous vous sentez belle et a l\'aise est parfaite.',
+    'dresscode.guide.women.short.h': 'Verification rapide', 'dresscode.guide.women.short.1': 'Midi ou longueur genou : parfait', 'dresscode.guide.women.short.2': 'Combinaison ou tailleur acceptes', 'dresscode.guide.women.short.3': 'Choisissez des chaussures elegantes', 'dresscode.guide.women.short.4': 'Choisissez une tenue dans laquelle vous bougez librement', 'dresscode.guide.women.short.5': 'N oubliez pas des chaussures de danse pour la fete plus tard dans la soiree',
+    'dresscode.guide.men.h': 'Pour les hommes', 'dresscode.guide.men.p1': 'Un costume, ou un pantalon habille avec chemise, convient tres bien a la tenue cocktail.',
+    'dresscode.guide.men.p2': 'Des chaussures soignees font partie de la tenue. Nous preferons eviter les baskets pendant la ceremonie et le diner.', 'dresscode.guide.men.p3': 'Une cravate, un noeud papillon ou une pochette permet d\'ajouter facilement votre touche personnelle.',
+    'dresscode.guide.men.short.h': 'Verification rapide', 'dresscode.guide.men.short.1': 'Costume ou pantalon habille avec chemise', 'dresscode.guide.men.short.2': 'Chaussures nettes et soignees', 'dresscode.guide.men.short.3': 'Accessoires optionnels', 'dresscode.guide.men.short.4': 'Objectif : confortable et elegant', 'dresscode.guide.men.short.5': 'N oubliez pas des chaussures de danse pour la fete plus tard dans la soiree',
+    'dresscode.guide.dos.h': 'Do\'s & don\'ts pratiques', 'dresscode.guide.dos.women.h': 'Pour les femmes', 'dresscode.guide.dos.men.h': 'Pour les hommes', 'dresscode.guide.dos.do': 'Do\'s', 'dresscode.guide.dos.dont': 'Don\'ts',
+    'dresscode.guide.dos.women.do.1': 'Choisissez une tenue festive et soignee', 'dresscode.guide.dos.women.do.2': 'Optez pour robe, combinaison ou tailleur', 'dresscode.guide.dos.women.do.3': 'Portez des chaussures confortables pour la journee',
+    'dresscode.guide.dos.women.dont.1': 'Evitez les pieces tres casual comme le denim ou le sportswear', 'dresscode.guide.dos.women.dont.2': 'Laissez les tenues de plage et les tongs a la maison', 'dresscode.guide.dos.women.dont.3': 'Evitez un look trop gala ou trop formel',
+    'dresscode.guide.dos.men.do.1': 'Choisissez un costume ou une combinaison habillee', 'dresscode.guide.dos.men.do.2': 'Portez des chaussures soignees', 'dresscode.guide.dos.men.do.3': 'Ajoutez volontiers un detail personnel', 'dresscode.guide.dos.men.do.4': 'Gardez un ensemble soigne et festif',
+    'dresscode.guide.dos.men.dont.1': 'Evitez baskets, tongs et tenues sportives', 'dresscode.guide.dos.men.dont.2': 'Evitez jeans et polos', 'dresscode.guide.dos.men.dont.3': 'Evitez une tenue trop decontractee',
+    'dresscode.colors.label': 'Guide des couleurs', 'dresscode.colors.h': 'Couleurs pour tout le monde', 'dresscode.colors.intro': 'Ces suggestions s’appliquent à tous les invités, quelle que soit la tenue choisie.', 'dresscode.colors.approved.h': 'Les couleurs que nous aimons', 'dresscode.colors.approved.1': 'Bleu poudré et bleu ciel doux', 'dresscode.colors.approved.2': 'Vert sauge et vert olive', 'dresscode.colors.approved.3': 'Rose poudré et vieux rose', 'dresscode.colors.approved.4': 'Lavande et lilas doux', 'dresscode.colors.approved.5': 'Jaune doux et terracotta chaleureux', 'dresscode.colors.avoid.h': 'Les couleurs à éviter', 'dresscode.colors.avoid.1': 'Blanc et blanc de mariée', 'dresscode.colors.avoid.2': 'Ivoire, crème et champagne', 'dresscode.colors.avoid.3': 'Les tons métallisés très nuptiaux, comme l’argent vif', 'dresscode.colors.avoid.4': 'Les couleurs fluo qui attirent beaucoup l’attention', 'dresscode.colors.avoid.5': 'Rouge vif et cramoisi éclatant',
+    'dresscode.selector.label': 'Voir la tenue pour', 'dresscode.selector.her': 'Elle', 'dresscode.selector.him': 'Lui',
+    'dresscode.image.women.alt': 'Exemple de tenue cocktail pour femme', 'dresscode.image.women.caption': 'Exemple de look pour la tenue cocktail', 'dresscode.image.men.alt': 'Exemple de tenue cocktail pour homme', 'dresscode.image.men.caption': 'Exemple de look masculin pour une tenue cocktail',
+    'dresscode.placeholder.women.label': 'Emplacement image exemple : tenue femme', 'dresscode.placeholder.men.label': 'Emplacement image exemple : tenue homme', 'dresscode.placeholder.dev': 'Placeholder : vous pourrez charger ici votre propre image ou composant plus tard.',
     'gifts.label': 'Cadeaux', 'gifts.h2': 'Cadeaux',
     'gifts.lead': 'Votre présence est le plus beau des cadeaux. Si vous souhaitez tout de même nous offrir quelque chose.',
     'gifts.honeymoon.h': 'Contribution au voyage de noces',
@@ -883,6 +919,39 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ------------------------------------------------------------------
+     Remember selected dresscode tab
+     ------------------------------------------------------------------ */
+  const initDresscodeTabs = () => {
+    const tabRoot = document.getElementById('dresscodeTabs');
+    if (!tabRoot || typeof bootstrap === 'undefined') {
+      return;
+    }
+
+    const tabButtons = Array.from(tabRoot.querySelectorAll('[data-bs-toggle="tab"]'));
+    if (tabButtons.length === 0) {
+      return;
+    }
+
+    const storageKey = 'wedding-dresscode-tab';
+    const restoreId = localStorage.getItem(storageKey);
+    if (restoreId) {
+      const restoreButton = document.getElementById(restoreId);
+      if (restoreButton) {
+        bootstrap.Tab.getOrCreateInstance(restoreButton).show();
+      }
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('shown.bs.tab', (event) => {
+        const selectedId = event.target && event.target.id;
+        if (selectedId) {
+          localStorage.setItem(storageKey, selectedId);
+        }
+      });
+    });
+  };
+
+  /* ------------------------------------------------------------------
      Init all
      ------------------------------------------------------------------ */
   initScrollPosition();
@@ -900,4 +969,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initCopyrightYear();
   initNavbarScrollState();
+  initDresscodeTabs();
 });
