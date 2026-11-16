@@ -1468,6 +1468,14 @@ section {
   border-color: var(--clr-gold);
   box-shadow: 0 10px 25px rgb(from var(--clr-rock) r g b / 0.18);
 }
+.dresscode-page .dress-code-card {
+  transition: none;
+}
+.dresscode-page .dress-code-card:hover {
+  transform: none;
+  border-color: rgb(from var(--clr-sky) r g b / 0.52);
+  box-shadow: none;
+}
 
 .accordion-item {
   border: none;
