@@ -17,7 +17,8 @@ const translations = {
     'nav.ceremony': 'Ceremoniemeesters',
     // Hero
     'hero.sub': 'Van Kerlingarfjöll tot voor altijd',
-    'hero.date': '15 juli 2027',
+    'hero.date': '26 mei 2027',
+    'hero.countdown_today': 'Vandaag is de dag!',
     'hero.countdown_prefix': 'Aftellen naar het moment dat we ‘ja’ zeggen.',
     'hero.days': 'Dagen', 'hero.hours': 'Uren', 'hero.minutes': 'Minuten', 'hero.seconds': 'Seconden',
     'hero.btn_rsvp': 'RSVP', 'hero.btn_day': 'Bekijk de dag',
@@ -49,13 +50,14 @@ const translations = {
     'proposal.h3_journey': 'De reis erheen', 'proposal.h3_moment': 'Het moment', 'proposal.h3_answer': 'Het antwoord',
     'proposal.location_caption': 'Kerlingarfjöll, IJsland · 64°38\'41.8"N 19°17\'14.9"W',
     'wind.label': 'Een beetje IJslandse wind', 'wind.h2': 'Roep de wind op',
-    'wind.lead': 'Blaas in je microfoon en laat de wind opsteken. Kun jij de windkracht tot het uiterste brengen?',
+    'wind.lead.instruction': 'Blaas in je microfoon en laat de wind opsteken.',
+    'wind.lead.challenge': 'Kun jij de windkracht tot het uiterste brengen?',
     'wind.start': 'Gebruik microfoon', 'wind.fallback': 'Houd vast voor wind',
     'wind.status_ready': 'Klaar voor een frisse bries?', 'wind.status_listening': 'We luisteren. Blaas maar!',
     'wind.status_success': 'Windkracht bereikt. Kijk wat er gebeurt!', 'wind.status_unavailable': 'De microfoon is niet beschikbaar. Roep de wind op met de knop.',
     // Wedding Day
     'wedding.label': 'De Grote Dag', 'wedding.h2': 'De Trouwdag',
-    'wedding.date': 'Donderdag, 15 juli 2027',
+    'wedding.date': 'Woensdag, 26 mei 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Aankomst gasten & welkom', 'wedding.arr.note': 'Neem rustig de tijd om aan te komen en elkaar te begroeten.',
     'wedding.cer.time': '15:00', 'wedding.cer.desc': 'Huwelijksceremonie', 'wedding.cer.note': 'Een moment voor ons ja-woord.',
     'wedding.cake.time': '15:45', 'wedding.cake.desc': 'Toast, taart, gelukwensen & borrel', 'wedding.cake.note': 'Vanaf de toast zijn bier, wijn en frisdrank onbeperkt beschikbaar.',
@@ -64,12 +66,14 @@ const translations = {
     'wedding.speeches.time': 'Tijdens het diner', 'wedding.speeches.desc': 'Toespraken', 'wedding.speeches.note': 'Een paar woorden uit het hart, tussen de gangen door.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Feest', 'wedding.party.note': 'Daarna gaat de muziek aan en vieren we samen tot laat.',
     'wedding.end.time': '00:30', 'wedding.end.desc': 'Einde van de avond', 'wedding.end.note': 'Bedankt dat jullie deze bijzondere dag met ons hebben gevierd.',
+    'wedding.end.irish_exit': 'Een Irish exit is helemaal prima: als je naar huis wilt, mag je gerust stilletjes vertrekken zonder iedereen gedag te zeggen. Je hoeft ons niet eerst op te zoeken.',
     'wedding.note': 'We nodigen graag precies de mensen uit die op jullie persoonlijke uitnodiging staan.',
-    'wedding.photo_note': "Tijdens de ceremonie hebben we een professionele fotograaf en vragen we jullie om telefoons weg te leggen. Buiten de ceremonie zijn jullie vrij om foto\'s en filmpjes te maken. Film je? Houd je telefoon dan horizontaal. En vooral: wees samen met ons in het moment.",
+    'wedding.photo_note.ceremony': 'Tijdens de ceremonie hebben we een professionele fotograaf en vragen we jullie om telefoons weg te leggen.',
+    'wedding.photo_note.outside': "Buiten de ceremonie zijn jullie vrij om foto\'s en filmpjes te maken. Film je? Houd je telefoon dan horizontaal. En vooral: wees samen met ons in het moment.",
     // Location
     'location.label': 'Locatie', 'location.h2': 'Hier naartoe',
     'location.description': 'Een sfeervol landhuis met klassieke ruimtes en een prachtige parktuin op de Utrechtse Heuvelrug.',
-    'location.travel.h': 'Reizen', 'location.travel.text': 'Reis naar station Driebergen-Zeist. Vanaf daar kun je lopen of de bus nemen. Plan vlak voor vertrek je actuele route via',
+    'location.travel.h': 'Reizen', 'location.travel.text': 'Reis naar station Driebergen-Zeist. Vanaf daar kun je lopen of de bus nemen. Plan vlak voor vertrek je actuele route.',
     'location.parking.h': 'Parkeren', 'location.parking.text': 'De parkeerplaats ligt vlak bij de locatie, net om de hoek. Vanaf daar is er een aparte ingang naar Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parkeerroute',
     'location.accom.h': 'Overnachting', 'location.accom.text': 'Gasten regelen en boeken hun overnachting zelf.', 'location.accom.link': 'Bekijk overnachtingsmogelijkheden',
     'location.taxi.h': 'Taxi & vervoer', 'location.taxi.intro': 'Hieronder vind je een aantal lokale taxi-opties.',
@@ -86,13 +90,15 @@ const translations = {
     'location.directions_btn': 'Routebeschrijving openen',
     // RSVP
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Kom je ook?',
-    'rsvp.lead': 'We vieren dit het liefst samen met jou. Laat ons weten of je erbij kunt zijn.',
-    'rsvp.deadline': 'Reageer voor:', 'rsvp.deadline_date': '20 mei 2027', 'rsvp.load': 'Toon RSVP-formulier', 'rsvp.btn': 'Open RSVP-formulier',
+    'rsvp.lead': 'We kijken ernaar uit om dit samen met jou te vieren! Laat ons weten of je erbij kunt zijn.',
+    'rsvp.invitation_note': 'We kunnen alleen de gasten ontvangen die op je uitnodiging staan.',
+    'rsvp.deadline': 'Reageer voor:', 'rsvp.deadline_date': '31 maart 2027', 'rsvp.load': 'Toon RSVP-formulier', 'rsvp.btn': 'Open RSVP-formulier',
     'rsvp.privacy': 'Je RSVP-gegevens worden uitsluitend gebruikt voor de organisatie van ons huwelijk en relevante communicatie.',
     // Dress Code
     'dresscode.label': 'Dresscode', 'dresscode.h2': 'Wat te dragen',
     'dresscode.theme': 'Cocktail Attire',
-    'dresscode.lead': 'Feestelijk en verzorgd, precies tussen casual en formeel in.',
+    'dresscode.lead.invitation': 'We vinden het leuk als onze gasten deze bijzondere dag met ons vieren in cocktail attire.',
+    'dresscode.lead.description': 'Feestelijk en verzorgd, precies tussen casual en formeel in.',
     'dresscode.style.h': 'Stijl', 'dresscode.style.text': 'Kies een nette midi-, thee- of knielange jurk, een chic pak of een verzorgde jumpsuit.', 'dresscode.colours.h': 'Kleur en materiaal', 'dresscode.colours.text': 'Zomerse kleuren en luchtige stoffen zijn welkom. Nette schoenen en een verzorgde afwerking passen perfect bij de gelegenheid.', 'dresscode.practical.h': 'Praktische opmerkingen',
     'dresscode.guide.link': 'Bekijk de dresscode-gids', 'dresscode.back': 'Terug naar site', 'dresscode.guide.label': 'Dresscode', 'dresscode.guide.title': 'Dresscode', 'dresscode.guide.theme': 'Dresscode: Cocktail Attire', 'dresscode.guide.h1': 'Dresscode: Cocktail Attire', 'dresscode.guide.lead': 'We kijken ernaar uit om samen met jullie te vieren. Hieronder vind je een kleine richtlijn, zodat iedereen zich prettig en passend voelt.', 'dresscode.guide.intro.h': 'Een kleine richtlijn voor onze dag',
     'dresscode.guide.intro.p1': 'Voor de dresscode hebben we gekozen voor cocktail attire. Met deze dresscode zoeken we de mooie balans tussen feestelijk en verzorgd. Een outfit met iets extra’s mag, zolang je je er prettig in voelt.', 'dresscode.guide.intro.p2': 'Zie het als een stijlvolle middenweg: eleganter dan casual, maar niet formeel als black tie.', 'dresscode.guide.intro.p3': 'Kies vooral iets dat bij jou past, waarin je vrij kunt bewegen en de hele dag en avond kunt meevieren.',
@@ -108,6 +114,7 @@ const translations = {
     'dresscode.guide.dos.men.do.1': 'Kies een pak of nette combinatie', 'dresscode.guide.dos.men.do.2': 'Draag nette schoenen', 'dresscode.guide.dos.men.do.3': 'Voeg gerust een persoonlijk detail toe', 'dresscode.guide.dos.men.do.4': 'Houd het geheel verzorgd en feestelijk',
     'dresscode.guide.dos.men.dont.1': 'Vermijd sneakers, slippers en sportkleding', 'dresscode.guide.dos.men.dont.2': 'Vermijd jeans en polo\'s', 'dresscode.guide.dos.men.dont.3': 'Ga niet voor een te casual look',
     'dresscode.colors.label': 'Kleuradvies', 'dresscode.colors.h': 'Kleuradvies', 'dresscode.colors.intro': 'Deze suggesties gelden voor iedereen, welke outfit je ook kiest.', 'dresscode.colors.approved.h': 'Kleuren die we mooi vinden', 'dresscode.colors.approved.1': 'Poederblauw en zacht hemelsblauw', 'dresscode.colors.approved.2': 'Saliegroen en olijfgroen', 'dresscode.colors.approved.3': 'Blush en vergrijsd roze', 'dresscode.colors.approved.4': 'Lavendel en zacht lila', 'dresscode.colors.approved.5': 'Gedempt geel en warm terracotta', 'dresscode.colors.avoid.h': 'Kleuren die je beter kunt vermijden', 'dresscode.colors.avoid.1': 'Wit en bruidswit', 'dresscode.colors.avoid.2': 'Ivoor, crème en champagne', 'dresscode.colors.avoid.3': 'Bruidsmetallics zoals helder zilver', 'dresscode.colors.avoid.4': 'Neonkleuren die veel aandacht trekken', 'dresscode.colors.avoid.5': 'Felrood en helderrode tinten',
+    'dresscode.colors.avoid.6': 'Zwart', 'dresscode.colors.avoid.7': 'Donkerblauw en marineblauw',
     'dresscode.selector.label': 'Bekijk dresscode voor', 'dresscode.selector.her': 'Haar', 'dresscode.selector.him': 'Hem',
     'dresscode.image.women.alt': 'Voorbeeld cocktailoutfit voor dames', 'dresscode.image.women.caption': 'Afbeelding ter inspiratie.', 'dresscode.image.men.alt': 'Voorbeeld cocktailoutfit voor heren', 'dresscode.image.men.caption': 'Afbeelding ter inspiratie.',
     'dresscode.placeholder.women.label': 'Voorbeeldafbeelding dames outfit', 'dresscode.placeholder.men.label': 'Voorbeeldafbeelding heren outfit', 'dresscode.placeholder.dev': 'Placeholder: hier kun je later een eigen afbeelding of component inladen.',
@@ -120,6 +127,10 @@ const translations = {
     // Ceremony Masters
     'ceremony.label': 'Ceremoniemeesters', 'ceremony.h2': 'Ontmoet onze ceremoniemeesters',
     'ceremony.lead': 'Onze ceremoniemeesters begeleiden de dag en beantwoorden praktische vragen.',
+    'ceremony.contact_note_intro': 'De contactgegevens van Bas en Suzan hebben we met de uitnodiging gedeeld. Heb je ze nog een keer nodig?',
+    'ceremony.contact_note_followup': 'Laat het Mariëlle of Jérémy gerust weten, dan delen we ze graag opnieuw.',
+    'ceremony.bas.photo': 'Foto van Bas',
+    'ceremony.suzan.photo': 'Foto van Suzan',
     // Footer
     'footer.thanks': 'Dank je wel dat je dit met ons viert.',
     'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP',
@@ -136,7 +147,7 @@ const translations = {
     'invite.label': 'Save the Date',
     'invite.message': 'Dear {name}, with so much love, we invite you to celebrate our wedding day with us. We cannot wait to toast, laugh, and create memories to carry with us forever.',
     'hero.sub': 'From Kerlingarfj\u00f6ll to forever',
-    'hero.date': '15 July 2027',
+    'hero.date': '26 May 2027',
     'hero.countdown_prefix': "Counting down to the moment we say \u2018I do\u2019.",
     'hero.countdown_today': 'Today is the day!',
     'hero.days': 'Days', 'hero.hours': 'Hours', 'hero.minutes': 'Minutes', 'hero.seconds': 'Seconds',
@@ -167,12 +178,13 @@ const translations = {
     'proposal.h3_journey': 'The Journey There', 'proposal.h3_moment': 'The Moment', 'proposal.h3_answer': 'The Answer',
     'proposal.location_caption': 'Kerlingarfjöll, Iceland · 64°38\'41.8"N 19°17\'14.9"W',
     'wind.label': 'A little Icelandic wind', 'wind.h2': 'Call up the wind',
-    'wind.lead': 'Blow into your microphone and make the wind rise. Can you take the wind strength all the way to the top?',
+    'wind.lead.instruction': 'Blow into your microphone and make the wind rise.',
+    'wind.lead.challenge': 'Can you take the wind strength all the way to the top?',
     'wind.start': 'Use microphone', 'wind.fallback': 'Hold for wind',
     'wind.status_ready': 'Ready for a fresh breeze?', 'wind.status_listening': 'We are listening. Give us your best gust!',
     'wind.status_success': 'Wind strength reached. Look what happens!', 'wind.status_unavailable': 'The microphone is unavailable. Call up the wind with the button.',
     'wedding.label': 'The Big Day', 'wedding.h2': 'The Wedding Day',
-    'wedding.date': 'Thursday, 15 July 2027',
+    'wedding.date': 'Wednesday, 26 May 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Guest Arrival & Welcome', 'wedding.arr.note': 'Take your time arriving and greeting one another.',
     'wedding.cer.time': '15:00', 'wedding.cer.desc': 'Wedding Ceremony', 'wedding.cer.note': 'Our moment to say yes.',
     'wedding.cake.time': '15:45', 'wedding.cake.desc': 'Toast, cake, congratulations & drinks', 'wedding.cake.note': 'From the toast onward, beer, wine and soft drinks are unlimited.',
@@ -181,11 +193,13 @@ const translations = {
     'wedding.speeches.time': 'During dinner', 'wedding.speeches.desc': 'Speeches', 'wedding.speeches.note': 'A few words from the heart, shared between courses.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'Party', 'wedding.party.note': 'Then the music starts and we celebrate together into the night.',
     'wedding.end.time': '00:30', 'wedding.end.desc': 'End of the evening', 'wedding.end.note': 'Thank you for celebrating this special day with us.',
+    'wedding.end.irish_exit': 'An Irish exit is welcome: when you’re ready to head home, feel free to slip away quietly without a round of goodbyes. No need to come and find us first.',
     'wedding.note': 'We are inviting exactly the people named on their personal invitation.',
-    'wedding.photo_note': 'We have a professional photographer during the ceremony, so please put your phones away. Outside the ceremony, feel free to take photos and videos. If you film, please hold your phone horizontally. Above all, be present in the moment with us.',
+    'wedding.photo_note.ceremony': 'We have a professional photographer during the ceremony, so please put your phones away.',
+    'wedding.photo_note.outside': 'Outside the ceremony, feel free to take photos and videos. If you film, please hold your phone horizontally. Above all, be present in the moment with us.',
     'location.label': 'Venue', 'location.h2': 'Getting There',
     'location.description': 'An atmospheric country house with classic rooms and a beautiful park garden in the Utrechtse Heuvelrug.',
-    'location.travel.h': 'Travel', 'location.travel.text': 'Travel to Driebergen-Zeist station. From there, walk or take a bus. Check the current route shortly before you leave via',
+    'location.travel.h': 'Travel', 'location.travel.text': 'Travel to Driebergen-Zeist station. From there, walk or take a bus. Check the current route shortly before you leave.',
     'location.parking.h': 'Parking', 'location.parking.text': 'The parking area is close to the venue, just around the corner. From there, a separate entrance leads to Buitenplaats Sparrendaal.', 'location.parking.link': 'Open parking route',
     'location.accom.h': 'Accommodation', 'location.accom.text': 'Guests arrange and book their own accommodation.', 'location.accom.link': 'View accommodation options',
     'location.taxi.h': 'Taxi & Transport', 'location.taxi.intro': 'Here are several local taxi options.',
@@ -201,12 +215,14 @@ const translations = {
     'accommodation.smallbnb.h': 'Other small B&Bs in Amerongen', 'accommodation.bestegoed': 'One-room bed and breakfast in Amerongen.', 'accommodation.overtuin': 'One-room bed and breakfast in Amerongen. Telephone: 0343 454 989.', 'accommodation.bb23': 'Two-room bed and breakfast in Amerongen. Telephone: 0343 451 692.', 'accommodation.back': 'Back to site',
     'location.directions_btn': 'Open Directions',
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Will You Join Us?',
-    'rsvp.lead': 'We would love to celebrate with you. Please let us know whether you can attend.',
-    'rsvp.deadline': 'Please respond before:', 'rsvp.deadline_date': '20 May 2027', 'rsvp.load': 'Show RSVP Form', 'rsvp.btn': 'Open RSVP Form',
+    'rsvp.lead': 'We’re excited to celebrate with you! Please let us know whether you can attend.',
+    'rsvp.invitation_note': 'We’re only able to accommodate the guests named on your invitation.',
+    'rsvp.deadline': 'Please respond before:', 'rsvp.deadline_date': '31 March 2027', 'rsvp.load': 'Show RSVP Form', 'rsvp.btn': 'Open RSVP Form',
     'rsvp.privacy': 'Your RSVP details will only be used to organize our wedding and communicate relevant wedding information.',
     'dresscode.label': 'Dress Code', 'dresscode.h2': 'What to Wear',
     'dresscode.theme': 'Cocktail Attire',
-    'dresscode.lead': 'Polished and festive, right between casual and formal.',
+    'dresscode.lead.invitation': 'We’d love for our guests to embrace the occasion in cocktail attire.',
+    'dresscode.lead.description': 'Polished and festive, right between casual and formal.',
     'dresscode.style.h': 'Style', 'dresscode.style.text': 'Choose a polished midi, tea-length or knee-length dress, a chic suit, or a tailored jumpsuit.', 'dresscode.colours.h': 'Colour and fabric', 'dresscode.colours.text': 'Summer colours and lightweight fabrics are welcome. Polished shoes and thoughtful finishing touches are perfect for the occasion.', 'dresscode.practical.h': 'Practical Notes',
     'dresscode.guide.link': 'View the dress code guide', 'dresscode.back': 'Back to site', 'dresscode.guide.label': 'Dress Code', 'dresscode.guide.title': 'Dress Code', 'dresscode.guide.theme': 'Dress code: Cocktail Attire', 'dresscode.guide.h1': 'Dress code: Cocktail Attire', 'dresscode.guide.lead': 'We are so happy to celebrate with you. Here is a small guideline so everyone feels comfortable and in tune with the day.', 'dresscode.guide.intro.h': 'A gentle guideline for our day',
     'dresscode.guide.intro.p1': 'For the dress code, we have chosen cocktail attire. With this dress code, we are looking for a lovely balance between festive and polished. An outfit with a little something extra is welcome, as long as you feel comfortable in it.', 'dresscode.guide.intro.p2': 'Think of it as a stylish middle ground: dressier than casual, but not as formal as black tie.', 'dresscode.guide.intro.p3': 'Choose something that feels like you, lets you move freely, and carries you through the whole day and evening.',
@@ -222,6 +238,7 @@ const translations = {
     'dresscode.guide.dos.men.do.1': 'Choose a suit or polished combination', 'dresscode.guide.dos.men.do.2': 'Wear neat shoes', 'dresscode.guide.dos.men.do.3': 'Feel free to add a personal detail', 'dresscode.guide.dos.men.do.4': 'Keep the overall look polished and festive',
     'dresscode.guide.dos.men.dont.1': 'Avoid sneakers, flip-flops, and sportswear', 'dresscode.guide.dos.men.dont.2': 'Avoid jeans and polos', 'dresscode.guide.dos.men.dont.3': 'Try not to go too casual',
     'dresscode.colors.label': 'Colour guide', 'dresscode.colors.h': 'Colour guide', 'dresscode.colors.intro': 'These suggestions apply to every guest, whatever you choose to wear.', 'dresscode.colors.approved.h': 'Colours we love', 'dresscode.colors.approved.1': 'Dusty blue and soft sky blue', 'dresscode.colors.approved.2': 'Sage and olive green', 'dresscode.colors.approved.3': 'Blush and dusty rose', 'dresscode.colors.approved.4': 'Lavender and soft lilac', 'dresscode.colors.approved.5': 'Muted yellow and warm terracotta', 'dresscode.colors.avoid.h': 'Colours to leave for the couple', 'dresscode.colors.avoid.1': 'White and bridal white', 'dresscode.colors.avoid.2': 'Ivory, cream, and champagne', 'dresscode.colors.avoid.3': 'Bridal metallics such as bright silver', 'dresscode.colors.avoid.4': 'Neon shades that draw focus', 'dresscode.colors.avoid.5': 'Bright red and vivid crimson',
+    'dresscode.colors.avoid.6': 'Black', 'dresscode.colors.avoid.7': 'Dark blue and navy blue',
     'dresscode.selector.label': 'View dress code for', 'dresscode.selector.her': 'Her', 'dresscode.selector.him': 'Him',
     'dresscode.image.women.alt': 'Example cocktail outfit for her', 'dresscode.image.women.caption': 'Image for inspiration.', 'dresscode.image.men.alt': 'Example cocktail outfit for him', 'dresscode.image.men.caption': 'Image for inspiration.',
     'dresscode.placeholder.women.label': 'Example image placeholder: women\'s outfit', 'dresscode.placeholder.men.label': 'Example image placeholder: men\'s outfit', 'dresscode.placeholder.dev': 'Placeholder: you can load your own image or component here later.',
@@ -232,6 +249,10 @@ const translations = {
     'gifts.wishlist.h': 'Wishlist', 'gifts.wishlist.text': 'If you know of something you are sure would suit us, a personal gift is always lovely. Otherwise, a contribution towards our honeymoon is a wonderful choice.',
     'ceremony.label': 'Ceremony Masters', 'ceremony.h2': 'Meet Our Ceremony Masters',
     'ceremony.lead': 'Our ceremony masters will help guide the day and answer practical questions.',
+    'ceremony.contact_note_intro': 'We shared Bas and Suzan’s contact details with the invitation. Need them again?',
+    'ceremony.contact_note_followup': 'Just ask Mariëlle or Jérémy and we’ll be happy to share them with you.',
+    'ceremony.bas.photo': 'Photo of Bas',
+    'ceremony.suzan.photo': 'Photo of Suzan',
     'footer.thanks': 'Thank you for celebrating with us.',
     'footer.nav.home': 'Home', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Back to top \u2191',
@@ -247,7 +268,7 @@ const translations = {
     'invite.label': 'Réservez la date',
     'invite.message': 'Cher/Chère {name}, c’est avec beaucoup d’amour que nous vous invitons à célébrer notre mariage avec nous. Nous avons hâte de trinquer, de rire et de créer ensemble des souvenirs pour toujours.',
     'hero.sub': "De Kerlingarfj\u00f6ll \u00e0 l\u2019\u00e9ternit\u00e9",
-    'hero.date': '15 juillet 2027',
+    'hero.date': '26 mai 2027',
     'hero.countdown_prefix': "D\u00e9compte jusqu\u2019au moment o\u00f9 nous disons \u2018oui\u2019.",
     'hero.countdown_today': 'C\u2019est le grand jour\u00a0!',
     'hero.days': 'Jours', 'hero.hours': 'Heures', 'hero.minutes': 'Minutes', 'hero.seconds': 'Secondes',
@@ -278,12 +299,13 @@ const translations = {
     'proposal.h3_journey': 'Le voyage l\u00e0-bas', 'proposal.h3_moment': 'Le moment', 'proposal.h3_answer': 'La r\u00e9ponse',
     'proposal.location_caption': 'Kerlingarfjöll, Islande · 64°38\'41.8"N 19°17\'14.9"W',
     'wind.label': 'Un peu de vent islandais', 'wind.h2': 'Appelez le vent',
-    'wind.lead': 'Soufflez dans votre microphone et faites monter le vent. Pouvez-vous pousser la force du vent jusqu’au sommet ?',
+    'wind.lead.instruction': 'Soufflez dans votre microphone et faites monter le vent.',
+    'wind.lead.challenge': 'Pouvez-vous pousser la force du vent jusqu’au sommet ?',
     'wind.start': 'Utiliser le microphone', 'wind.fallback': 'Maintenir pour le vent',
     'wind.status_ready': 'Prêt pour une brise fraîche ?', 'wind.status_listening': 'Nous écoutons. Soufflez !',
     'wind.status_success': 'Force du vent atteinte. Regardez ce qui se passe !', 'wind.status_unavailable': 'Le microphone est indisponible. Appelez le vent avec le bouton.',
     'wedding.label': 'Le Grand Jour', 'wedding.h2': 'Le Mariage',
-    'wedding.date': 'Jeudi, 15 juillet 2027',
+    'wedding.date': 'Mercredi, 26 mai 2027',
     'wedding.arr.time': '14:30', 'wedding.arr.desc': 'Accueil des invit\u00e9s', 'wedding.arr.note': 'Prenez le temps d’arriver tranquillement et de vous saluer.',
     'wedding.cer.time': '15:00', 'wedding.cer.desc': 'C\u00e9r\u00e9monie de mariage', 'wedding.cer.note': 'Notre moment pour nous dire oui.',
     'wedding.cake.time': '15:45', 'wedding.cake.desc': 'Toast, g\u00e2teau, f\u00e9licitations & boissons', 'wedding.cake.note': 'D\u00e8s le toast, la bi\u00e8re, le vin et les boissons sans alcool sont \u00e0 volont\u00e9.',
@@ -291,19 +313,23 @@ const translations = {
     'wedding.speeches.time': 'Pendant le d\u00eener', 'wedding.speeches.desc': 'Discours', 'wedding.speeches.note': 'Quelques mots du cœur, entre les plats.',
     'wedding.party.time': '20:00', 'wedding.party.desc': 'F\u00eate', 'wedding.party.note': 'Puis la musique commence et la f\u00eate continue jusque tard dans la nuit.',
     'wedding.end.time': '00:30', 'wedding.end.desc': 'Fin de la soirée', 'wedding.end.note': 'Merci d’avoir célébré cette journée si spéciale avec nous.',
+    'wedding.end.irish_exit': 'Un « Irish exit » est tout à fait bienvenu : quand vous souhaitez rentrer, n’hésitez pas à partir discrètement, sans faire la tournée des au revoir. Pas besoin de venir nous chercher avant de partir.',
     'wedding.note': 'Nous invitons exactement les personnes indiquées sur leur invitation personnelle.',
-    'wedding.photo_note': 'Un photographe professionnel sera pr\u00e9sent pendant la c\u00e9r\u00e9monie\u00a0: merci de ranger vos t\u00e9l\u00e9phones. En dehors de la c\u00e9r\u00e9monie, vous pouvez prendre des photos et des vid\u00e9os. Si vous filmez, tenez votre t\u00e9l\u00e9phone horizontalement. Et surtout, profitez de ce moment avec nous.',
+    'wedding.photo_note.ceremony': 'Un photographe professionnel sera pr\u00e9sent pendant la c\u00e9r\u00e9monie\u00a0: merci de ranger vos t\u00e9l\u00e9phones.',
+    'wedding.photo_note.outside': 'En dehors de la c\u00e9r\u00e9monie, vous pouvez prendre des photos et des vid\u00e9os. Si vous filmez, tenez votre t\u00e9l\u00e9phone horizontalement. Et surtout, profitez de ce moment avec nous.',
     'location.label': 'Lieu', 'location.h2': 'Comment venir',
     'location.travel.h': 'Transport', 'location.parking.h': 'Parking',
     'location.accom.h': 'H\u00e9bergement', 'location.taxi.h': 'Taxi & transport',
     'location.directions_btn': "Ouvrir l\u2019itin\u00e9raire",
     'rsvp.label': 'RSVP', 'rsvp.h2': 'Serez-vous des n\u00f4tres\u00a0?',
-    'rsvp.lead': 'Nous adorerions c\u00e9l\u00e9brer avec vous. Faites-nous savoir si vous pouvez \u00eatre pr\u00e9sent.',
-    'rsvp.deadline': 'Merci de r\u00e9pondre avant le\u00a0:', 'rsvp.deadline_date': '20 mai 2027', 'rsvp.load': 'Afficher le formulaire RSVP', 'rsvp.btn': 'Ouvrir le formulaire RSVP',
+    'rsvp.lead': 'Nous avons hâte de célébrer ce moment avec vous ! Faites-nous savoir si vous serez des nôtres.',
+    'rsvp.invitation_note': 'Nous pouvons uniquement accueillir les personnes nommées sur votre invitation.',
+    'rsvp.deadline': 'Merci de r\u00e9pondre avant le\u00a0:', 'rsvp.deadline_date': '31 mars 2027', 'rsvp.load': 'Afficher le formulaire RSVP', 'rsvp.btn': 'Ouvrir le formulaire RSVP',
     'rsvp.privacy': 'Vos coordonn\u00e9es RSVP ne seront utilis\u00e9es que pour organiser notre mariage et communiquer les informations pertinentes.',
     'dresscode.label': 'Code vestimentaire', 'dresscode.h2': 'Tenue vestimentaire',
     'dresscode.theme': 'Tenue cocktail',
-    'dresscode.lead': 'Élégante et festive, entre décontracté et formel.',
+    'dresscode.lead.invitation': 'Nous serions ravis que nos invités célèbrent cette belle occasion avec nous en tenue cocktail.',
+    'dresscode.lead.description': 'Élégante et festive, entre décontracté et formel.',
     'dresscode.style.h': 'Style', 'dresscode.style.text': 'Choisissez une robe midi, longueur thé ou au genou, un costume chic ou une combinaison élégante.', 'dresscode.colours.h': 'Couleur et matière', 'dresscode.colours.text': 'Les couleurs estivales et les matières légères sont les bienvenues. Des chaussures élégantes et une finition soignée conviennent parfaitement.', 'dresscode.practical.h': 'Conseils pratiques',
     'dresscode.guide.link': 'Voir le guide vestimentaire', 'dresscode.back': 'Retour au site', 'dresscode.guide.label': 'Code vestimentaire', 'dresscode.guide.title': 'Code vestimentaire', 'dresscode.guide.theme': 'Code vestimentaire : tenue cocktail', 'dresscode.guide.h1': 'Dress code : Cocktail Attire', 'dresscode.guide.lead': 'Nous sommes ravis de celebrer avec vous. Voici un petit guide pour que chacun se sente a l\'aise et en harmonie avec la journee.', 'dresscode.guide.intro.h': 'Un guide simple pour notre journee',
     'dresscode.guide.intro.p1': 'Pour le code vestimentaire, nous avons choisi la tenue cocktail. Avec ce code vestimentaire, nous cherchons un bel équilibre entre élégance et esprit festif. Une tenue avec un petit quelque chose en plus est la bienvenue, si vous vous y sentez à l’aise.', 'dresscode.guide.intro.p2': 'Pensez à un juste milieu élégant : plus habillé que casual, sans aller jusqu’au black tie.', 'dresscode.guide.intro.p3': 'Choisissez surtout une tenue qui vous ressemble, dans laquelle vous pouvez bouger librement et profiter de toute la journée et de la soirée.',
@@ -319,6 +345,7 @@ const translations = {
     'dresscode.guide.dos.men.do.1': 'Choisissez un costume ou une combinaison habillee', 'dresscode.guide.dos.men.do.2': 'Portez des chaussures soignees', 'dresscode.guide.dos.men.do.3': 'Ajoutez volontiers un detail personnel', 'dresscode.guide.dos.men.do.4': 'Gardez un ensemble soigne et festif',
     'dresscode.guide.dos.men.dont.1': 'Evitez baskets, tongs et tenues sportives', 'dresscode.guide.dos.men.dont.2': 'Evitez jeans et polos', 'dresscode.guide.dos.men.dont.3': 'Evitez une tenue trop decontractee',
     'dresscode.colors.label': 'Guide des couleurs', 'dresscode.colors.h': 'Guide des couleurs', 'dresscode.colors.intro': 'Ces suggestions s’appliquent à tous les invités, quelle que soit la tenue choisie.', 'dresscode.colors.approved.h': 'Les couleurs que nous aimons', 'dresscode.colors.approved.1': 'Bleu poudré et bleu ciel doux', 'dresscode.colors.approved.2': 'Vert sauge et vert olive', 'dresscode.colors.approved.3': 'Rose poudré et vieux rose', 'dresscode.colors.approved.4': 'Lavande et lilas doux', 'dresscode.colors.approved.5': 'Jaune doux et terracotta chaleureux', 'dresscode.colors.avoid.h': 'Les couleurs à éviter', 'dresscode.colors.avoid.1': 'Blanc et blanc de mariée', 'dresscode.colors.avoid.2': 'Ivoire, crème et champagne', 'dresscode.colors.avoid.3': 'Les tons métallisés très nuptiaux, comme l’argent vif', 'dresscode.colors.avoid.4': 'Les couleurs fluo qui attirent beaucoup l’attention', 'dresscode.colors.avoid.5': 'Rouge vif et cramoisi éclatant',
+    'dresscode.colors.avoid.6': 'Noir', 'dresscode.colors.avoid.7': 'Bleu foncé et bleu marine',
     'dresscode.selector.label': 'Voir la tenue pour', 'dresscode.selector.her': 'Elle', 'dresscode.selector.him': 'Lui',
     'dresscode.image.women.alt': 'Exemple de tenue cocktail pour femme', 'dresscode.image.women.caption': 'Image pour vous inspirer.', 'dresscode.image.men.alt': 'Exemple de tenue cocktail pour homme', 'dresscode.image.men.caption': 'Image pour vous inspirer.',
     'dresscode.placeholder.women.label': 'Emplacement image exemple : tenue femme', 'dresscode.placeholder.men.label': 'Emplacement image exemple : tenue homme', 'dresscode.placeholder.dev': 'Placeholder : vous pourrez charger ici votre propre image ou composant plus tard.',
@@ -329,8 +356,12 @@ const translations = {
     'gifts.wishlist.h': 'Liste de souhaits', 'gifts.wishlist.text': 'Si vous connaissez quelque chose qui nous correspond vraiment, un cadeau personnel nous fera plaisir. Sinon, une contribution à notre voyage de noces est une très belle idée.',
     'ceremony.label': 'Ma\u00eetres de C\u00e9r\u00e9monie', 'ceremony.h2': 'Rencontrez nos ma\u00eetres de c\u00e9r\u00e9monie',
     'ceremony.lead': 'Nos ma\u00eetres de c\u00e9r\u00e9monie guideront la journ\u00e9e et r\u00e9pondront aux questions pratiques.',
+    'ceremony.contact_note_intro': 'Les coordonnées de Bas et Suzan ont été partagées avec l’invitation. Vous en avez à nouveau besoin ?',
+    'ceremony.contact_note_followup': 'Demandez simplement à Mariëlle ou à Jérémy, nous vous les redonnerons avec plaisir.',
+    'ceremony.bas.photo': 'Photo de Bas',
+    'ceremony.suzan.photo': 'Photo de Suzan',
     'location.description': 'Une maison de campagne chaleureuse avec des salles classiques et un magnifique parc dans l\u2019Utrechtse Heuvelrug.',
-    'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel avant votre d\u00e9part via',
+    'location.travel.text': 'Rendez-vous \u00e0 la gare de Driebergen-Zeist. De l\u00e0, marchez ou prenez le bus. V\u00e9rifiez l\u2019itin\u00e9raire actuel avant votre d\u00e9part.',
     'location.parking.text': 'Le parking se trouve près du lieu, juste au coin de la rue. De là, une entrée séparée mène à Buitenplaats Sparrendaal.',
     'location.parking.link': 'Ouvrir l\u2019itin\u00e9raire du parking',
     'location.accom.text': 'Les invités organisent et réservent eux-mêmes leur hébergement.', 'location.accom.link': 'Voir les possibilités d’hébergement',
@@ -345,7 +376,6 @@ const translations = {
     'accommodation.amerongen.h': 'Amerongen', 'accommodation.gasthuys': 'Bed and breakfast de quatre chambres dans une ferme restaurée, petit-déjeuner compris.', 'accommodation.buitenlust': 'Restaurant avec cinq chambres d’hôtel à Amerongen.', 'accommodation.napoleonschuur': 'Cinq chambres design dans un bâtiment historique restauré à Amerongen.',
     'accommodation.wijk.h': 'Wijk bij Duurstede', 'accommodation.dijklodges': 'Cinq lodges sur un ancien domaine agricole, à environ dix minutes de route du lieu.',
     'accommodation.smallbnb.h': 'Autres petits B&B à Amerongen', 'accommodation.bestegoed': 'Bed and breakfast avec une chambre à Amerongen.', 'accommodation.overtuin': 'Bed and breakfast avec une chambre à Amerongen. Téléphone : 0343 454 989.', 'accommodation.bb23': 'Bed and breakfast avec deux chambres à Amerongen. Téléphone : 0343 451 692.', 'accommodation.back': 'Retour au site',
-    'rsvp.deadline_date': '[DATE \u00c0 AJOUTER]', 'rsvp.load': 'Afficher le formulaire RSVP',
     'footer.thanks': 'Merci de c\u00e9l\u00e9brer avec nous.',
     'footer.nav.home': 'Accueil', 'footer.nav.rsvp': 'RSVP',
     'footer.backtop': 'Retour en haut \u2191',
@@ -365,72 +395,54 @@ const initI18n = () => {
   const STORAGE_KEY = 'wedding-lang';
 
   const detect = () => {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    let stored;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch { /* Storage is optional. */ }
     if (stored && SUPPORTED.includes(stored)) return stored;
     const browser = (navigator.language || '').slice(0, 2).toLowerCase();
     return SUPPORTED.includes(browser) ? browser : DEFAULT;
   };
 
   let lang = detect();
-  const languageLabels = {
-    nl: { flagClass: 'flag-nl', short: 'NL', name: 'Nederlands' },
-    en: { flagClass: 'flag-us', short: 'EN', name: 'English' },
-    fr: { flagClass: 'flag-fr', short: 'FR', name: 'Français' },
-  };
-
   const apply = (targetLang) => {
-    const dict = translations[targetLang] || translations[DEFAULT];
+    const dict = { ...translations[DEFAULT], ...translations[targetLang] };
 
     // Text content
     document.querySelectorAll('[data-i18n]').forEach((el) => {
+      if (el.closest('[data-fluent-mounted]')) return;
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
     });
 
     // aria-label
     document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      if (el.closest('[data-fluent-mounted]')) return;
       const key = el.getAttribute('data-i18n-aria');
-      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+      if (dict[key] !== undefined) el.setAttribute(el.tagName === 'IMG' ? 'alt' : 'aria-label', dict[key]);
     });
 
     // Update <html lang>
     document.documentElement.lang = targetLang;
 
-    // Active language button
-    document.querySelectorAll('[data-lang-btn]').forEach((btn) => {
-      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === targetLang);
-      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang-btn') === targetLang ? 'true' : 'false');
-    });
-
-    const current = languageLabels[targetLang];
-    document.querySelectorAll('.lang-trigger').forEach((trigger) => {
-      const flag = trigger.querySelector('.lang-current-flag');
-      const label = trigger.querySelector('.lang-current');
-      if (flag) {
-        flag.classList.remove('flag-nl', 'flag-us', 'flag-fr');
-        flag.classList.add(current.flagClass);
-      }
-      if (label) label.textContent = trigger.closest('.offcanvas-lang-switcher') ? current.name : current.short;
-    });
   };
 
   const switchTo = (targetLang) => {
     if (!SUPPORTED.includes(targetLang)) return;
     lang = targetLang;
-    localStorage.setItem(STORAGE_KEY, lang);
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch { /* Storage is optional. */ }
     apply(lang);
     document.dispatchEvent(new CustomEvent('language-changed'));
   };
 
   apply(lang);
 
-  document.querySelectorAll('[data-lang-btn]').forEach((btn) => {
-    btn.addEventListener('click', () => switchTo(btn.getAttribute('data-lang-btn')));
-  });
-
   i18nInstance = {
-    get: (key) => (translations[lang] || translations[DEFAULT])[key] || key,
+    get: (key) => translations[lang]?.[key] ?? translations[DEFAULT][key] ?? key,
     currentLang: () => lang,
+  };
+  window.weddingSite = {
+    getLanguage: () => lang,
+    setLanguage: switchTo,
+    translate: i18nInstance.get,
   };
 };
 
@@ -551,116 +563,6 @@ const initPersonalInvitation = () => {
   document.addEventListener('language-changed', renderMessage);
 };
 
-const initLazyRsvp = () => {
-  const iframe = document.querySelector('.rsvp-iframe-container iframe[data-src]');
-  const loadButton = document.querySelector('[data-rsvp-load]');
-  if (!iframe || !loadButton) {
-    return;
-  }
-
-  const loadForm = () => {
-    if (iframe.getAttribute('src')) return;
-    iframe.src = iframe.dataset.src;
-    iframe.closest('.rsvp-iframe-container').classList.add('is-loaded');
-  };
-
-  loadButton.addEventListener('click', loadForm, { once: true });
-};
-
-const initWindGame = () => {
-  const game = document.querySelector('[data-wind-game]');
-  if (!game) return;
-
-  const startButton = game.querySelector('[data-wind-start]');
-  const fallbackButton = game.querySelector('[data-wind-fallback]');
-  const meter = game.querySelector('.wind-game__meter');
-  const status = game.querySelector('[data-wind-status]');
-  let stream;
-  let animationFrame;
-  let fallbackInterval;
-  let resetTimeout;
-  let windLevel = 0;
-  let won = false;
-
-  const text = (key) => i18nInstance ? i18nInstance.get(key) : key;
-  const update = (level) => {
-    windLevel = Math.max(0, Math.min(100, level));
-    game.style.setProperty('--wind-level', `${windLevel}%`);
-    meter.setAttribute('aria-valuenow', String(Math.round(windLevel)));
-    game.classList.toggle('is-windy', windLevel > 14);
-    if (!won && windLevel >= 65) {
-      won = true;
-      windLevel = 100;
-      game.style.setProperty('--wind-level', '100%');
-      meter.setAttribute('aria-valuenow', '100');
-      window.clearInterval(fallbackInterval);
-      game.classList.add('is-won');
-      status.textContent = text('wind.status_success');
-      if (stream) stream.getTracks().forEach((track) => track.stop());
-      if (animationFrame) window.cancelAnimationFrame(animationFrame);
-      resetTimeout = window.setTimeout(() => {
-        won = false;
-        stream = undefined;
-        animationFrame = undefined;
-        game.classList.remove('is-won', 'is-windy', 'is-listening');
-        update(0);
-        status.textContent = text('wind.status_ready');
-        startButton.disabled = false;
-      }, 4000);
-    }
-  };
-
-  const stopFallback = () => {
-    window.clearInterval(fallbackInterval);
-    fallbackInterval = undefined;
-    if (!won) update(0);
-  };
-
-  const startFallback = () => {
-    if (won) return;
-    window.clearInterval(fallbackInterval);
-    update(55);
-    fallbackInterval = window.setInterval(() => update(85), 100);
-  };
-
-  fallbackButton.addEventListener('pointerdown', startFallback);
-  fallbackButton.addEventListener('pointerup', stopFallback);
-  fallbackButton.addEventListener('pointerleave', stopFallback);
-  fallbackButton.addEventListener('pointercancel', stopFallback);
-  fallbackButton.addEventListener('keydown', (event) => {
-    if (event.key === ' ' || event.key === 'Enter') startFallback();
-  });
-  fallbackButton.addEventListener('keyup', stopFallback);
-  startButton.addEventListener('click', async () => {
-    if (!navigator.mediaDevices?.getUserMedia) {
-      status.textContent = text('wind.status_unavailable');
-      return;
-    }
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      game.classList.add('is-listening');
-      status.textContent = text('wind.status_listening');
-      startButton.disabled = true;
-      const audioContext = new AudioContext();
-      const analyser = audioContext.createAnalyser();
-      analyser.fftSize = 512;
-      audioContext.createMediaStreamSource(stream).connect(analyser);
-      const samples = new Uint8Array(analyser.fftSize);
-      const sample = () => {
-        if (won) return;
-        analyser.getByteTimeDomainData(samples);
-        const average = samples.reduce((sum, value) => sum + Math.abs(value - 128), 0) / samples.length;
-        const detectedWind = Math.min(100, Math.max(0, (average - 12) * 7));
-        update(windLevel * 0.2 + detectedWind * 0.8);
-        animationFrame = window.requestAnimationFrame(sample);
-      };
-      sample();
-    } catch {
-      status.textContent = text('wind.status_unavailable');
-    }
-  });
-};
-
 const isFullyVisible = (element) => {
   const bounds = element.getBoundingClientRect();
   return bounds.top >= 0 && bounds.bottom <= window.innerHeight;
@@ -678,40 +580,48 @@ const initStoryHearts = () => {
     }
 
     const heartSettings = [
-      { left: 68, delay: 0.54 },
-      { left: 24, delay: 0.12 },
-      { left: 84, delay: 0.82 },
-      { left: 43, delay: 0.3 },
-      { left: 14, delay: 0.68 },
+      { left: 68, delay: 0 },
+      { left: 24, delay: 0.8 },
+      { left: 84, delay: 1.6 },
+      { left: 43, delay: 2.4 },
+      { left: 14, delay: 3.2 },
     ];
     heartSettings.forEach(({ left, delay }) => {
       const size = `${(0.85 + Math.random() * 0.7).toFixed(2)}rem`;
-      const animationDelay = `${delay + Math.random() * 0.16}s`;
-    const heart = document.createElement('span');
-    heart.className = 'story-heart bi bi-heart-fill';
-    heart.setAttribute('aria-hidden', 'true');
+      const animationDelay = `${delay}s`;
+      const heart = document.createElement('span');
+      heart.className = 'story-heart bi bi-heart-fill';
+      heart.setAttribute('aria-hidden', 'true');
       heart.style.setProperty('--heart-left', `${left}%`);
-    heart.style.setProperty('--heart-size', size);
-    heart.style.setProperty('--heart-delay', animationDelay);
-    imageWrap.appendChild(heart);
+      heart.style.setProperty('--heart-size', size);
+      heart.style.setProperty('--heart-delay', animationDelay);
+      imageWrap.appendChild(heart);
     });
   };
 
+  let wasVisible = false;
+  let lastTrigger = -Infinity;
+  const updateVisibility = (visible) => {
+    if (!document.body.classList.contains('page-ready')) return;
+    const entered = visible && !wasVisible;
+    wasVisible = visible;
+    if (!entered) return;
+    const now = window.performance.now();
+    if (now - lastTrigger < 5000) return;
+    lastTrigger = now;
+    createHearts();
+    imageWrap.classList.remove('hearts-visible');
+    void imageWrap.offsetWidth;
+    imageWrap.classList.add('hearts-visible');
+  };
+
   const observer = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting) && document.body.classList.contains('page-ready')) {
-      createHearts();
-      imageWrap.classList.add('hearts-visible');
-      observer.disconnect();
-    }
+    entries.forEach((entry) => updateVisibility(entry.isIntersecting && entry.intersectionRatio >= 1));
   }, { rootMargin: '0px', threshold: 1 });
   observer.observe(imageWrap);
 
   document.addEventListener('site-ready', () => {
-    if (isFullyVisible(imageWrap)) {
-      createHearts();
-      imageWrap.classList.add('hearts-visible');
-      observer.disconnect();
-    }
+    updateVisibility(isFullyVisible(imageWrap));
   }, { once: true });
 };
 
@@ -719,39 +629,51 @@ const initTimelineVideo = () => {
   const video = document.querySelector('.timeline-proposal-video');
   if (!video || !('IntersectionObserver' in window)) return;
 
-  let hasStarted = false;
-  let loopTimeout;
-  video.addEventListener('ended', () => {
-    loopTimeout = window.setTimeout(() => {
+  let visible = false;
+  let visit = 0;
+  let startedVisit = 0;
+  const startVisit = () => {
+    if (!visible || startedVisit === visit || video.readyState < 1) return;
+    startedVisit = visit;
+    const playingVisit = visit;
+    video.muted = true;
+    try {
       video.currentTime = 0;
-      video.play().catch(() => {
-        video.controls = false;
-      });
-    }, 3000);
-  });
+    } catch (error) {
+      console.warn('Could not reset the proposal video.', error);
+      return;
+    }
+    video.play().catch((error) => {
+      if (error.name === 'AbortError' && (!visible || playingVisit !== visit)) return;
+      console.warn('Could not play the proposal video.', error);
+    });
+  };
+  video.addEventListener('loadedmetadata', startVisit);
 
   const observer = new IntersectionObserver((entries) => {
-    if (hasStarted || !entries.some((entry) => entry.isIntersecting)) return;
-
-    video.muted = true;
-    video.play().catch(() => {
-      video.controls = false;
+    entries.forEach((entry) => {
+      if (visible === entry.isIntersecting) return;
+      visible = entry.isIntersecting;
+      if (visible) {
+        visit += 1;
+        startVisit();
+      } else {
+        video.pause();
+      }
     });
-    hasStarted = true;
-    observer.disconnect();
   }, { rootMargin: '0px', threshold: 1 });
 
   observer.observe(video);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+const initSite = () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ------------------------------------------------------------------
      Countdown to the wedding
      ------------------------------------------------------------------ */
   const initCountdown = () => {
-    const weddingDate = new Date('2027-07-15T14:30:00+02:00').getTime();
+    const weddingDate = new Date('2027-05-26T14:30:00+02:00').getTime();
     const daysEl = document.getElementById('countdown-days');
     const hoursEl = document.getElementById('countdown-hours');
     const minutesEl = document.getElementById('countdown-minutes');
@@ -798,32 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tick();
     intervalId = window.setInterval(tick, 1000);
-  };
-
-  /* ------------------------------------------------------------------
-     Close offcanvas menu when a nav link is clicked
-     ------------------------------------------------------------------ */
-  const initOffcanvasClose = () => {
-    const offcanvasEl = document.getElementById('offcanvasNav');
-    if (!offcanvasEl || typeof bootstrap === 'undefined') {
-      return;
-    }
-
-    const navLinks = offcanvasEl.querySelectorAll('a.nav-link');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        const instance = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
-        instance.hide();
-      });
-    });
-
-    const closeOnHashChange = () => {
-      const instance = bootstrap.Offcanvas.getInstance(offcanvasEl);
-      if (instance && offcanvasEl.classList.contains('show')) {
-        instance.hide();
-      }
-    };
-    window.addEventListener('hashchange', closeOnHashChange);
+    document.addEventListener('language-changed', tick);
   };
 
   /* ------------------------------------------------------------------
@@ -873,27 +770,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ------------------------------------------------------------------
-     Back-to-top button
-     ------------------------------------------------------------------ */
-  const initBackToTop = () => {
-    const backToTopBtn = document.getElementById('backToTop');
-    if (!backToTopBtn) {
-      return;
-    }
-
-    const toggleVisibility = () => {
-      backToTopBtn.classList.toggle('is-visible', window.scrollY > 300);
-    };
-
-    toggleVisibility();
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-    });
-  };
-
-  /* ------------------------------------------------------------------
      Dynamic copyright year
      ------------------------------------------------------------------ */
   const initCopyrightYear = () => {
@@ -919,39 +795,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ------------------------------------------------------------------
-     Remember selected dresscode tab
-     ------------------------------------------------------------------ */
-  const initDresscodeTabs = () => {
-    const tabRoot = document.getElementById('dresscodeTabs');
-    if (!tabRoot || typeof bootstrap === 'undefined') {
-      return;
-    }
-
-    const tabButtons = Array.from(tabRoot.querySelectorAll('[data-bs-toggle="tab"]'));
-    if (tabButtons.length === 0) {
-      return;
-    }
-
-    const storageKey = 'wedding-dresscode-tab';
-    const restoreId = localStorage.getItem(storageKey);
-    if (restoreId) {
-      const restoreButton = document.getElementById(restoreId);
-      if (restoreButton) {
-        bootstrap.Tab.getOrCreateInstance(restoreButton).show();
-      }
-    }
-
-    tabButtons.forEach((button) => {
-      button.addEventListener('shown.bs.tab', (event) => {
-        const selectedId = event.target && event.target.id;
-        if (selectedId) {
-          localStorage.setItem(storageKey, selectedId);
-        }
-      });
-    });
-  };
-
-  /* ------------------------------------------------------------------
      Init all
      ------------------------------------------------------------------ */
   initScrollPosition();
@@ -959,15 +802,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initInitialHashGuard();
   initI18n();
   initPersonalInvitation();
-  initWindGame();
-  initLazyRsvp();
   initStoryHearts();
   initTimelineVideo();
   initCountdown();
-  initOffcanvasClose();
   initTimelineReveal();
-  initBackToTop();
   initCopyrightYear();
   initNavbarScrollState();
-  initDresscodeTabs();
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSite, { once: true });
+} else {
+  initSite();
+}

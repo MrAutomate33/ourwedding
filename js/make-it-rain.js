@@ -38,6 +38,14 @@
   const initHoneymoonEasterEgg = () => {
     const trigger = document.querySelector('[data-honeymoon-easter-egg]');
     if (!trigger) return;
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('tabindex', '0');
+    trigger.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        if (!event.repeat) trigger.click();
+      }
+    });
 
     const unlockPresses = 3;
     const bonusPresses = 4;
@@ -113,5 +121,9 @@
     });
   };
 
-  document.addEventListener('DOMContentLoaded', initHoneymoonEasterEgg);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHoneymoonEasterEgg, { once: true });
+  } else {
+    initHoneymoonEasterEgg();
+  }
 })();

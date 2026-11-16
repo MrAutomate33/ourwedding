@@ -1,0 +1,377 @@
+.fui-FluentProvider.fluent-provider {
+  color: inherit;
+  background: transparent;
+  font-family: var(--font-body);
+}
+
+.fluent-button-slot,
+.fluent-button-slot > .fluent-provider {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.fluent-button-slot a {
+  text-decoration: none;
+}
+
+.fui-FluentProvider.fluent-provider .fluent-on-dark,
+.fui-FluentProvider.fluent-provider .fluent-language-button:not(.fluent-on-light),
+.fui-FluentProvider.fluent-provider .fluent-desktop-navigation .fluent-nav-link,
+.fui-FluentProvider.fluent-provider .fluent-mobile-menu-button {
+  color: var(--site-on-dark);
+  background: var(--site-dark-surface);
+  border-color: var(--site-on-dark);
+}
+
+.fui-FluentProvider.fluent-provider .fluent-on-dark:hover:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-language-button:not(.fluent-on-light):hover:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-desktop-navigation .fluent-nav-link:hover:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-mobile-menu-button:hover:not(:disabled) {
+  color: var(--site-on-accent);
+  background: var(--site-accent);
+}
+
+.fui-FluentProvider.fluent-provider .fluent-on-dark:active:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-language-button:not(.fluent-on-light):active:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-desktop-navigation .fluent-nav-link:active:not(:disabled),
+.fui-FluentProvider.fluent-provider .fluent-mobile-menu-button:active:not(:disabled) {
+  color: var(--site-on-accent);
+  background: var(--site-accent-pressed);
+}
+
+.fui-FluentProvider.fluent-provider .fui-Button:disabled,
+.fui-FluentProvider.fluent-provider .fui-Button[aria-disabled="true"] {
+  color: var(--site-text-muted);
+  background: var(--site-surface-pressed);
+  border-color: var(--site-border);
+}
+
+.fui-FluentProvider.fluent-provider .fluent-language-button {
+  gap: 0.45rem;
+}
+
+.fluent-navigation-provider {
+  width: 100%;
+}
+
+.fluent-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.fluent-desktop-navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.fluent-nav-link {
+  min-width: 0;
+  text-decoration: none;
+}
+
+.fui-FluentProvider.fluent-provider .fluent-nav-link[aria-current="location"] {
+  color: var(--site-on-accent);
+  background: var(--site-accent);
+}
+
+.fui-FluentProvider.fluent-provider .fluent-language-button[aria-expanded="true"],
+.fui-FluentProvider.fluent-provider .fluent-nav-link[aria-expanded="true"] {
+  color: var(--site-on-accent);
+  background: var(--site-accent);
+}
+
+.navbar-wedding .fui-FluentProvider.fluent-provider .fui-Button,
+.fluent-navigation-drawer .fui-Button {
+  border-color: transparent;
+  border-radius: 999px;
+}
+
+.navbar-wedding .fluent-desktop-navigation .fui-Button {
+  padding-inline: 0.625rem;
+}
+
+.navbar-wedding .fui-FluentProvider.fluent-provider .fui-Button:focus-visible {
+  outline: 2px solid var(--site-on-dark);
+  outline-offset: 2px;
+}
+
+.fluent-navigation-drawer .fui-Button:focus-visible {
+  outline: 2px solid var(--site-text);
+  outline-offset: 2px;
+}
+
+.fui-FluentProvider.fluent-provider .fluent-mobile-menu-button {
+  display: none;
+}
+
+.fluent-menu-surface,
+.fluent-navigation-drawer {
+  color: var(--site-text);
+  background: var(--site-surface);
+  border-color: var(--site-border);
+}
+
+.fluent-mobile-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+  gap: 0.3rem;
+}
+
+.fluent-navigation-drawer .fluent-mobile-navigation .fluent-nav-link {
+  justify-content: flex-start;
+  color: var(--site-text);
+}
+
+.fluent-navigation-drawer .fluent-mobile-navigation .fluent-nav-link[aria-current="location"] {
+  color: var(--site-on-accent);
+  background: var(--site-accent);
+}
+
+.fui-FluentProvider.fluent-provider .fluent-on-light,
+.fluent-navigation-drawer .fluent-on-light {
+  color: var(--site-text);
+}
+
+.fluent-rsvp-load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.rsvp-iframe-container.is-loaded .fluent-rsvp-load {
+  display: none;
+}
+
+.fluent-tabs-host > .fluent-provider {
+  display: flex;
+  justify-content: center;
+}
+
+.fluent-tabs-host .fui-TabList {
+  --colorTransparentBackground: var(--site-surface);
+  --colorTransparentBackgroundHover: var(--site-surface-hover);
+  --colorTransparentBackgroundPressed: var(--site-surface-pressed);
+  --colorCompoundBrandStroke: var(--site-accent-text);
+  --colorCompoundBrandStrokeHover: var(--site-text);
+  --colorCompoundBrandStrokePressed: var(--site-text);
+  background: var(--site-surface);
+  border-radius: var(--borderRadiusMedium, 0.5rem);
+}
+
+.fluent-tabs-host .fui-Tab {
+  min-width: 5rem;
+  min-height: 44px;
+}
+
+.fluent-menu-surface [role="menuitemradio"][aria-checked="true"] {
+  color: var(--site-text);
+  background: var(--site-surface-pressed);
+}
+
+.fluent-menu-surface [role="menuitemradio"][aria-checked="true"]:hover {
+  background: var(--site-surface-hover);
+}
+
+.fluent-menu-surface [role="menuitemradio"][aria-checked="true"]:active {
+  background: var(--site-surface-pressed);
+}
+
+.wind-game__meter:has([role="progressbar"]) {
+  height: auto;
+  min-height: 0.65rem;
+  border: 0;
+  background: transparent;
+}
+
+.fluent-wind-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.fui-FluentProvider.fluent-provider .fluent-back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1040;
+}
+
+.proposal-carousel.fui-Carousel {
+  --proposal-photo-height: clamp(18rem, 38vw, 32rem);
+  width: 100%;
+  min-width: 0;
+}
+
+.proposal-carousel .proposal-carousel-viewport {
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--site-surface-subtle);
+}
+
+.proposal-carousel .proposal-carousel-card {
+  min-width: 0;
+  max-width: calc(100% - 0.75rem);
+  margin-inline: 0.375rem;
+}
+
+.proposal-carousel-card picture {
+  display: block;
+  width: 100%;
+}
+
+.proposal-carousel-frame {
+  height: var(--proposal-photo-height);
+}
+
+.proposal-carousel-card .proposal-carousel-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.proposal-carousel .proposal-carousel-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--borderRadiusLarge, 0.75rem);
+  object-fit: contain;
+}
+
+.proposal-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.proposal-carousel-controls .fui-CarouselButton {
+  --colorNeutralBackgroundAlpha: var(--site-surface);
+}
+
+.proposal-carousel-controls > .fui-Button {
+  flex-shrink: 0;
+}
+
+.proposal-carousel-controls .fui-CarouselNav {
+  gap: 0.25rem;
+  margin: 0;
+  background: var(--site-surface);
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--site-surface);
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton:hover:not(:disabled) {
+  background: var(--site-surface-hover);
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton:active:not(:disabled),
+.proposal-carousel-controls .fui-CarouselNavButton:disabled {
+  background: var(--site-surface-pressed);
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton[aria-selected="true"]::after {
+  width: 10px;
+  height: 10px;
+  background: var(--site-accent-text);
+  opacity: 1;
+}
+
+.proposal-carousel-controls .fui-CarouselNavButton:focus-visible {
+  outline: 2px solid var(--site-text);
+  outline-offset: 2px;
+}
+
+#location .location-card {
+  display: flex;
+  flex-direction: column;
+}
+
+#location .location-card__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+#location .location-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#location .location-card__footer a {
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#location .location-card__footer a:hover {
+  color: var(--site-accent-text);
+  text-decoration-thickness: 2px;
+}
+
+#location .location-card__footer a:focus-visible {
+  outline: 2px solid var(--site-text);
+  outline-offset: 3px;
+}
+
+.schedule-support-note {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-inline-start: 3px solid var(--site-accent);
+  border-radius: 0.5rem;
+  background: var(--site-surface-subtle);
+  color: var(--site-text);
+  font-size: 0.875rem;
+  line-height: var(--site-line-height-prose, 1.55);
+}
+
+@media (max-width: 991.98px) {
+  .fluent-desktop-navigation {
+    display: none;
+  }
+  .fui-FluentProvider.fluent-provider .fluent-mobile-menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .fluent-navigation .navbar-brand {
+    font-size: 1.1rem;
+  }
+  .fluent-wind-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+}

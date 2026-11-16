@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+/* Icelandic palette and shared site color contract. */
+:root {
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --site-font-size-body: 1rem;
+  --site-line-height-body: 1.5;
+  --site-line-height-prose: 1.55;
+  --site-font-size-label: 0.8rem;
+
+  --clr-rock: #292E38;
+  --clr-lichen: #44452E;
+  --clr-slate: #8091A5;
+  --clr-sky: #BBC3D4;
+  --clr-moss: #9CA04C;
+  --clr-gold: #C8A86B;
+  --clr-heart: #B23A48;
+  --clr-cream: var(--clr-sky);
+  --clr-stone: var(--clr-lichen);
+  --clr-sand: var(--clr-gold);
+
+  --clr-moss-rgb: 156, 160, 76;
+  --clr-lichen-rgb: 68, 69, 46;
+  --clr-gold-rgb: 200, 168, 107;
+
+  --site-bg: var(--clr-sky);
+  --site-surface: var(--clr-sky);
+  --site-surface-hover: color-mix(in srgb, var(--clr-sky) 94%, var(--clr-rock));
+  --site-surface-pressed: color-mix(in srgb, var(--clr-sky) 88%, var(--clr-rock));
+  --site-surface-subtle: rgb(from var(--clr-sky) r g b / 0.34);
+  --site-text: var(--clr-rock);
+  --site-text-muted: var(--clr-lichen);
+  --site-border: var(--clr-slate);
+  --site-border-hover: var(--clr-lichen);
+  --site-border-subtle: rgb(from var(--clr-slate) r g b / 0.24);
+  --site-accent: var(--clr-moss);
+  --site-accent-hover: var(--clr-gold);
+  --site-accent-pressed: var(--clr-gold);
+  --site-accent-subtle: rgb(from var(--clr-moss) r g b / 0.08);
+  --site-accent-text: var(--clr-lichen);
+  --site-on-accent: var(--clr-rock);
+  --site-focus-ring: var(--clr-gold);
+  --site-dark-surface: var(--clr-rock);
+  --site-on-dark: var(--clr-sky);
+  --site-on-image: var(--clr-sky);
+  --site-shadow: 0 0.75rem 2rem rgb(from var(--clr-rock) r g b / 0.35);
+  --site-shadow-ambient: rgb(from var(--clr-rock) r g b / 0.12);
+  --site-shadow-key: rgb(from var(--clr-rock) r g b / 0.22);
+  --site-gradient-accent: linear-gradient(90deg, var(--clr-moss), var(--clr-gold));
+  --site-gradient-loader-veil: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.62), rgb(from var(--clr-rock) r g b / 0.9));
+  --site-gradient-hero-veil: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.45) 0%, rgb(from var(--clr-rock) r g b / 0.72) 65%, rgb(from var(--clr-rock) r g b / 0.92) 100%);
+  --site-toast-border: rgb(from var(--clr-slate) r g b / 0.45);
+  --site-toast-bg: rgb(from var(--clr-rock) r g b / 0.9);
+  --site-toast-shadow: 0 8px 20px rgb(from var(--clr-rock) r g b / 0.28);
+  --site-note-shadow: 0 3px 6px rgb(from var(--clr-rock) r g b / 0.2);
+
+  /* Dress-code examples and flag illustrations retain their original colors. */
+  --swatch-blue: #9ec8dc;
+  --swatch-sage: #a7b69a;
+  --swatch-blush: #d9a6a1;
+  --swatch-lavender: #b9acd1;
+  --swatch-yellow: #d8bd71;
+  --swatch-white: #fff;
+  --swatch-ivory: #f4ead3;
+  --swatch-metallic: #c7c9ca;
+  --swatch-neon: #c8ef42;
+  --swatch-red: #c94b4b;
+  --swatch-black: #000;
+  --swatch-navy: #001f3f;
+  --flag-nl-red: #AE1C28;
+  --flag-nl-blue: #21468B;
+  --flag-fr-blue: #1E3A8A;
+  --flag-fr-red: #CE2B37;
+  --flag-us-red: #B22234;
+  --site-gradient-slate: #3f4e5b;
+
+  --bs-primary: var(--clr-moss);
+  --bs-primary-rgb: var(--clr-moss-rgb);
+  --bs-secondary: var(--clr-slate);
+  --bs-body-color: var(--site-text);
+  --bs-body-bg: var(--site-bg);
+  --bs-link-color: var(--clr-lichen);
+  --bs-link-hover-color: var(--clr-gold);
+}

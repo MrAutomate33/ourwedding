@@ -1,33 +1,9 @@
+@import url('theme.css');
+
 /* ==========================================================================
   Mariëlle & Jérémy — Wedding Website Stylesheet
    Theme: Romantic Icelandic Nature
    ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Root variables & Bootstrap overrides
-   -------------------------------------------------------------------------- */
-:root {
-  /* ── 6-colour Icelandic palette ── */
-  --clr-rock:   #292E38;   /* volcanic rock  – deepest dark  */
-  --clr-lichen: #44452E;   /* deep lichen    – warm dark     */
-  --clr-slate:  #8091A5;   /* mountain slate – muted grey    */
-  --clr-sky:    #BBC3D4;   /* glacier sky    – lightest      */
-  --clr-moss:   #9CA04C;   /* Icelandic moss – vivid accent  */
-  --clr-gold:   #C8A86B;   /* desert gold    – warm accent   */
-  --clr-heart:  #B23A48;   /* romantic red   – map heart     */
-
-  /* ── Bootstrap overrides ── */
-  --bs-primary:          var(--clr-moss);
-  --bs-primary-rgb:      156, 160, 76;
-  --bs-secondary:        var(--clr-slate);
-  --bs-body-color:       var(--clr-rock);
-  --bs-body-bg:          var(--clr-sky);
-  --bs-link-color:       var(--clr-lichen);
-  --bs-link-hover-color: var(--clr-gold);
-
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
 
 /* --------------------------------------------------------------------------
    2. Base
@@ -55,8 +31,10 @@ html.skip-site-loader .site-loader {
 
 body {
   font-family: var(--font-body);
-  color: var(--clr-rock);
-  background-color: var(--clr-sky);
+  font-size: var(--site-font-size-body);
+  line-height: var(--site-line-height-body);
+  color: var(--site-text);
+  background-color: var(--site-bg);
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -111,7 +89,7 @@ html.skip-site-loader body[aria-busy="true"] {
   animation: loader-image-in 2.4s ease forwards;
 }
 .site-loader__veil {
-  background: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.62), rgb(from var(--clr-rock) r g b / 0.9));
+  background: var(--site-gradient-loader-veil);
 }
 .site-loader__content {
   position: relative;
@@ -152,7 +130,7 @@ html.skip-site-loader body[aria-busy="true"] {
   display: block;
   width: 45%;
   height: 100%;
-  background: linear-gradient(90deg, var(--clr-moss), var(--clr-gold));
+  background: var(--site-gradient-accent);
   animation: loader-line 1.7s 0.35s ease-in-out infinite;
 }
 @keyframes loader-image-in {
@@ -181,7 +159,7 @@ section h2 {
 .section-label {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: 0.8rem;
+  font-size: var(--site-font-size-label);
   color: var(--clr-lichen);
   font-weight: 500;
 }
@@ -201,20 +179,6 @@ a:hover {
 
 #our-story {
   overflow: hidden;
-}
-#our-story::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 8rem;
-  z-index: 1;
-  background:
-    linear-gradient(180deg, transparent 0%, rgb(from var(--clr-sky) r g b / 0.72) 58%, var(--clr-sky) 100%),
-    url('../img/terrain-contours.svg') center bottom / 100% auto repeat-x;
-  opacity: 0.62;
-  pointer-events: none;
 }
 #our-story > .container {
   position: relative;
@@ -309,7 +273,7 @@ section {
   background: rgb(from var(--clr-rock) r g b / 0.94);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  box-shadow: 0 0.75rem 2rem rgb(from var(--clr-rock) r g b / 0.35);
+  box-shadow: var(--site-shadow);
 }
 .navbar-wedding .dropdown-item {
   padding: 0.6rem 0.75rem;
@@ -359,7 +323,7 @@ section {
   --bs-btn-active-border-color: var(--clr-moss);
   --bs-btn-disabled-color: var(--clr-slate);
   --bs-btn-disabled-border-color: var(--clr-slate);
-  --bs-btn-focus-shadow-rgb: 68, 69, 46;
+  --bs-btn-focus-shadow-rgb: var(--clr-lichen-rgb);
 }
 .btn-outline-primary.active,
 .btn-outline-primary:active,
@@ -388,7 +352,7 @@ section {
   --bs-btn-active-color: var(--clr-rock);
   --bs-btn-active-bg: var(--clr-gold);
   --bs-btn-active-border-color: var(--clr-gold);
-  --bs-btn-focus-shadow-rgb: 200, 168, 107;
+  --bs-btn-focus-shadow-rgb: var(--clr-gold-rgb);
 }
 .btn-outline-light:active,
 .btn-outline-light.active {
@@ -432,7 +396,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgb(from var(--clr-rock) r g b / 0.45) 0%, rgb(from var(--clr-rock) r g b / 0.72) 65%, rgb(from var(--clr-rock) r g b / 0.92) 100%);
+  background: var(--site-gradient-hero-veil);
   z-index: 1;
 }
 .hero-content {
@@ -510,7 +474,7 @@ section {
 .personal-invitation__message {
   margin: 0;
   color: var(--clr-sky);
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 .personal-invitation__message strong {
   color: var(--clr-gold);
@@ -577,7 +541,7 @@ section {
 .expedition-card .coord-label {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: 0.8rem;
+  font-size: var(--site-font-size-label);
   color: var(--clr-moss);
 }
 .expedition-card .section-label {
@@ -607,11 +571,11 @@ section {
   9. Topographic subtle pattern
    -------------------------------------------------------------------------- */
 .topo-pattern {
-  background-color: var(--clr-sky);
-  background-image: url('../img/terrain-contours.svg');
-  background-position: center;
+  background-color: var(--site-bg);
+  background-image: url('../img/terrain-contours.webp');
+  background-position: center top;
   background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-size: 160% auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -821,54 +785,32 @@ section {
 
 #wedding-day {
   overflow: hidden;
+  background: linear-gradient(165deg, color-mix(in srgb, var(--clr-sky) 94%, var(--clr-gold)) 0%, var(--clr-sky) 48%, color-mix(in srgb, var(--clr-sky) 96%, var(--clr-moss)) 100%);
 }
 #wedding-day::before,
 #wedding-day::after {
+  content: "";
   position: absolute;
   z-index: 0;
-  color: transparent;
-  font-family: Georgia, serif;
-  font-size: clamp(12rem, 27vw, 27rem);
-  line-height: 1;
-  opacity: 0.34;
-  -webkit-text-stroke: 2px var(--clr-moss);
+  width: clamp(11rem, 35vw, 32rem);
+  aspect-ratio: 2 / 5;
+  background: url('../img/wedding-botanical.svg') center / contain no-repeat;
+  opacity: 0.32;
   pointer-events: none;
 }
 #wedding-day::before {
-  content: "❀";
-  top: 1rem;
-  left: 2vw;
-  transform: rotate(-16deg);
+  top: 2.5rem;
+  left: clamp(-4.5rem, -5vw, -3rem);
 }
 #wedding-day::after {
-  content: "✽";
-  right: 2vw;
-  bottom: 1rem;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--clr-gold);
-  transform: rotate(18deg);
+  right: clamp(-4.5rem, -5vw, -3rem);
+  bottom: 2.5rem;
+  transform: scaleX(-1);
 }
 #wedding-day > .container {
   position: relative;
   z-index: 1;
 }
-.wedding-flower {
-  position: absolute;
-  z-index: 0;
-  color: transparent;
-  font-family: Georgia, serif;
-  font-size: clamp(7rem, 16vw, 16rem);
-  line-height: 1;
-  opacity: 0.28;
-  -webkit-text-stroke: 2px var(--clr-slate);
-  pointer-events: none;
-  transform: rotate(8deg);
-}
-.wedding-flower--middle {
-  top: 38%;
-  right: 4vw;
-}
-
 /* --------------------------------------------------------------------------
    13. Wedding day schedule
    -------------------------------------------------------------------------- */
@@ -1051,12 +993,12 @@ section {
 .accommodation-intro {
   max-width: 48rem;
   margin: 0 auto 0.75rem;
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 .accommodation-disclaimer {
   max-width: 48rem;
   margin: 0 auto 2rem;
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 .accommodation-directory h4 {
   margin-bottom: 0.75rem;
@@ -1070,7 +1012,7 @@ section {
 .accommodation-option p {
   margin-bottom: 0;
   font-size: 0.9rem;
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 .accommodation-directory a {
   color: var(--clr-rock);
@@ -1120,7 +1062,7 @@ section {
   margin-inline: auto;
   padding: 1rem 1.1rem 1.15rem;
   border-radius: 1rem;
-  border: 1px solid rgb(from var(--clr-slate) r g b / 0.24);
+  border: 1px solid var(--site-border-subtle);
   background: linear-gradient(
     180deg,
     rgb(from var(--clr-cream) r g b / 0.72) 0%,
@@ -1217,7 +1159,7 @@ section {
   height: 100%;
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid rgb(from var(--clr-slate) r g b / 0.24);
+  border: 1px solid var(--site-border-subtle);
   background: rgb(from var(--clr-cream) r g b / 0.52);
 }
 .dresscode-points {
@@ -1228,7 +1170,7 @@ section {
 .dresscode-points li {
   position: relative;
   padding-left: 1.35rem;
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 .dresscode-points li + li {
   margin-top: 0.6rem;
@@ -1298,7 +1240,7 @@ section {
 .dresscode-colour-card {
   padding: 1.5rem;
   border: 1px solid rgb(from var(--clr-slate) r g b / 0.18);
-  background: rgb(from var(--clr-sky) r g b / 0.34);
+  background: var(--site-surface-subtle);
 }
 .dresscode-colour-card-approved {
   border-top: 3px solid var(--clr-moss);
@@ -1324,16 +1266,18 @@ section {
   border: 1px solid rgb(from var(--clr-rock) r g b / 0.22);
   border-radius: 50%;
 }
-.dresscode-swatch-blue { background: #9ec8dc; }
-.dresscode-swatch-sage { background: #a7b69a; }
-.dresscode-swatch-blush { background: #d9a6a1; }
-.dresscode-swatch-lavender { background: #b9acd1; }
-.dresscode-swatch-yellow { background: #d8bd71; }
-.dresscode-swatch-white { background: #fff; }
-.dresscode-swatch-ivory { background: #f4ead3; }
-.dresscode-swatch-metallic { background: #c7c9ca; }
-.dresscode-swatch-neon { background: #c8ef42; }
-.dresscode-swatch-red { background: #c94b4b; }
+.dresscode-swatch-blue { background: var(--swatch-blue); }
+.dresscode-swatch-sage { background: var(--swatch-sage); }
+.dresscode-swatch-blush { background: var(--swatch-blush); }
+.dresscode-swatch-lavender { background: var(--swatch-lavender); }
+.dresscode-swatch-yellow { background: var(--swatch-yellow); }
+.dresscode-swatch-white { background: var(--swatch-white); }
+.dresscode-swatch-ivory { background: var(--swatch-ivory); }
+.dresscode-swatch-metallic { background: var(--swatch-metallic); }
+.dresscode-swatch-neon { background: var(--swatch-neon); }
+.dresscode-swatch-red { background: var(--swatch-red); }
+.dresscode-swatch-black { background: var(--swatch-black); }
+.dresscode-swatch-navy { background: var(--swatch-navy); }
 .dresscode-example-figure {
   margin: 0;
 }
@@ -1431,10 +1375,11 @@ section {
   border-radius: 0.75rem;
   background: rgb(from var(--clr-moss) r g b / 0.62);
   color: var(--clr-rock);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+}
+.dress-code-card,
+.gift-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .dress-code-card .text-moss,
 .gift-card .text-moss,
@@ -1462,8 +1407,7 @@ section {
   color: var(--clr-rock);
 }
 .dress-code-card:hover,
-.gift-card:hover,
-.ceremony-master-card:hover {
+.gift-card:hover {
   transform: translateY(-4px);
   border-color: var(--clr-gold);
   box-shadow: 0 10px 25px rgb(from var(--clr-rock) r g b / 0.18);
@@ -1537,7 +1481,7 @@ section {
   max-width: 26rem;
   color: var(--clr-sky);
   font-size: 0.82rem;
-  line-height: 1.55;
+  line-height: var(--site-line-height-prose);
 }
 
 /* --------------------------------------------------------------------------
@@ -1707,9 +1651,9 @@ section {
   border-radius: 2px;
   box-shadow: 0 1px 2px rgb(from var(--clr-rock) r g b / 0.25);
 }
-.flag-nl { background: linear-gradient(to bottom, #AE1C28 0 33%, var(--clr-sky) 33% 66%, #21468B 66%); }
-.flag-fr { background: linear-gradient(to right, #1E3A8A 0 33%, var(--clr-sky) 33% 66%, #CE2B37 66%); }
-.flag-us { background: repeating-linear-gradient(to bottom, #B22234 0 10%, var(--clr-sky) 10% 20%); }
+.flag-nl { background: linear-gradient(to bottom, var(--flag-nl-red) 0 33%, var(--clr-sky) 33% 66%, var(--flag-nl-blue) 66%); }
+.flag-fr { background: linear-gradient(to right, var(--flag-fr-blue) 0 33%, var(--clr-sky) 33% 66%, var(--flag-fr-red) 66%); }
+.flag-us { background: repeating-linear-gradient(to bottom, var(--flag-us-red) 0 10%, var(--clr-sky) 10% 20%); }
 .flag-us::after {
   content: "";
   position: absolute;
@@ -1726,7 +1670,7 @@ section {
   background: rgb(from var(--clr-rock) r g b / 0.96);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  box-shadow: 0 0.75rem 2rem rgb(from var(--clr-rock) r g b / 0.35);
+  box-shadow: var(--site-shadow);
 }
 .lang-btn {
   display: flex;
@@ -1783,7 +1727,7 @@ section {
   overflow: hidden;
   border: 1px solid rgb(from var(--clr-gold) r g b / 0.48);
   border-radius: 0.5rem;
-  background: linear-gradient(125deg, var(--clr-rock) 0%, #3f4e5b 52%, var(--clr-slate) 100%);
+  background: linear-gradient(125deg, var(--clr-rock) 0%, var(--site-gradient-slate) 52%, var(--clr-slate) 100%);
   box-shadow: 0 1.5rem 3rem rgb(from var(--clr-rock) r g b / 0.25);
 }
 .wind-game__copy {
@@ -1810,7 +1754,7 @@ section {
   width: var(--wind-level, 0%);
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--clr-moss), var(--clr-gold));
+  background: var(--site-gradient-accent);
   transition: width 0.12s linear;
 }
 .wind-game__status { min-height: 1.5rem; margin: 0.75rem 0 1rem; color: var(--clr-sky); }
@@ -1998,6 +1942,5 @@ iframe {
   .wind-game-section { padding-block: 3.5rem; }
   .wind-game__scene { min-height: 11rem; }
   .wind-game__actions .btn { width: 100%; justify-content: center; }
-  .wedding-flower--middle { right: -2rem; }
 }
 
