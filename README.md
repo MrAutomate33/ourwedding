@@ -32,6 +32,8 @@ The Icelandic wedding palette and semantic colors are defined in `css/theme.css`
 colors there instead of introducing page-specific hex values.
 Buttons have filled, themed backgrounds; island wrappers remain transparent.
 Information cards use translucent color without backdrop blur.
+Section content and decorative gift rain stay below the fixed navigation.
+Menus and the mobile drawer retain their separate overlay layers.
 
 Headings use Playfair Display; body text and Fluent controls use Inter. Proposal
 photos use the Fluent Carousel with five-second autoplay, manual controls and
